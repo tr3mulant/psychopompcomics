@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from '../images/deer.svg';
+import img from '../../images/deer.svg';
 
 const ComingSoon = styled.section`
 	width: 100vw;

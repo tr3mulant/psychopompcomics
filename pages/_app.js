@@ -2,10 +2,10 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import "./_app.css"
 
 const theme = {
-  colors: {
-    primary: '#b8b8b8',
-		secondary: '#2c2c2c'
-  },
+	colors: {
+    	primary: '#b8b8b8',
+		secondary: '#2c2c2c',
+  	},
 	fonts: {
 		primary: '"Roboto", sans-serif',
 		secondary: '"Rokkitt", serif;'
@@ -19,26 +19,26 @@ const theme = {
 		xs: '575px',
 		xxs: '374px'
 	},
-	space: {
-    zero: "0px",
-    xs: "2px",
-    sm: "4px",
-    ms: "8px",
-    md: "12px",
-    ml: "16px",
-    lg: "24px",
-    xl: "32px",
-    xxl: "64px",
-    xxxl: "96px"
+	spaces: {
+		zero: "0px",
+		xs: "2px",
+		sm: "4px",
+		ms: "8px",
+		md: "12px",
+		ml: "16px",
+		lg: "24px",
+		xl: "32px",
+		xxl: "64px",
+		xxxl: "96px"
 	}
 }
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 
 	h1,h2,h3,h4,h5,h6 {
 		font-weight: 900;

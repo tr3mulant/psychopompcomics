@@ -1,7 +1,7 @@
 name: build
 
 env:
-  REGISTRY: "registry.digitalocean.com/ppc"
+  REGISTRY: "registry.digitalocean.com/parabola"
   IMAGE_NAME: "psychopompcomics.com"
 
 on:

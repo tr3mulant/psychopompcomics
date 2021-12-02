@@ -11,7 +11,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "docker-dev": "docker-compose up -d --remove-orphans --force-recreate",
+    "docker-prod": "docker-compose -f docker-compose.prod.yml up --remove-orphans --force-recreate",
+    "docker-build-dev": "docker-compose build --build-arg APP_ENV=dev",
+    "docker-build-prod": "docker-compose -f docker-compose.prod.yml build --build-arg APP_ENV=prod"
   },
   "dependencies": {
     "next": "latest",

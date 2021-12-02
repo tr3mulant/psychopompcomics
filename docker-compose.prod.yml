@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  psychopompcomics:
+    image: ${REGISTRY}${IMAGE_NAME}:${COMMIT}
+    container_name: psychopompcomics
+    build:
+      context: ./
+      args:
+        - APP_ENV=prod
+    restart: always
+    environment:
+      PRODUCTION: 'true'
+    networks:
+      - app-network
+
+  nginx:
+    image: ${REGISTRY}${IMAGE_NAME_SERVER}:${COMMIT}
+    container_name: psychopompcomics_nginx
+    build:
+      context: ./nginx
+      args:
+        - APP_ENV=prod
+    restart: unless-stopped
+    environment:
+      - CERTBOT_EMAIL=webmaster@psychopompcomics.com
+      - STAGING=1
+      - USE_ECDSA=1
+      - DEBUG=1
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+    networks:
+    - app-network
+    
+networks:
+  app-network:
+    driver: bridge

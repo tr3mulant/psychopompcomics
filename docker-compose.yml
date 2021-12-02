@@ -1,0 +1,19 @@
+version: '3'
+services:
+  psychopompcomics:
+    image: psychopompcomics.com:dev
+    environment:
+      DEBUG: 'true'
+    build: ./
+  nginx:
+    image: nginx:stable
+    environment:
+      - USE_LOCAL_CA=1
+    ports:
+      - 80:80
+    build:
+      context: ./nginx
+      args:
+        - APP_ENV=dev
+    depends_on:
+      - psychopompcomics

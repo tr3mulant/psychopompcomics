@@ -1,5 +1,7 @@
 # Installation
-* $`yarn install`
+* [Install Docker Engine](https://docs.docker.com/engine/install/)
+* `yarn install`
 
 # Run
-* $`yarn run dev`
+Build and run images (nextjs hot reload proxied by nginx)
+* `yarn doc-dev`

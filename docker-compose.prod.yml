@@ -24,9 +24,8 @@ services:
     restart: unless-stopped
     environment:
       - CERTBOT_EMAIL=webmaster@psychopompcomics.com
-      - STAGING=1
+      - STAGING=0
       - USE_ECDSA=1
-      - DEBUG=1
     ports:
       - 80:80
       - 443:443

@@ -12,10 +12,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "docker-dev": "docker-compose up -d --remove-orphans --force-recreate",
-    "docker-prod": "docker-compose -f docker-compose.prod.yml up --remove-orphans --force-recreate",
-    "docker-build-dev": "docker-compose build --build-arg APP_ENV=dev",
-    "docker-build-prod": "docker-compose -f docker-compose.prod.yml build --build-arg APP_ENV=prod"
+    "doc-up": "docker-compose up -d --remove-orphans",
+    "doc-upb": "docker-compose up -d --build --remove-orphans",
+    "doc-down": "docker-compose down",
+    "doc-build": "docker-compose build",
+    "doc-build-psy": "docker-compose build psychopompcomics",
+    "doc-build-nginx": "docker-compose build nginx"
   },
   "dependencies": {
     "next": "latest",

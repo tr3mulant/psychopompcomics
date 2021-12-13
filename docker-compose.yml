@@ -2,13 +2,24 @@ version: '3'
 services:
   psychopompcomics:
     image: psychopompcomics.com:dev
+    container_name: psychopompcomics
     environment:
       DEBUG: 'true'
-    build: ./
+    build: 
+      context: ./
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
   nginx:
-    image: nginx:stable
+    image: psychopompcomics.com_nginx:dev
+    container_name: psychopompcomics_nginx
     environment:
+      - CERTBOT_EMAIL=webmaster@psychopompcomics.com
       - USE_LOCAL_CA=1
+      - USE_ECDSA=1
+      - DEBUG=1
     ports:
       - 80:80
     build:

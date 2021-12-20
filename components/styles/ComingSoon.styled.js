@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"; 
 import img from '../../images/deer.svg';
 
 //CommingSoon component - the styled.section is an acutal <section> tag

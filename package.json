@@ -12,8 +12,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --watch",
     "doc-up": "docker-compose up -d --remove-orphans",
-    "doc-upb": "docker-compose up -d --build --remove-orphans",
+    "doc-dev": "docker-compose up -d --build --remove-orphans",
     "doc-down": "docker-compose down",
     "doc-build": "docker-compose build",
     "doc-build-psy": "docker-compose build psychopompcomics",
@@ -27,6 +28,13 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.12.0"
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-plugin-styled-components": "^1.12.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "^27.4.5",
+    "jest-styled-components": "^7.0.8",
+    "react-test-renderer": "^17.0.2"
   }
 }

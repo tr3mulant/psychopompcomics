@@ -1,18 +1,11 @@
 import styled from "styled-components"; 
-import img from '../../images/deer.svg';
 
 //CommingSoon component - the styled.section is an acutal <section> tag
 const ComingSoon = styled.section`
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	background-color: ${ props=>props.theme.colors.secondary };
-	background-image: url(${ img.src });
-	background-size: cover;
-	background-position: center;
+	max-width: 100%;
+	padding: 48px 16px;
 	color: ${ props=>props.theme.colors.primary };
+	text-align: center;
 `;
 
 export default ComingSoon;

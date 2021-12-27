@@ -1,11 +1,16 @@
 export const theme = {
 	colors: {
-    	primary: '#b8b8b8',
+		primary: '#b8b8b8',
 		secondary: '#2c2c2c',
-  	},
+	},
 	fonts: {
 		primary: '"Roboto", sans-serif',
-		secondary: '"Rokkitt", serif;'
+		secondary: '"Rokkitt", serif;',
+		sizes: {
+			sm: "1rem",
+			md: "1.2rem",
+			lg: "3.5rem"
+		}
 	},
 	breakpoints: {
 		xxl: '1899px',

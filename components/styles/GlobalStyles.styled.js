@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
+		background-color: ${ (theme.colors.secondary) };
 	}
 
 	h1,h2,h3,h4,h5,h6 {
@@ -16,8 +17,12 @@ export const GlobalStyle = createGlobalStyle`
 		font-family: ${(theme.fonts.primary)}
 	}
 
-	h4,h5,h6,p{
+	h4,h5,h6,p,input {
 		font-family: ${(theme.fonts.secondary)}
+	}
+
+	p,input,button {
+		font-size: 1.2em;
 	}
 
 	h1 {

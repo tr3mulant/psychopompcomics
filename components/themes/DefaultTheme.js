@@ -5,7 +5,12 @@ export const theme = {
   	},
 	fonts: {
 		primary: '"Roboto", sans-serif',
-		secondary: '"Rokkitt", serif;'
+		secondary: '"Rokkitt", serif;',
+		sizes: {
+			sm: "1rem",
+			md: "1.2rem",
+			lg: "3.5rem"
+		}
 	},
 	breakpoints: {
 		xxl: '1899px',

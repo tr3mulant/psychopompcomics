@@ -1,8 +1,8 @@
 export const theme = {
 	colors: {
-    	primary: '#b8b8b8',
+		primary: '#b8b8b8',
 		secondary: '#2c2c2c',
-  	},
+	},
 	fonts: {
 		primary: '"Roboto", sans-serif',
 		secondary: '"Rokkitt", serif;',

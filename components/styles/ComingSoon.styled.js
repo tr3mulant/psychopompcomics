@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ComingSoon = styled.section`
 	max-width: 100%;
 	padding: 48px 16px;
-	color: ${ props=>props.theme.colors.primary };
+	color: var(--text1);
 	text-align: center;
 `;
 

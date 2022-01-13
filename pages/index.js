@@ -6,7 +6,7 @@ import NewsletterSubscribe from '../components/NewsletterSubscribe';
 
 const Title = styled.h1`
 	text-align: center;
-  color: ${ props=>props.theme.colors.primary };
+  color: var(--text1);
 	margin: 0 0 32px;
 `
 export default function Home() {

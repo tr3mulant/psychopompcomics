@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-	background-color: #000;
-	color: ${ props=>props.theme.colors.primary };
+	background-color: var(--brand);
+	color: var(--text-on-brand);
 	border: none;
-	padding: ${ props=>props.theme.spaces.sm} ${ props=>props.theme.spaces.lg};
+	padding: ${props => props.theme.spaces.sm} ${props => props.theme.spaces.lg};
 	border-radius: 4px;
-	font-size: ${ props=>props.theme.fonts.sizes.md};
 	cursor: pointer;
 	transition: background-color 300ms ease;
+	font-weight: bold;
 
 	&:hover {
-		background-color: #202020;
+		filter: brightness(115%);
 	}
 `;
 

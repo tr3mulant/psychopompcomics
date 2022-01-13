@@ -1,6 +1,6 @@
 import ComingSoon from '../components/styles/ComingSoon.styled'
 import styled from 'styled-components'
-import Image from 'next/image'
+import ComingSoonImage from '../components/ComingSoonImage';
 import deer from '../images/deer.svg'; 
 import NewsletterSubscribe from '../components/NewsletterSubscribe';
 
@@ -12,12 +12,7 @@ const Title = styled.h1`
 export default function Home() {
   return <ComingSoon>
 		<Title>Coming Soon</Title>
-		<div>
-			<Image 
-				src={deer}
-				alt="Line art of a stag"
-			/>
-		</div>
+		<ComingSoonImage />
 		<h2>Sign up to receive email updates</h2>
 		<NewsletterSubscribe />
 	</ComingSoon>

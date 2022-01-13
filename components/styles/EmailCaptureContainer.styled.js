@@ -12,6 +12,12 @@ const EmailCaptureContainer = styled.article`
 
 	& input {
 		max-width: calc(100% - 109px);
+		border-top: 1px solid var(--brand);
+		border-left: 1px solid var(--brand);
+		border-bottom: 1px solid var(--brand);
+		padding-left: 4px;
+		background-color: var(--surface2);
+		color: var(--text2);
 	}
 
 	& button {

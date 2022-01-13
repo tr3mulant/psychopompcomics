@@ -11,7 +11,7 @@ const StyledButton = styled.button`
 	font-weight: bold;
 
 	&:hover {
-		filter: brightness(115%);
+		background-color: hsl(var(--brand-hue) var(--brand-saturation) calc(var(--brand-lightness) * 1.2));
 	}
 `;
 

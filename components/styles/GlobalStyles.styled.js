@@ -204,29 +204,66 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	:root {
-	color-scheme: light;
+		color-scheme: light;
 
-	/* set defaults */
-	--brand: var(--brand-light);
-	--text1: var(--text1-light);
-	--text2: var(--text2-light);
-	--text-on-brand: var(--text-on-brand-light));
-	--surface1: var(--surface1-light);
-	--surface2: var(--surface2-light);
-	--surface3: var(--surface3-light);
-	--surface4: var(--surface4-light);
-	--box-shadow-xxs: var(--box-shadow-xxs-light);
-	--box-shadow-xs: var(--box-shadow-xs-light);
-	--box-shadow-sm: var(--box-shadow-sm-light);
-	--box-shadow-ms: var(--box-shadow-ms-light);
-	--box-shadow-md: var(--box-shadow-md-light);
-	--box-shadow-ml: var(--box-shadow-ml-light);
-	--box-shadow-lg: var(--box-shadow-lg-light);
-	--box-shadow-xl: var(--box-shadow-xl-light);
+		/* set defaults */
+		--brand: var(--brand-light);
+		--text1: var(--text1-light);
+		--text2: var(--text2-light);
+		--text-on-brand: var(--text-on-brand-light));
+		--surface1: var(--surface1-light);
+		--surface2: var(--surface2-light);
+		--surface3: var(--surface3-light);
+		--surface4: var(--surface4-light);
+		--box-shadow-xxs: var(--box-shadow-xxs-light);
+		--box-shadow-xs: var(--box-shadow-xs-light);
+		--box-shadow-sm: var(--box-shadow-sm-light);
+		--box-shadow-ms: var(--box-shadow-ms-light);
+		--box-shadow-md: var(--box-shadow-md-light);
+		--box-shadow-ml: var(--box-shadow-ml-light);
+		--box-shadow-lg: var(--box-shadow-lg-light);
+		--box-shadow-xl: var(--box-shadow-xl-light);
 	}
 
 	@media (prefers-color-scheme: dark) {
-	:root {
+		:root {
+			color-scheme: dark;
+
+			--brand: var(--brand-dark);
+			--text1: var(--text1-dark);
+			--text2: var(--text2-dark);
+			--text-on-brand: var(--text-on-brand-dark);
+			--surface1: var(--surface1-dark);
+			--surface2: var(--surface2-dark);
+			--surface3: var(--surface3-dark);
+			--surface4: var(--surface4-dark);
+			--box-shadow-xxs: var(--box-shadow-xxs-dark);
+			--box-shadow-xs: var(--box-shadow-xs-dark);
+			--box-shadow-sm: var(--box-shadow-sm-dark);
+			--box-shadow-ms: var(--box-shadow-ms-dark);
+			--box-shadow-md: var(--box-shadow-md-dark);
+			--box-shadow-ml: var(--box-shadow-ml-dark);
+			--box-shadow-lg: var(--box-shadow-lg-dark);
+			--box-shadow-xl: var(--box-shadow-xl-dark);
+		}
+	}
+
+	[color-scheme="light"] {
+		color-scheme: light;
+
+		--brand: var(--brand-light);
+		--text1: var(--text1-light);
+		--text2: var(--text2-light);
+		--text-on-brand: var(--text-on-brand-light));
+		--surface1: var(--surface1-light);
+		--surface2: var(--surface2-light);
+		--surface3: var(--surface3-light);
+		--surface4: var(--surface4-light);
+		--surface-shadow: var(--surface-shadow-light);
+		--shadow-strength: var(--shadow-strength-light);
+	}
+
+	[color-scheme="dark"] {
 		color-scheme: dark;
 
 		--brand: var(--brand-dark);
@@ -237,45 +274,8 @@ export const GlobalStyle = createGlobalStyle`
 		--surface2: var(--surface2-dark);
 		--surface3: var(--surface3-dark);
 		--surface4: var(--surface4-dark);
-		--box-shadow-xxs: var(--box-shadow-xxs-dark);
-		--box-shadow-xs: var(--box-shadow-xs-dark);
-		--box-shadow-sm: var(--box-shadow-sm-dark);
-		--box-shadow-ms: var(--box-shadow-ms-dark);
-		--box-shadow-md: var(--box-shadow-md-dark);
-		--box-shadow-ml: var(--box-shadow-ml-dark);
-		--box-shadow-lg: var(--box-shadow-lg-dark);
-		--box-shadow-xl: var(--box-shadow-xl-dark);
-	}
-}
-
-	[color-scheme="light"] {
-	color-scheme: light;
-
-	--brand: var(--brand-light);
-	--text1: var(--text1-light);
-	--text2: var(--text2-light);
-	--text-on-brand: var(--text-on-brand-light));
-	--surface1: var(--surface1-light);
-	--surface2: var(--surface2-light);
-	--surface3: var(--surface3-light);
-	--surface4: var(--surface4-light);
-	--surface-shadow: var(--surface-shadow-light);
-	--shadow-strength: var(--shadow-strength-light);
-	}
-
-	[color-scheme="dark"] {
-	color-scheme: dark;
-
-	--brand: var(--brand-dark);
-	--text1: var(--text1-dark);
-	--text2: var(--text2-dark);
-	--text-on-brand: var(--text-on-brand-dark);
-	--surface1: var(--surface1-dark);
-	--surface2: var(--surface2-dark);
-	--surface3: var(--surface3-dark);
-	--surface4: var(--surface4-dark);
-	--surface-shadow: var(--surface-shadow-dark);
-	--shadow-strength: var(--shadow-strength-dark);
+		--surface-shadow: var(--surface-shadow-dark);
+		--shadow-strength: var(--shadow-strength-dark);
 	}
 
 	/* Box sizing rules */

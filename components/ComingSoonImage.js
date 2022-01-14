@@ -9,19 +9,22 @@ const ImageContainer = styled.div`
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	@media only screen and (max-width: ${props => props.theme.breakpoints.xs}) {
+		max-width: 85%;
+	}
 `;
 
 const ImageContainerLight = styled(ImageContainer)`
-@media (prefers-color-scheme: dark) {
-	display: none;
-}
+	@media (prefers-color-scheme: dark) {
+		display: none;
+	}
 `;
 
 const ImageContainerDark = styled(ImageContainer)`
-display: none;
-@media (prefers-color-scheme: dark) {
-	display: block;
-}
+	display: none;
+	@media (prefers-color-scheme: dark) {
+		display: block;
+	}
 `;
 
 export default function ComingSoonImage() {

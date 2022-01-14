@@ -1,11 +1,35 @@
+/* Colors
+	primary: '#8dc63f',
+	primary50: '#f2f8e8',
+	primary100: '#ddeec6',
+	primary200: '#c7e3a1',
+	primary300: '#b1d77b',
+	primary400: '#9fcf5d',
+	primary500: '#8ec63f',
+	primary600: '#7eb637',
+	primary700: '#69a22d',
+	primary800: '#558e24',
+	primary900: '#316c11',
+	secondary: '#231F20',
+	secondary50: '#fef8fa',
+	secondary100: '#f9f3f5',
+	secondary200: '#f2eced',
+	secondary300: '#e3dedf',
+	secondary400: '#c0babc',
+	secondary500: '#a19b9d',
+	secondary600: '#777374',
+	secondary700: '#635f60',
+	secondary800: '#444041',
+	secondary900: '#231f20',
+	white: '#fff',
+	black: '#000',
+	offblack: '#0f0f0f'
+*/
+
 export const theme = {
-	colors: {
-		primary: '#b8b8b8',
-		secondary: '#2c2c2c',
-	},
 	fonts: {
-		primary: '"Roboto", sans-serif',
-		secondary: '"Rokkitt", serif;',
+		primary: '"Archive", sans-serif',
+		secondary: '"Roboto", sans-serif;',
 		sizes: {
 			sm: "1rem",
 			md: "1.2rem",

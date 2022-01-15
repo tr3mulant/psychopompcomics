@@ -1,11 +1,11 @@
-version: '3'
+version: "3"
 services:
   psychopompcomics:
     image: psychopompcomics.com:dev
     container_name: psychopompcomics
     environment:
-      DEBUG: 'true'
-    build: 
+      DEBUG: "true"
+    build:
       context: ./
       dockerfile: ./dev.Dockerfile
     volumes:

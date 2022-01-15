@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   psychopompcomics:
@@ -10,7 +10,7 @@ services:
         - APP_ENV=prod
     restart: always
     environment:
-      PRODUCTION: 'true'
+      PRODUCTION: "true"
     networks:
       - app-network
 
@@ -32,8 +32,8 @@ services:
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
     networks:
-    - app-network
-    
+      - app-network
+
 networks:
   app-network:
     driver: bridge

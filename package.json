@@ -18,7 +18,11 @@
     "doc-down": "docker-compose down",
     "doc-build": "docker-compose build",
     "doc-build-psy": "docker-compose build psychopompcomics",
-    "doc-build-nginx": "docker-compose build nginx"
+    "doc-build-nginx": "docker-compose build nginx",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "html-entities": "^2.3.2",
@@ -36,8 +40,10 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^8.6.0",
+    "husky": "^7.0.4",
     "jest": "^27.4.5",
     "jest-styled-components": "^7.0.8",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "prettier-eslint": "^13.0.0",
     "react-test-renderer": "^17.0.2"

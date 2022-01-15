@@ -12,9 +12,6 @@
 /.next/
 /out/
 
-# dev
-/.husky
-
 # production
 /build
 

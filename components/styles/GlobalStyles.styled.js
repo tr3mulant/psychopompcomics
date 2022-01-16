@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { theme } from '../themes/DefaultTheme'
+import { createGlobalStyle } from "styled-components";
+import { theme } from "../themes/DefaultTheme";
 
 export const GlobalStyle = createGlobalStyle`
 	* {
@@ -327,7 +327,7 @@ export const GlobalStyle = createGlobalStyle`
 		min-height: 100vh;
 		text-rendering: optimizeSpeed;
 		line-height: 1.5;
-		font-family: ${(theme.fonts.secondary)};
+		font-family: ${theme.fonts.secondary};
 		color: var(--text1);
 		font-feature-settings: "kern";
 	}
@@ -349,18 +349,18 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	h1,h2,h3 {
-		font-family: ${(theme.fonts.primary)};
+		font-family: ${theme.fonts.primary};
 	}
 
 	h4,h5,h6,p,input {
-		font-family: ${(theme.fonts.secondary)};
+		font-family: ${theme.fonts.secondary};
 	}
 
 	p,input,button {
 		font-size: 1.8rem;
 		line-height: 1.333;
 
-		@media (max-width: ${(theme.breakpoints.md)}) {
+		@media (max-width: ${theme.breakpoints.md}) {
 			font-size: 1.6rem;
 			line-height: 1.375;
 		}
@@ -370,7 +370,7 @@ export const GlobalStyle = createGlobalStyle`
 		font-size: 5.2rem;
 		line-height: 1.06;
 
-		@media (max-width: ${(theme.breakpoints.md)}) {
+		@media (max-width: ${theme.breakpoints.md}) {
 			font-size: 3.6rem;
 			line-height: 1.18;
 		}
@@ -380,7 +380,7 @@ export const GlobalStyle = createGlobalStyle`
 		font-size: 3rem;
 		line-height: 1.12;
 
-		@media (max-width: ${(theme.breakpoints.md)}) {
+		@media (max-width: ${theme.breakpoints.md}) {
 			font-size: 2.8rem;
 			line-height: 1.21;
 		}

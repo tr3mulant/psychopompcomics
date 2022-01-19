@@ -1,12 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "../themes/DefaultTheme";
 
+/* Drawn from https://web.dev/building-a-color-scheme/ */
 export const GlobalStyle = createGlobalStyle`
 	* {
 		/* brand foundation */
 		--brand-hue: 85;
 		--brand-saturation: 54%;
 		--brand-lightness: 51%;
+		--brand-rgb: 142, 198, 63;
 
 		/* light */
 		--brand-hue-light: var(--brand-hue);
@@ -352,16 +354,22 @@ export const GlobalStyle = createGlobalStyle`
 		font-family: ${theme.fonts.primary};
 	}
 
-	h4,h5,h6,p,input {
+	h4,h5,h6,p,input,button,a {
 		font-family: ${theme.fonts.secondary};
 	}
 
-	p,input,button {
+	p,input,button,a {
 		font-size: 1.8rem;
-		line-height: 1.333;
 
 		@media (max-width: ${theme.breakpoints.md}) {
 			font-size: 1.6rem;
+		}
+	}
+
+	p,input,a {
+		line-height: 1.333;
+
+		@media (max-width: ${theme.breakpoints.md}) {
 			line-height: 1.375;
 		}
 	}

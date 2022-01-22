@@ -11,7 +11,7 @@ const EmailCaptureContainer = styled.article`
   border-bottom-right-radius: 4px;
 
   & input {
-    max-width: calc(100% - 109px);
+    max-width: calc(100% - 137px);
     border-top: 1px solid var(--brand);
     border-left: 1px solid var(--brand);
     border-bottom: 1px solid var(--brand);
@@ -20,9 +20,12 @@ const EmailCaptureContainer = styled.article`
     color: var(--text2);
   }
 
-  & button {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  & > * {
+    margin-top: 0;
+  }
+
+  & > div > div:first-child {
+    display: none;
   }
 `;
 

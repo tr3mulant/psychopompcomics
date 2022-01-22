@@ -70,7 +70,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           className="mr-2"
           onKeyUp={(event) => handleInputKeyEvent(event)}
         />
-        <StyledButton onClick={handleFormSubmit}>Submit</StyledButton>
+        <StyledButton href="#" onClick={handleFormSubmit}>
+          Submit
+        </StyledButton>
       </EmailCaptureContainer>
       <div className="newsletter-form-info">
         {status === "sending" && <div>Sending...</div>}

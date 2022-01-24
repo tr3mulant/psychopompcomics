@@ -4,8 +4,7 @@ import { GlobalStyle } from "../components/styles/GlobalStyles.styled";
 import Home from "../pages/index";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import 'jest-styled-components'
 
 configure({ adapter: new Adapter() });
 

@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   psychopompcomics:
     image: psychopompcomics.com:dev
@@ -12,6 +13,7 @@ services:
       - ./:/app
       - /app/node_modules
       - /app/.next
+      
   nginx:
     image: psychopompcomics.com_nginx:dev
     container_name: psychopompcomics_nginx

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styled from "styled-components";
-import deer_light from "/images/final_wtype_inv_cropped.svg";
-import deer_dark from "/images/final_wtype_cropped.svg";
+import deer_light from "../images/final_wtype_inv_cropped@4x.png";
+import deer_dark from "../images/final_wtype_transparent_cropped@4x.png";
 
 const ImageContainer = styled.div`
   margin-bottom: ${(props) => props.theme.spaces.xxl};
-  width: 420px;
+  width: 42rem;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;

@@ -40,16 +40,15 @@ export const theme = {
     },
   },
   breakpoints: {
-    xxs: "37.4rem",
-    xs: "57.5rem",
-    xxl: "18.9remx",
-    sm: "76.7rem",
-    md: "99.1rem",
-    lg: "127.9rem",
-    xl: "159.9rem",
+    xxs: "368px", //
+    xs: "576px", //
+    sm: "768px", //
+    md: "992px", //
+    lg: "1280px", //
+    xl: "1600px",
   },
   spaces: {
-    zero: "0px",
+    zero: "0",
     xs: "0.2rem",
     sm: "0.4rem",
     ms: "0.8rem",

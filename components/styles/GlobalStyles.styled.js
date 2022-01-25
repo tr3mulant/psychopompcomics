@@ -53,61 +53,61 @@ export const GlobalStyle = createGlobalStyle`
 		--surface4-light: hsl(var(--surface4-hue-light) var(--surface4-saturation-light) var(--surface4-lightness-light));
 		/* Shadows generated with https://shadows.brumm.af */
 		--box-shadow-xxs-light:
-			0.1px 0.1px 0.1px rgba(0, 0, 0, 0.02),
-			0.1px 0.1px 0.1px rgba(0, 0, 0, 0.028),
-			0.3px 0.3px 0.3px rgba(0, 0, 0, 0.035),
-			0.4px 0.4px 0.4px rgba(0, 0, 0, 0.042),
-			0.8px 0.8px 0.8px rgba(0, 0, 0, 0.05)
-			2px 2px 2px rgba(0, 0, 0, 0.07);
+			.01rem .01rem .01rem rgba(0, 0, 0, 0.02),
+			.01rem .01rem .01rem rgba(0, 0, 0, 0.028),
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.035),
+			.04rem .04rem .04rem rgba(0, 0, 0, 0.042),
+			.08rem .08rem .08rem rgba(0, 0, 0, 0.05)
+			.2rem .2rem .2rem rgba(0, 0, 0, 0.07);
 		--box-shadow-xs-light:
-			0.1px 0.1px 0.1px rgba(0, 0, 0, 0.02),
-			0.3px 0.3px 0.3px rgba(0, 0, 0, 0.028),
-			0.5px 0.5px 0.5px rgba(0, 0, 0, 0.035),
-			0.9px 0.9px 0.9px rgba(0, 0, 0, 0.042),
-			1.7px 1.7px 1.7px rgba(0, 0, 0, 0.05),
-			4px 4px 4px rgba(0, 0, 0, 0.07);
+			.01rem .01rem .01rem rgba(0, 0, 0, 0.02),
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.028),
+			.05rem .05rem .05rem rgba(0, 0, 0, 0.035),
+			.09rem .09rem .09rem rgba(0, 0, 0, 0.042),
+			.17rem .17rem .17rem rgba(0, 0, 0, 0.05),
+			.4rem .4rem .4rem rgba(0, 0, 0, 0.07);
 		--box-shadow-sm-light:
-			0.2px 0.2px 0.2px rgba(0, 0, 0, 0.02),
-			0.4px 0.4px 0.4px rgba(0, 0, 0, 0.028),
-			0.8px 0.8px 0.8px rgba(0, 0, 0, 0.035),
-			1.3px 1.3px 1.3px rgba(0, 0, 0, 0.404277),
-			2.5px 2.5px 2.5px rgba(0, 0, 0, 0.05)
-			6px 6px 6px rgba(0, 0, 0, 0.07);
+			.02rem .02rem .02rem rgba(0, 0, 0, 0.02),
+			.04rem .04rem .04rem rgba(0, 0, 0, 0.028),
+			.08rem .08rem .08rem rgba(0, 0, 0, 0.035),
+			.13rem .13rem .13rem rgba(0, 0, 0, 0.404277),
+			.25rem .25rem .25rem rgba(0, 0, 0, 0.05)
+			.6rem .6rem .6rem rgba(0, 0, 0, 0.07);
 		--box-shadow-ms-light:
-			0.2px 0.2px 0.2px rgba(0, 0, 0, 0.02),
-			0.5px 0.5px 0.5px rgba(0, 0, 0, 0.028),
-			1px 1px 0.9px rgba(0, 0, 0, 0.035),
-			1.8px 1.8px 1.6px rgba(0, 0, 0, 0.042),
-			3.3px 3.3px 2.9px rgba(0, 0, 0, 0.05),
-			8px 8px 7px rgba(0, 0, 0, 0.07);
+			.02rem .02rem .02rem rgba(0, 0, 0, 0.02),
+			.05rem .05rem .05rem rgba(0, 0, 0, 0.028),
+			.1rem .1rem .09rem rgba(0, 0, 0, 0.035),
+			.18rem .18rem .16rem rgba(0, 0, 0, 0.042),
+			.33rem .33rem .29rem rgba(0, 0, 0, 0.05),
+			.8rem .8rem .7rem rgba(0, 0, 0, 0.07);
 		--box-shadow-md-light:
-			0.3px 0.3px 0.3px rgba(0, 0, 0, 0.02),
-			0.8px 0.8px 0.7px rgba(0, 0, 0, 0.028),
-			1.5px 1.5px 1.4px rgba(0, 0, 0, 0.035),
-			2.7px 2.7px 2.5px rgba(0, 0, 0, 0.042),
-			5px 5px 4.6px rgba(0, 0, 0, 0.05),
-			12px 12px 11px rgba(0, 0, 0, 0.07);
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.02),
+			.08rem .08rem .07rem rgba(0, 0, 0, 0.028),
+			.15rem .15rem .14rem rgba(0, 0, 0, 0.035),
+			.27rem .27rem .25rem rgba(0, 0, 0, 0.042),
+			.5rem .5rem .46rem rgba(0, 0, 0, 0.05),
+			1.2rem 1.2rem 1.1rem rgba(0, 0, 0, 0.07);
 		--box-shadow-ml-light:
-			0.7px 0.7px 0.6px rgba(0, 0, 0, 0.02),
-			1.7px 1.7px 1.5px rgba(0, 0, 0, 0.028),
-			3.1px 3.1px 2.9px rgba(0, 0, 0, 0.035),
-			5.6px 5.6px 5.1px rgba(0, 0, 0, 0.042),
-			10.4px 10.4px 9.6px rgba(0, 0, 0, 0.05),
-			25px 25px 23px rgba(0, 0, 0, 0.07);
+			.07rem .07rem .06rem rgba(0, 0, 0, 0.02),
+			.17rem .17rem .15rem rgba(0, 0, 0, 0.028),
+			.31rem .31rem .29rem rgba(0, 0, 0, 0.035),
+			.56rem .56rem .51rem rgba(0, 0, 0, 0.042),
+			10.04rem 10.04rem .96rem rgba(0, 0, 0, 0.05),
+			2.5rem 2.5rem 2.3rem rgba(0, 0, 0, 0.07);
 		--box-shadow-lg-light:
-			1.4px 1.4px 1.2px rgba(0, 0, 0, 0.02),
-			3.3px 3.3px 3px rgba(0, 0, 0, 0.028),
-			6.3px 6.3px 5.6px rgba(0, 0, 0, 0.035),
-			11.2px 11.2px 10.1px rgba(0, 0, 0, 0.042),
-			20.9px 20.9px 18.8px rgba(0, 0, 0, 0.05),
-			50px 50px 45px rgba(0, 0, 0, 0.07);
+			.14rem .14rem .12rem rgba(0, 0, 0, 0.02),
+			.33rem .33rem .3rem rgba(0, 0, 0, 0.028),
+			.63rem .63rem .56rem rgba(0, 0, 0, 0.035),
+			1.12rem 1.12rem 10.01rem rgba(0, 0, 0, 0.042),
+			20.09rem 20.09rem 1.88rem rgba(0, 0, 0, 0.05),
+			5rem 5rem 4.5rem rgba(0, 0, 0, 0.07);
 		--box-shadow-xl-light:
-			2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-			6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-			12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-			22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-			41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-			100px 100px 80px rgba(0, 0, 0, 0.07);
+			.28rem .28rem .22rem rgba(0, 0, 0, 0.02),
+			.67rem .67rem .53rem rgba(0, 0, 0, 0.028),
+			1.25rem 1.25rem 1rem rgba(0, 0, 0, 0.035),
+			2.23rem 2.23rem 1.79rem rgba(0, 0, 0, 0.042),
+			4.18rem 4.18rem 3.34rem rgba(0, 0, 0, 0.05),
+			10rem 10rem 8rem rgba(0, 0, 0, 0.07);
 
 		/* dark */
 		--brand-dark: hsl(
@@ -155,54 +155,61 @@ export const GlobalStyle = createGlobalStyle`
 		--surface3-dark: hsl(var(--surface3-hue-dark) var(--surface3-saturation-dark) var(--surface3-lightness-dark));
 		--surface4-dark: hsl(var(--surface4-hue-dark) var(--surface4-saturation-dark) var(--surface4-lightness-dark));
 		--box-shadow-xxs-dark:
-			0.1px 0.1px 0.1px rgba(0, 0, 0, 0.225),
-			0.1px 0.1px 0.1px rgba(0, 0, 0, 0.323),
-			0.3px 0.3px 0.3px rgba(0, 0, 0, 0.4),
-			0.4px 0.4px 0.4px rgba(0, 0, 0, 0.477),
-			0.8px 0.8px 0.8px rgba(0, 0, 0, 0.575)
-			2px 2px 2px rgba(0, 0, 0, 0.8);
+			.01rem .01rem .01rem rgba(0, 0, 0, 0.225),
+			.01rem .01rem .01rem rgba(0, 0, 0, 0.323),
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.4),
+			.04rem .04rem .04rem rgba(0, 0, 0, 0.477),
+			.08rem .08rem .08rem rgba(0, 0, 0, 0.575)
+			.2rem .2rem .2rem rgba(0, 0, 0, 0.8);
+		--box-shadow-xs-dark:
+			.01rem .01rem .01rem rgba(0, 0, 0,  0.225),
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.323),
+			.05rem .05rem .05rem rgba(0, 0, 0, 0.4),
+			.09rem .09rem .09rem rgba(0, 0, 0, 0.477),
+			.17rem .17rem .17rem rgba(0, 0, 0, 0.575),
+			.4rem .4rem .4rem rgba(0, 0, 0, 0.8);
 		--box-shadow-sm-dark:
-			0.2px 0.2px 0.2px rgba(0, 0, 0, 0.225),
-			0.4px 0.4px 0.4px rgba(0, 0, 0, 0.323),
-			0.8px 0.8px 0.8px rgba(0, 0, 0, 0.4),
-			1.3px 1.3px 1.3px rgba(0, 0, 0, 0.477),
-			2.5px 2.5px 2.5px rgba(0, 0, 0, 0.575)
-			6px 6px 6px rgba(0, 0, 0, 0.8);
+			.02rem .02rem .02rem rgba(0, 0, 0, 0.225),
+			.04rem .04rem .04rem rgba(0, 0, 0, 0.323),
+			.08rem .08rem .08rem rgba(0, 0, 0, 0.4),
+			.13rem .13rem .13rem rgba(0, 0, 0, 0.477),
+			.25rem .25rem .25rem rgba(0, 0, 0, 0.575)
+			.6rem .6rem .6rem rgba(0, 0, 0, 0.8);
 		--box-shadow-ms-dark:
-			0.2px 0.2px 0.2px rgba(0, 0, 0, 0.225),
-			0.5px 0.5px 0.5px rgba(0, 0, 0, 0.323),
-			1px 1px 0.9px rgba(0, 0, 0, 0.4),
-			1.8px 1.8px 1.6px rgba(0, 0, 0, 0.477),
-			3.3px 3.3px 2.9px rgba(0, 0, 0, 0.575),
-			8px 8px 7px rgba(0, 0, 0, 0.8);
+			.02rem .02rem .02rem rgba(0, 0, 0, 0.225),
+			.05rem .05rem .05rem rgba(0, 0, 0, 0.323),
+			.1rem .1rem .09rem rgba(0, 0, 0, 0.4),
+			.18rem .18rem .16rem rgba(0, 0, 0, 0.477),
+			.33rem .33rem .29rem rgba(0, 0, 0, 0.575),
+			.8rem .8rem .7rem rgba(0, 0, 0, 0.8);
 		--box-shadow-md-dark:
-			0.3px 0.3px 0.3px rgba(0, 0, 0, 0.225),
-			0.8px 0.8px 0.7px rgba(0, 0, 0, 0.323),
-			1.5px 1.5px 1.4px rgba(0, 0, 0, 0.4),
-			2.7px 2.7px 2.5px rgba(0, 0, 0, 0.477),
-			5px 5px 4.6px rgba(0, 0, 0, 0.575),
-			12px 12px 11px rgba(0, 0, 0, 0.8);
+			.03rem .03rem .03rem rgba(0, 0, 0, 0.225),
+			.08rem .08rem .07rem rgba(0, 0, 0, 0.323),
+			.15rem .15rem .14rem rgba(0, 0, 0, 0.4),
+			.27rem .27rem .25rem rgba(0, 0, 0, 0.477),
+			.5rem .5rem .46rem rgba(0, 0, 0, 0.575),
+			1.2rem 1.2rem 1.1rem rgba(0, 0, 0, 0.8);
 		--box-shadow-ml-dark:
-			0.7px 0.7px 0.6px rgba(0, 0, 0, 0.225),
-			1.7px 1.7px 1.5px rgba(0, 0, 0, 0.323),
-			3.1px 3.1px 2.9px rgba(0, 0, 0, 0.4),
-			5.6px 5.6px 5.1px rgba(0, 0, 0, 0.477),
-			10.4px 10.4px 9.6px rgba(0, 0, 0, 0.575),
-			25px 25px 23px rgba(0, 0, 0, 0.8);
+			.07rem .07rem .06rem rgba(0, 0, 0, 0.225),
+			.17rem .17rem .15rem rgba(0, 0, 0, 0.323),
+			.31rem .31rem .29rem rgba(0, 0, 0, 0.4),
+			.56rem .56rem .51rem rgba(0, 0, 0, 0.477),
+			10.04rem 10.04rem .96rem rgba(0, 0, 0, 0.575),
+			2.5rem 2.5rem 2.3rem rgba(0, 0, 0, 0.8);
 		--box-shadow-lg-dark:
-			1.4px 1.4px 1.2px rgba(0, 0, 0, 0.225),
-			3.3px 3.3px 3px rgba(0, 0, 0, 0.323),
-			6.3px 6.3px 5.6px rgba(0, 0, 0, 0.4),
-			11.2px 11.2px 10.1px rgba(0, 0, 0, 0.477),
-			20.9px 20.9px 18.8px rgba(0, 0, 0, 0.575),
-			50px 50px 45px rgba(0, 0, 0, 0.8);
+			.14rem .14rem .12rem rgba(0, 0, 0, 0.225),
+			.33rem .33rem .3rem rgba(0, 0, 0, 0.323),
+			.63rem .63rem .56rem rgba(0, 0, 0, 0.4),
+			1.12rem 1.12rem 10.01rem rgba(0, 0, 0, 0.477),
+			20.09rem 20.09rem 1.88rem rgba(0, 0, 0, 0.575),
+			5rem 5rem 4.5rem rgba(0, 0, 0, 0.8);
 		--box-shadow-xl-dark:
-			2.8px 2.8px 2.2px rgba(0, 0, 0, 0.225),
-			6.7px 6.7px 5.3px rgba(0, 0, 0, 0.323),
-			12.5px 12.5px 10px rgba(0, 0, 0, 0.4),
-			22.3px 22.3px 17.9px rgba(0, 0, 0, 0.477),
-			41.8px 41.8px 33.4px rgba(0, 0, 0, 0.575),
-			100px 100px 80px rgba(0, 0, 0, 0.8);
+			.28rem .28rem .22rem rgba(0, 0, 0, 0.225),
+			.67rem .67rem .53rem rgba(0, 0, 0, 0.323),
+			1.25rem 1.25rem 1rem rgba(0, 0, 0, 0.4),
+			2.23rem 2.23rem 1.79rem rgba(0, 0, 0, 0.477),
+			4.18rem 4.18rem 3.34rem rgba(0, 0, 0, 0.575),
+			10rem 10rem 8rem rgba(0, 0, 0, 0.8);
 	}
 
 	:root {
@@ -367,30 +374,30 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	p,input,a {
-		line-height: 1.333;
-
+		line-height: 1.375;
+		
 		@media (max-width: ${theme.breakpoints.md}) {
-			line-height: 1.375;
+			line-height: 1.333;
 		}
 	}
 
 	h1 {
-		font-size: 5.2rem;
-		line-height: 1.06;
-
-		@media (max-width: ${theme.breakpoints.md}) {
-			font-size: 3.6rem;
-			line-height: 1.18;
+	font-size: 3.6rem;
+	line-height: 1.18;
+		
+		@media (min-width: ${theme.breakpoints.md}) {
+			line-height: 1.06;
+			font-size: 5.2rem;
 		}
 	}
 
 	h2 {
-		font-size: 3rem;
-		line-height: 1.12;
-
-		@media (max-width: ${theme.breakpoints.md}) {
-			font-size: 2.8rem;
-			line-height: 1.21;
+	font-size: 2.8rem;
+	line-height: 1.21;
+		
+		@media (min-width: ${theme.breakpoints.md}) {
+			font-size: 3rem;
+			line-height: 1.12;
 		}
 	}
 

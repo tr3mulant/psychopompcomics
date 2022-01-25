@@ -1,9 +1,9 @@
 name: build
 
 env:
-  REGISTRY: "registry.digitalocean.com/parabola/"
-  IMAGE_NAME: "psychopompcomics.com"
-  IMAGE_NAME_SERVER: "psychopompcomics.com_nginx"
+  REGISTRY: 'registry.digitalocean.com/parabola/'
+  IMAGE_NAME: 'psychopompcomics.com'
+  IMAGE_NAME_SERVER: 'psychopompcomics.com_nginx'
 
 on:
   push:
@@ -66,8 +66,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "docker-compose.prod.yml"
-          target: "~/psychopompcomics"
+          source: 'docker-compose.prod.yml'
+          target: '~/psychopompcomics'
 
       - name: Deploy to Digital Ocean droplet via SSH action
         uses: appleboy/ssh-action@master

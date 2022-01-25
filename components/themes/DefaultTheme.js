@@ -27,36 +27,36 @@
 */
 
 export const theme = {
-  fonts: {
-    primary: '"Archive", sans-serif',
-    secondary: '"Roboto", sans-serif;',
-    sizes: {
-      xs: "1.6rem",
-      sm: "1.8rem",
-      md: "2.2rem",
-      lg: "3rem",
-      xl: "5.2rem",
-      xxl: "3.5rem",
-    },
-  },
-  breakpoints: {
-    xxs: "368px", //
-    xs: "576px", //
-    sm: "768px", //
-    md: "992px", //
-    lg: "1280px", //
-    xl: "1600px",
-  },
-  spaces: {
-    zero: "0",
-    xs: "0.2rem",
-    sm: "0.4rem",
-    ms: "0.8rem",
-    md: "1.2rem",
-    ml: "1.6rem",
-    lg: "2.4rem",
-    xl: "3.2rem",
-    xxl: "6.4rem",
-    xxxl: "9.6rem",
-  },
+	fonts: {
+		primary: '"Archive", sans-serif',
+		secondary: '"Roboto", sans-serif;',
+		sizes: {
+			xs: '1.6rem',
+			sm: '1.8rem',
+			md: '2.2rem',
+			lg: '3rem',
+			xl: '5.2rem',
+			xxl: '3.5rem',
+		},
+	},
+	breakpoints: {
+		xxs: '368px', //
+		xs: '576px', //
+		sm: '768px', //
+		md: '992px', //
+		lg: '1280px', //
+		xl: '1600px',
+	},
+	spaces: {
+		zero: '0',
+		xs: '0.2rem',
+		sm: '0.4rem',
+		ms: '0.8rem',
+		md: '1.2rem',
+		ml: '1.6rem',
+		lg: '2.4rem',
+		xl: '3.2rem',
+		xxl: '6.4rem',
+		xxxl: '9.6rem',
+	},
 };

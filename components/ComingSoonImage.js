@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
-import deer_light from "../images/final_wtype_inv_cropped.svg";
-import deer_dark from "../images/final_wtype_cropped.svg";
+import deer_light from "/images/final_wtype_inv_cropped.svg";
+import deer_dark from "/images/final_wtype_cropped.svg";
 
 const ImageContainer = styled.div`
   margin-bottom: ${(props) => props.theme.spaces.xxl};

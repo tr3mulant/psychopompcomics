@@ -1,11 +1,11 @@
-version: "3"
+version: '3'
 
 services:
   psychopompcomics:
     image: psychopompcomics.com:dev
     container_name: psychopompcomics
     environment:
-      DEBUG: "true"
+      DEBUG: 'true'
     build:
       context: ./
       dockerfile: ./dev.Dockerfile
@@ -13,7 +13,7 @@ services:
       - ./:/app
       - /app/node_modules
       - /app/.next
-      
+
   nginx:
     image: psychopompcomics.com_nginx:dev
     container_name: psychopompcomics_nginx

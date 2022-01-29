@@ -1,22 +1,22 @@
-import ComingSoon from "../components/styles/ComingSoon.styled";
-import styled from "styled-components";
-import ComingSoonImage from "../components/ComingSoonImage";
-import NewsletterSubscribe from "../components/NewsletterSubscribe";
+import ComingSoon from '../components/styles/ComingSoon.styled';
+import styled from 'styled-components';
+import ComingSoonImage from '../components/ComingSoonImage';
+import NewsletterSubscribe from '../components/NewsletterSubscribe';
 
 const Title = styled.h1`
-  text-align: center;
-  color: var(--text1);
-  margin: 0 0 32px;
+	text-align: center;
+	color: var(--text1);
+	margin: 0 0 3.2rem;
 `;
 export default function Home() {
-  return (
-    <>
-      <ComingSoon>
-        <Title>Coming Soon</Title>
-        <ComingSoonImage />
-        <h2>Sign up to receive email updates</h2>
-        <NewsletterSubscribe />
-      </ComingSoon>
-    </>
-  );
+	return (
+		<>
+			<ComingSoon>
+				<Title>Coming Soon</Title>
+				<ComingSoonImage />
+				<h2>Sign up to receive email updates</h2>
+				<NewsletterSubscribe />
+			</ComingSoon>
+		</>
+	);
 }

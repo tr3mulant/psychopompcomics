@@ -29,12 +29,7 @@ export default function App({ Component, pageProps }) {
 					key='favicon16'
 				/>
 				<link rel='manifest' href='/site.webmanifest' key='manifest' />
-				<link
-					rel='mask-icon'
-					href='/safari-pinned-tab.svg'
-					color='#5bbad5'
-					key='mask-icon'
-				/>
+				<link rel='mask-icon' href='/safari-pinned-tab.svg' color='#000000' />
 				<meta
 					name='msapplication-TileColor'
 					content='#000000'

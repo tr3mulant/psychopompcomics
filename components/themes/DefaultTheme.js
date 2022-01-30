@@ -40,11 +40,11 @@ export const theme = {
 		},
 	},
 	breakpoints: {
-		xxs: '368px', //
-		xs: '576px', //
-		sm: '768px', //
-		md: '992px', //
-		lg: '1280px', //
+		xxs: '368px',
+		xs: '576px',
+		sm: '768px',
+		md: '992px',
+		lg: '1280px',
 		xl: '1600px',
 	},
 	spaces: {

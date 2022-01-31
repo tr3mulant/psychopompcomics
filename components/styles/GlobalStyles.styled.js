@@ -14,15 +14,15 @@ export const GlobalStyle = createGlobalStyle`
 		--brand-hue-light: var(--brand-hue);
 		--brand-saturation-light: var(--brand-saturation);
 		--brand-lightness-light: var(--brand-lightness);
-		
+
 		--surface1-hue-light: var(--brand-hue-light);
 		--surface1-saturation-light: 20%;
 		--surface1-lightness-light: 99%;
-		
+
 		--surface2-hue-light: var(--brand-hue-light);
 		--surface2-saturation-light: 20%;
 		--surface2-lightness-light: 92%;
-		
+
 		--surface3-hue-light: var(--brand-hue-light);
 		--surface3-saturation-light: 25%;
 		--surface3-lightness-light: 90%;
@@ -111,7 +111,7 @@ export const GlobalStyle = createGlobalStyle`
 
 		/* dark */
 		--brand-dark: hsl(
-			var(--brand-hue) 
+			var(--brand-hue)
 			calc(var(--brand-saturation))
 			calc(var(--brand-lightness))
 		);
@@ -119,15 +119,15 @@ export const GlobalStyle = createGlobalStyle`
 		--brand-hue-dark: var(--brand-hue);
 		--brand-saturation-dark: var(--brand-saturation);
 		--brand-lightness-dark: var(--brand-lightness);
-		
+
 		--surface1-hue-dark: 0;
 		--surface1-saturation-dark: 0%;
 		--surface1-lightness-dark: 5.9%;
-		
+
 		--surface2-hue-dark: 345;
 		--surface2-saturation-dark: 6.1%;
 		--surface2-lightness-dark: 12.9%;
-		
+
 		--surface3-hue-dark: 345;
 		--surface3-saturation-dark: 3%;
 		--surface3-lightness-dark: 25.9%;
@@ -366,53 +366,53 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	p,input,button,a {
-		font-size: 1.8rem;
+		font-size: ${theme.fonts.sizes.xs};
 
-		@media (max-width: ${theme.breakpoints.md}) {
-			font-size: 1.6rem;
+		@media (min-width: ${theme.breakpoints.md}) {
+			font-size: ${theme.fonts.sizes.sm};
 		}
 	}
 
 	p,input,a {
-		line-height: 1.375;
-		
-		@media (max-width: ${theme.breakpoints.md}) {
-			line-height: 1.333;
+		line-height: 1.333;
+
+		@media (min-width: ${theme.breakpoints.md}) {
+			line-height: 1.375;
 		}
 	}
 
 	h1 {
-	font-size: 3.6rem;
+	font-size: ${theme.fonts.sizes.lg};
 	line-height: 1.18;
-		
+
 		@media (min-width: ${theme.breakpoints.md}) {
 			line-height: 1.06;
-			font-size: 5.2rem;
+			font-size: ${theme.fonts.sizes.xxl};
 		}
 	}
 
 	h2 {
-	font-size: 2.8rem;
+	font-size: ${theme.fonts.sizes.md};
 	line-height: 1.21;
-		
+
 		@media (min-width: ${theme.breakpoints.md}) {
-			font-size: 3rem;
+			font-size: ${theme.fonts.sizes.ml};
 			line-height: 1.12;
 		}
 	}
 
 	h3 {
-		font-size: 2.2rem;
+		font-size: ${theme.fonts.sizes.ms};
 		line-height: 1.27;
 	}
 
 	h4 {
-		font-size: 1.8rem;
+		font-size: ${theme.fonts.sizes.sm};
 		line-height: 1.333;
 	}
 
 	h5 {
-		font-size: 1.6rem;
+		font-size: ${theme.fonts.sizes.xs};
 		line-height: 1.25;
 	}
 

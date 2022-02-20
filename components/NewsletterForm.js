@@ -3,7 +3,7 @@ import { decode } from 'html-entities';
 import StyledButton from './styles/StyledButton.styled';
 import EmailCaptureContainer from './styles/EmailCaptureContainer.styled';
 
-const NewsletterForm = ({ status, message, onValidated }) => {
+const NewsletterForm = ({ status, message, onValidated, className }) => {
 	const [error, setError] = useState(null);
 	const [email, setEmail] = useState(null);
 
@@ -61,13 +61,12 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 	};
 
 	return (
-		<>
+		<div className={className}>
 			<EmailCaptureContainer>
 				<input
 					onChange={(event) => setEmail(event?.target?.value ?? '')}
 					type='email'
 					placeholder='Your email'
-					className='mr-2'
 					onKeyUp={(event) => handleInputKeyEvent(event)}
 				/>
 				<StyledButton href='#'>
@@ -86,7 +85,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 					<div dangerouslySetInnerHTML={{ __html: decode(message) }} />
 				)}
 			</div>
-		</>
+		</div>
 	);
 };
 

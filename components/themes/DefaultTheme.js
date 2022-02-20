@@ -36,7 +36,7 @@ export const theme = {
 			md: '2.2rem',
 			lg: '3rem',
 			xl: '5.2rem',
-			xxl: '3.5rem',
+			xxl: '7.4rem',
 		},
 	},
 	breakpoints: {

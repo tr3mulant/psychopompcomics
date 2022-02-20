@@ -10,7 +10,7 @@ const Title = styled.h1`
 export default function Collectibles() {
 	return (
 		<>
-            <Title>Style 4</Title>
+            <Title>Collectibles</Title>
         </>
     )
 };

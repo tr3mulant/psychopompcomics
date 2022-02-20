@@ -10,7 +10,7 @@ const Title = styled.h1`
 export default function Merch() {
 	return (
 		<>
-            <Title>Navbar Default</Title>
+            <Title>Merch</Title>
         </>
     )
 };

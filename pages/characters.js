@@ -10,7 +10,7 @@ const Title = styled.h1`
 export default function Characters() {
 	return (
 		<>
-            <Title>Style 5</Title>
+            <Title>Characters</Title>
         </>
     )
 };

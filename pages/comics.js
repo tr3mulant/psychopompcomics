@@ -10,7 +10,7 @@ const Title = styled.h1`
 export default function Comics() {
 	return (
 		<>
-            <Title>Style 3</Title>
+            <Title>Comics</Title>
         </>
     )
 };

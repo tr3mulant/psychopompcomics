@@ -10,7 +10,7 @@ const Title = styled.h1`
 export default function Artists() {
 	return (
 		<>
-            <Title>Style 6</Title>
+            <Title>Artists</Title>
         </>
     )
 };

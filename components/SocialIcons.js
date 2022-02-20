@@ -5,9 +5,9 @@ import discord_light from '../images/discord_icon_light.svg';
 import discord_dark from '../images/discord_icon_dark.svg';
 import discord_color from '../images/discord_icon_blurple.svg';
 import discord_brand_color from '../images/discord_icon_ppc_branded.svg';
-import twiiter_brand_color from '../images/iconmonstr-twitter-1-brand-color.svg';
-import twitter_light from '../images/iconmonstr-twitter-1-white.svg';
-import twitter_dark from '../images/iconmonstr-twitter-1.svg';
+import twitter_light from '../images/twitter_icon_light.svg';
+import twitter_dark from '../images/twitter_icon_dark.svg';
+import twitter_brand_color from '../images/twitter_icon_ppc_branded.svg';
 
 const DiscordServerLink = "https://discord.com";
 const TwitterLink = "https://twitter.com";

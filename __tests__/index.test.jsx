@@ -21,14 +21,12 @@ describe('Coming Soon Page', () => {
 		const heading = screen.getByRole('heading', {
 			name: /coming soon/i,
 		});
-
 		expect(heading).toBeInTheDocument();
 	});
 
 	it('should render the article', () => {
 		ComingSoonPage();
 		const article = screen.getByRole('article');
-
 		expect(article).toBeInTheDocument();
 	});
 

@@ -38,3 +38,6 @@ yarn-error.log*
 
 # vscode debug
 .vscode
+
+# ditch those pesky Zone Identifier files
+/images/*:Zone.Identifier

@@ -13,6 +13,7 @@
 		"build": "next build",
 		"start": "next start",
 		"test": "jest --",
+    "test-ci": "jest --ci",
 		"test-watch": "jest --watch",
 		"coverage": "jest --collectCoverage --",
 		"lint": "next lint",

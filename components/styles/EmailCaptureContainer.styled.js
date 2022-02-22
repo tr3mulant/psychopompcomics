@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const EmailCaptureContainer = styled.article`
 	max-width: 100%;
 	width: 33.4rem;
-	margin: 2.4rem auto;
+	margin: auto auto;
 	display: flex;
 	justify-content: center;
 	align-items: stretch;

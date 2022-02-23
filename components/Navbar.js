@@ -26,13 +26,17 @@ const IconContainer = styled.div`
 `;
 
 const MobileSocialContainer = () => {
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log("social icon clicked");
+    }
     return (
         <SocialContainer>
             <p>Sign Up for our Newsletter</p>
             <MobileNavNewsletterSubscribe />
             <IconContainer>
-                <DiscordIcon />
-                <TwitterIcon />
+                <DiscordIcon onClick={handleClick} />
+                <TwitterIcon onClick={handleClick} />
             </IconContainer>
         </SocialContainer>
     );

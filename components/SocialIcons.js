@@ -41,7 +41,7 @@ export const DiscordIcon = ({onClick}) => {
             </SocialIconContainerLight>
             <SocialIconContainerDark>
                 <Link href={DiscordServerLink}>
-                    <a>
+                    <a onClick={onClick}>
                         <Image src={discord_light} alt="Discord Icon" />
                     </a>
                 </Link>
@@ -62,7 +62,7 @@ export const TwitterIcon = ({onClick}) => {
             </SocialIconContainerLight>
             <SocialIconContainerDark>
                 <Link href={TwitterLink}>
-                    <a>
+                    <a onClick={onClick}>
                         <Image src={twitter_light} alt="Twitter Icon" />
                     </a>
                 </Link>

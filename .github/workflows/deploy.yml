@@ -28,6 +28,7 @@ jobs:
         run: yarn test-ci
 
   build-and-deploy:
+    if: ${{ github.repository == 'psychopomp-dev/psychopompcomics' }}
     name: Build Images and Deploy
     needs: build-and-test
     runs-on: ubuntu-latest

@@ -94,7 +94,7 @@ jobs:
             # Stops containers and removes containers, networks, volumes, and images created by up
             docker-compose -f docker-compose.prod.yml down -v --remove-orphans
 
-            # Lets login to registry in order for Docker to run from the registry url
+            # Lets login to our container registry in order for Docker to pull from the registry url
             doctl registry login --expiry-seconds 600
 
             #Lets pull our images down

@@ -14,15 +14,15 @@ export const GlobalStyle = createGlobalStyle`
 		--brand-hue-light: var(--brand-hue);
 		--brand-saturation-light: var(--brand-saturation);
 		--brand-lightness-light: var(--brand-lightness);
-		
+
 		--surface1-hue-light: var(--brand-hue-light);
 		--surface1-saturation-light: 20%;
 		--surface1-lightness-light: 99%;
-		
+
 		--surface2-hue-light: var(--brand-hue-light);
 		--surface2-saturation-light: 20%;
 		--surface2-lightness-light: 92%;
-		
+
 		--surface3-hue-light: var(--brand-hue-light);
 		--surface3-saturation-light: 25%;
 		--surface3-lightness-light: 90%;
@@ -47,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
 		--text1-light: hsl(var(--brand-hue-light) var(--text1-saturation-light) var(--text1-lightness-light));
 		--text2-light: hsl(var(--brand-hue-light) var(--text2-saturation-light) var(--text2-lightness-light));
 		--text-on-brand: hsl(var(--text-on-brand-hue-light) var(--text-on-brand-saturation-light) var(--text-on-brand-lightness-light));
+		--surface0-light: rgb(255,255,255);
 		--surface1-light: hsl(var(--surface1-hue-light) var(--surface1-saturation-light) var(--surface1-lightness-light));
 		--surface2-light: hsl(var(--surface2-hue-light) var(--surface2-saturation-light) var(--surface2-lightness-light));
 		--surface3-light: hsl(var(--surface3-hue-light) var(--surface3-saturation-light) var(--surface3-lightness-light));
@@ -111,7 +112,7 @@ export const GlobalStyle = createGlobalStyle`
 
 		/* dark */
 		--brand-dark: hsl(
-			var(--brand-hue) 
+			var(--brand-hue)
 			calc(var(--brand-saturation))
 			calc(var(--brand-lightness))
 		);
@@ -119,15 +120,15 @@ export const GlobalStyle = createGlobalStyle`
 		--brand-hue-dark: var(--brand-hue);
 		--brand-saturation-dark: var(--brand-saturation);
 		--brand-lightness-dark: var(--brand-lightness);
-		
+
 		--surface1-hue-dark: 0;
 		--surface1-saturation-dark: 0%;
 		--surface1-lightness-dark: 5.9%;
-		
+
 		--surface2-hue-dark: 345;
 		--surface2-saturation-dark: 6.1%;
 		--surface2-lightness-dark: 12.9%;
-		
+
 		--surface3-hue-dark: 345;
 		--surface3-saturation-dark: 3%;
 		--surface3-lightness-dark: 25.9%;
@@ -150,6 +151,7 @@ export const GlobalStyle = createGlobalStyle`
 
 		--text1-dark: hsl(var(--text1-hue-dark) var(--text1-saturation-dark) var(--text1-lightness-dark));
 		--text2-dark: hsl(var(--text2-hue-dark) var(--text2-saturation-dark) var(--text2-lightness-dark));
+		--surface0-dark: rgb(0,0,0);
 		--surface1-dark: hsl(var(--surface1-hue-dark) var(--surface1-saturation-dark) var(--surface1-lightness-dark));
 		--surface2-dark: hsl(var(--surface2-hue-dark) var(--surface2-saturation-dark) var(--surface2-lightness-dark));
 		--surface3-dark: hsl(var(--surface3-hue-dark) var(--surface3-saturation-dark) var(--surface3-lightness-dark));
@@ -220,6 +222,7 @@ export const GlobalStyle = createGlobalStyle`
 		--text1: var(--text1-light);
 		--text2: var(--text2-light);
 		--text-on-brand: var(--text-on-brand-light));
+		--surface0: var(--surface0-light);
 		--surface1: var(--surface1-light);
 		--surface2: var(--surface2-light);
 		--surface3: var(--surface3-light);
@@ -242,6 +245,7 @@ export const GlobalStyle = createGlobalStyle`
 			--text1: var(--text1-dark);
 			--text2: var(--text2-dark);
 			--text-on-brand: var(--text-on-brand-dark);
+			--surface0: var(--surface0-dark);
 			--surface1: var(--surface1-dark);
 			--surface2: var(--surface2-dark);
 			--surface3: var(--surface3-dark);
@@ -325,20 +329,127 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 	}
 
+	h1 {
+		margin-top: ${theme.spaces.xl};
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h2 {
+		margin-top: ${theme.spaces.lg};
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h3 {
+		margin-top: ${theme.spaces.ml};
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h4,p {
+		margin-top: ${theme.spaces.ms};
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h1 + p {
+		margin-top: ${theme.spaces.ml};
+	}
+
+	h2 + p {
+		margin-top: ${theme.spaces.md};
+	}
+
+	h3 + p,
+	h4 + p,
+	h5 + p,
+	h6 + p,
+	p + p,
+	h3 + ul,
+	h3 + ol,
+	h4 + ul,
+	h4 + ol,
+	h5 + ul,
+	h5 + ol,
+	h6 + ul,
+	h6 + ol,
+	p + ul,
+	p + ol {
+		margin-top: ${theme.spaces.ms};
+	}
+
 	input {
 		border: none;
 	}
 
 	body {
+		position: relative;
 		padding: 0;
 		box-sizing: border-box;
 		background-color: var(--surface1);
-		min-height: 100vh;
 		text-rendering: optimizeSpeed;
 		line-height: 1.5;
 		font-family: ${theme.fonts.secondary};
 		color: var(--text1);
 		font-feature-settings: "kern";
+
+		background:
+		radial-gradient(circle farthest-side at 0% 50%,var(--surface0) 23.5%,rgba(0,0,0,0) 0)2.1rem 3.0rem,
+		radial-gradient(circle farthest-side at 0% 50%,var(--surface2) 24%,rgba(0,0,0,0) 0)1.9rem 3.0rem,
+		linear-gradient(var(--surface0) 14%,rgba(0,0,0,0) 0, rgba(0,0,0,0) 85%,var(--surface0) 0)0 0,
+		linear-gradient(150deg,var(--surface0) 24%,var(--surface2) 0,var(--surface2) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface2) 0,var(--surface2) 76%,var(--surface0) 0)0 0,
+		linear-gradient(30deg,var(--surface0) 24%,var(--surface2) 0,var(--surface2) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface2) 0,var(--surface2) 76%,var(--surface0) 0)0 0,
+		linear-gradient(90deg,var(--surface2) 2%,var(--surface0) 0,var(--surface0) 98%,var(--surface2) 0%)0 0 var(--surface0);
+		background-size: 4rem 6rem;
+
+		&::after {
+			position: absolute;
+			content: '';
+			background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.75));
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			background:
+			radial-gradient(circle farthest-side at 0% 50%,var(--surface1) 23.5%,rgba(0,0,0,0) 0)2.1rem 3.0rem,
+			radial-gradient(circle farthest-side at 0% 50%,var(--surface0) 24%,rgba(0,0,0,0) 0)1.9rem 3.0rem,
+			linear-gradient(var(--surface1) 14%,rgba(0,0,0,0) 0, rgba(0,0,0,0) 85%,var(--surface1) 0)0 0,
+			linear-gradient(150deg,var(--surface1) 24%,var(--surface0) 0,var(--surface0) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface0) 0,var(--surface0) 76%,var(--surface1) 0)0 0,
+			linear-gradient(30deg,var(--surface1) 24%,var(--surface0) 0,var(--surface0) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface0) 0,var(--surface0) 76%,var(--surface1) 0)0 0,
+			linear-gradient(90deg,var(--surface0) 2%,var(--surface1) 0,var(--surface1) 98%,var(--surface0) 0%)0 0 var(--surface1);
+			background-size: 4rem 6rem;
+			
+			&::after {
+				background: linear-gradient(rgba(15,15,15,1), rgba(15,15,15,0.75));
+			}
+		}
+	}
+
+	#__next {
+		display: grid;
+		grid-gap: ${theme.spaces.md};
+		grid-template-rows: auto auto 1fr auto;
+		grid-template-areas:
+			'nav'
+			'header'
+			'main'
+			'footer'
+		;
+		min-height: 100vh;
+
+		& > nav {grid-area: nav; }
+		& > header {grid-area: header; }
+		& > main {grid-area: main; }
+		& > footer {grid-area: footer; }
 	}
 
 	/* A elements that don't have a class get default styles */
@@ -355,6 +466,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	h1,h2,h3,h4,h5,h6 {
 		font-weight: 400;
+		color: var(--brand);
 	}
 
 	h1,h2,h3 {
@@ -365,55 +477,59 @@ export const GlobalStyle = createGlobalStyle`
 		font-family: ${theme.fonts.secondary};
 	}
 
-	p,input,button,a {
-		font-size: 1.8rem;
+	p,input,button,a,ol,ul {
+		font-size: ${theme.fonts.sizes.xs};
 
-		@media (max-width: ${theme.breakpoints.md}) {
-			font-size: 1.6rem;
+		@media (min-width: ${theme.breakpoints.md}) {
+			font-size: ${theme.fonts.sizes.sm};
 		}
 	}
 
-	p,input,a {
-		line-height: 1.375;
-		
-		@media (max-width: ${theme.breakpoints.md}) {
-			line-height: 1.333;
+	p,input,a,ul,ol {
+		line-height: 1.333;
+
+		@media (min-width: ${theme.breakpoints.md}) {
+			line-height: 1.375;
 		}
 	}
 
 	h1 {
-	font-size: 3.6rem;
+	font-size: ${theme.fonts.sizes.lg};
 	line-height: 1.18;
-		
+
 		@media (min-width: ${theme.breakpoints.md}) {
 			line-height: 1.06;
-			font-size: 5.2rem;
+			font-size: ${theme.fonts.sizes.xxl};
 		}
 	}
 
 	h2 {
-	font-size: 2.8rem;
+	font-size: ${theme.fonts.sizes.md};
 	line-height: 1.21;
-		
+
 		@media (min-width: ${theme.breakpoints.md}) {
-			font-size: 3rem;
+			font-size: ${theme.fonts.sizes.ml};
 			line-height: 1.12;
 		}
 	}
 
 	h3 {
-		font-size: 2.2rem;
+		font-size: ${theme.fonts.sizes.ms};
 		line-height: 1.27;
 	}
 
 	h4 {
-		font-size: 1.8rem;
+		font-size: ${theme.fonts.sizes.sm};
 		line-height: 1.333;
 	}
 
 	h5 {
-		font-size: 1.6rem;
+		font-size: ${theme.fonts.sizes.xs};
 		line-height: 1.25;
+	}
+
+	.text-center {
+		text-align: center;
 	}
 
 	/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

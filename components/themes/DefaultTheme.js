@@ -31,20 +31,24 @@ export const theme = {
 		primary: '"Archive", sans-serif',
 		secondary: '"Roboto", sans-serif;',
 		sizes: {
+			xxs: '1.4rem',
 			xs: '1.6rem',
 			sm: '1.8rem',
-			md: '2.2rem',
-			lg: '3rem',
-			xl: '5.2rem',
-			xxl: '7.4rem',
+			ms: '2.2rem',
+			md: '2.8rem',
+			ml: '3rem',
+			lg: '3.6rem',
+			xl: '4.8rem',
+			xxl: '5.2rem',
+			xxxl: '6.4rem',
 		},
 	},
 	breakpoints: {
-		xxs: '368px', //
-		xs: '576px', //
-		sm: '768px', //
-		md: '992px', //
-		lg: '1280px', //
+		xxs: '368px',
+		xs: '576px',
+		sm: '768px',
+		md: '992px',
+		lg: '1280px',
 		xl: '1600px',
 	},
 	spaces: {

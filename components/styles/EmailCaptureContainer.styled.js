@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const EmailCaptureContainer = styled.article`
-	max-width: 100%;
-	width: 33.4rem;
+	width: 100%;
+	max-width: 33.4rem;
 	margin: auto auto;
 	display: flex;
 	justify-content: center;
@@ -12,7 +12,7 @@ const EmailCaptureContainer = styled.article`
 	border-bottom-right-radius: 0.4rem;
 
 	& input {
-		max-width: calc(100% - 13.7rem);
+		width: calc(100% - 13.7rem);
 		border-top: 0.1rem solid var(--brand);
 		border-left: 0.1rem solid var(--brand);
 		border-bottom: 0.1rem solid var(--brand);

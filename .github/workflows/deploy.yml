@@ -1,4 +1,4 @@
-name: build-test-deploy
+name: deploy
 
 env:
   REGISTRY: 'registry.digitalocean.com/parabola/'
@@ -9,13 +9,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-and-test:
-    name: Checkout and Install and Test
+  build-and-deploy:
+    if: ${{ github.repository == 'psychopomp-dev/psychopompcomics' }}
+    name: Build Images and Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -23,18 +21,6 @@ jobs:
 
       - name: yarn install
         run: yarn
-
-      - name: Jest Test
-        run: yarn test-ci
-
-  build-and-deploy:
-    if: ${{ github.repository == 'psychopomp-dev/psychopompcomics' }}
-    name: Build Images and Deploy
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2

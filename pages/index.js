@@ -2,12 +2,22 @@ import ComingSoon from '../components/styles/ComingSoon.styled';
 import styled from 'styled-components';
 import ComingSoonImage from '../components/ComingSoonImage';
 import NewsletterSubscribe from '../components/NewsletterSubscribe';
-import { Navbar_Style_1 } from '../components/Navbar';
+
+const HomeHeader = styled.header`
+	text-align: center;
+	max-width: 100%;
+	padding: ${(props) => props.theme.spaces.xxl} ${(props) => props.theme.spaces.lg} ${(props) => props.theme.spaces.xl};
+`;
 
 const Title = styled.h1`
-	text-align: center;
 	color: var(--text1);
-	margin: 0 0 3.2rem;
+`;
+
+const HomeMain = styled.main`
+	height: 100%;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
 `;
 
 const SignUp = styled.h2`
@@ -17,12 +27,16 @@ const SignUp = styled.h2`
 export default function Home() {
 	return (
 		<>
-			<ComingSoon>
+			<HomeHeader>
 				<Title>Coming Soon</Title>
-				<ComingSoonImage />
-				<SignUp>Sign up to receive email updates</SignUp>
-				<NewsletterSubscribe />
-			</ComingSoon>
+			</HomeHeader>
+			<HomeMain>
+					<ComingSoon>
+						<ComingSoonImage />
+						<SignUp>Sign up to receive email updates</SignUp>
+						<NewsletterSubscribe />
+					</ComingSoon>
+			</HomeMain>
 		</>
 	);
 }

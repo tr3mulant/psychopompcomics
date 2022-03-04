@@ -434,6 +434,10 @@ export const GlobalStyle = createGlobalStyle`
 		}
 	}
 
+	body.no-scroll {
+		overflow: hidden;
+	}
+
 	#__next {
 		display: grid;
 		grid-gap: ${theme.spaces.md};

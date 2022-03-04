@@ -13,7 +13,8 @@ const NavBrandContainer = styled.div`
         margin-left: auto;
     }
     @media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-        margin-left: ${(props) => props.theme.spaces.md}
+        margin-left: ${(props) => props.theme.spaces.md};
+        width: ${(props) => props.theme.spaces.xxxl.replace("rem","") * 0.7}rem;
     }
 `;
 

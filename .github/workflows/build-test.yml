@@ -1,0 +1,20 @@
+name: build-test
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    name: Checkout and Install and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v2
+
+      - name: yarn install
+        run: yarn
+
+      - name: Jest Test
+        run: yarn test-ci

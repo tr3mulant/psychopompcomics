@@ -25,10 +25,11 @@ const NavLinkList = styled.ul`
         position: fixed;
         top: 15%;
         width: 100%;
-        height: 100%;
+        height: 85%;
         flex-direction: column;
         justify-content: flex-start;
         transition: 0.3s ease-in-out;
+        overflow: ${({openMenu }) => openMenu ? `scroll` : `unset`};
 
         //from left
         transform: ${({ openMenu }) => openMenu ? `translateX(0)` : `translateX(-100%)`};
@@ -42,13 +43,16 @@ const NavLinkList = styled.ul`
             padding: ${(props) => props.theme.spaces.ms};
         }
 
+        li:last-child {
+            margin-bottom: ${(props) => props.theme.spaces.lg};
+        }
+
         li:not(li:last-child) {
             border-bottom: 2px solid var(--surface4);
         }
 
         li + li:before {
-            height:0;
-            width:0;
+            display: none;
         }
 
         li a {
@@ -66,16 +70,6 @@ export const NavLinkList_2 = styled(NavLinkList)`
         margin: 0 1rem;
         height: 75%;
     }
-    // @media only screen and (min-width: ${(props) => props.theme.breakpoints.xxs}) { 
-    //     li * {
-    //         font-size: ${(props) => props.theme.fonts.sizes.md};
-    //     }
-    // // }
-    // @media only screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
-    //     li * {
-    //         font-size: ${(props) => props.theme.fonts.sizes.xs};
-    //     }
-    // } 
     @media only screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
         li:last-child {
             display: none;

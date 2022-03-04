@@ -5,12 +5,12 @@ import deer_dark from '../images/final_wtype_transparent_cropped@4x.png';
 
 const ImageContainer = styled.div`
 	margin-bottom: ${(props) => props.theme.spaces.xxl};
-	width: 42rem;
-	max-width: 100%;
+	max-width: 42rem;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.xs}) {
-		max-width: 85%;
+		width: 85%;
 	}
 `;
 

@@ -92,6 +92,30 @@ const ButtonContainerPrimary = styled.div`
 			);
 		}
 	}
+
+	&:focus,
+	&:active {
+		& > div:first-child {
+			border-right-color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.5)
+			);
+		}
+
+		& a {
+			background-color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.5)
+			);
+		}
+
+		& > div:last-child {
+			border-left-color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.5)
+			);
+		}
+	}
 `;
 
 const Triangle = styled.div`
@@ -233,6 +257,16 @@ const ButtonContainerPrimaryOutline = styled(ButtonContainerPrimary)`
 		}
 		svg path {
 			fill: rgba(var(--brand-rgb), 0.2);
+		}
+	}
+
+	&:focus,
+	&:active {
+		a {
+			background-color: rgba(var(--brand-rgb), 0.3);
+		}
+		svg path {
+			fill: rgba(var(--brand-rgb), 0.3);
 		}
 	}
 `;

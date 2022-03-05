@@ -83,20 +83,6 @@ const CoreTeamMemberImage = styled.div`
 	justify-content: center;
 `;
 
-const mainVariants = {
-	hidden: { opacity: 0, x: '-20rem', y: 0 },
-	visible: {
-		opacity: 1,
-		x: 0,
-		y: 0,
-		transition: {
-			when: 'beforeChildren',
-			type: 'linear',
-		},
-	},
-	exit: { opacity: 0, x: 0, y: '-10rem' },
-};
-
 const coreTeamVariants = {
 	hidden: { opacity: 0 },
 	visible: {

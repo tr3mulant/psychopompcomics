@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ComingSoonImage from '../components/ComingSoonImage';
 import NewsletterSubscribe from '../components/NewsletterSubscribe';
 import { Navbar_Style_1 } from '../components/Navbar';
+import MotionHeader from '../components/styles/MotionHeader.styled';
+import MotionMain from '../components/styles/MotionMain.styled';
 
 const Title = styled.h1`
 	text-align: center;
@@ -17,12 +19,16 @@ const SignUp = styled.h2`
 export default function Home() {
 	return (
 		<>
-			<ComingSoon>
+			<MotionHeader>
 				<Title>Coming Soon</Title>
-				<ComingSoonImage />
-				<SignUp>Sign up to receive email updates</SignUp>
-				<NewsletterSubscribe />
-			</ComingSoon>
+			</MotionHeader>
+			<MotionMain>
+				<ComingSoon>
+					<ComingSoonImage />
+					<SignUp>Sign up to receive email updates</SignUp>
+					<NewsletterSubscribe />
+				</ComingSoon>
+			</MotionMain>
 		</>
 	);
 }

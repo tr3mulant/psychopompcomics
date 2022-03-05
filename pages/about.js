@@ -1,20 +1,20 @@
 import StyledSection from '../components/styles/StyledSection.styled';
 import SectionContainer from '../components/styles/SectionContainer.styled';
 import LogoTextImage from '../components/LogoTextImage';
+import MotionMain from '../components/styles/MotionMain.styled';
+import MotionHeader from '../components/styles/MotionHeader.styled';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { DevRoutes } from "../utils/dev_routes";
+import { DevRoutes } from '../utils/dev_routes';
+import { motion } from 'framer-motion';
 
-const AboutHeader = styled.header`
+const AboutHeader = styled(MotionHeader)`
 	text-align: center;
-	max-width: 100%;
 	padding: ${(props) => props.theme.spaces.xxl}
 		${(props) => props.theme.spaces.lg} ${(props) => props.theme.spaces.xl};
 `;
 
-const AboutMain = styled.main`
-	height: 100%;
-	max-width: 100%;
+const AboutMain = styled(MotionMain)`
 	display: flex;
 	flex-direction: column;
 `;
@@ -40,7 +40,7 @@ const TwoUp = styled.article`
 	}
 `;
 
-const CoreTeamContainer = styled.div`
+const CoreTeamContainer = styled(motion.div)`
 	margin-top: ${(props) => props.theme.spaces.ml};
 	display: grid;
 	grid-template-areas:
@@ -67,7 +67,7 @@ const CoreTeamContainer = styled.div`
 	}
 `;
 
-const CoreTeamMember = styled.section`
+const CoreTeamMember = styled(motion.section)`
 	background-color: var(--surface1);
 	border: 0.1rem solid hsl(var(--brand-hue) 10% 50% / 15%);
 	border-radius: 1rem;
@@ -82,6 +82,46 @@ const CoreTeamMemberImage = styled.div`
 	display: flex;
 	justify-content: center;
 `;
+
+const mainVariants = {
+	hidden: { opacity: 0, x: '-20rem', y: 0 },
+	visible: {
+		opacity: 1,
+		x: 0,
+		y: 0,
+		transition: {
+			when: 'beforeChildren',
+			type: 'linear',
+		},
+	},
+	exit: { opacity: 0, x: 0, y: '-10rem' },
+};
+
+const coreTeamVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			when: 'beforeChildren',
+			staggerChildren: 0.1,
+		},
+	},
+};
+
+const childrenTCoreTeamVariants = {
+	hidden: {
+		opacity: 0,
+		scale: 0,
+	},
+	visible: {
+		opacity: 1,
+		scale: 1,
+		transition: {
+			duration: 0.2,
+			ease: 'easeInOut',
+		},
+	},
+};
 
 export default function About() {
 	return (
@@ -127,8 +167,13 @@ export default function About() {
 							</TwoUp>
 							<TwoUp>
 								<h3 className='text-center'>{'Core Team'}</h3>
-								<CoreTeamContainer>
-									<CoreTeamMember>
+								<CoreTeamContainer
+									initial='hidden'
+									whileInView='visible'
+									viewport={{ once: true }}
+									variants={coreTeamVariants}
+								>
+									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
@@ -141,7 +186,7 @@ export default function About() {
 										<h4>Chief Wagmi Officer</h4>
 										<h4>@RoninRosewater</h4>
 									</CoreTeamMember>
-									<CoreTeamMember>
+									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
@@ -154,7 +199,7 @@ export default function About() {
 										<h4>Developer</h4>
 										<h4>@4l4RIC_1</h4>
 									</CoreTeamMember>
-									<CoreTeamMember>
+									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
@@ -167,7 +212,7 @@ export default function About() {
 										<h4>Director of Lore</h4>
 										<h4>@The_NFTer</h4>
 									</CoreTeamMember>
-									<CoreTeamMember>
+									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'

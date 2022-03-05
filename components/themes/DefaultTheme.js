@@ -63,4 +63,21 @@ export const theme = {
 		xxl: '6.4rem',
 		xxxl: '9.6rem',
 	},
+
+	motion: {
+		pageTransitionVariants: {
+			hidden: {
+				opacity: 0,
+			},
+			visible: {
+				opacity: 1,
+				transition: { when: 'beforeChildren' },
+			},
+			exit: {
+				x: '-50vw',
+				opacity: 0,
+				transition: { ease: 'easeInOut' },
+			},
+		},
+	},
 };

@@ -14,7 +14,7 @@ const NavBrandContainer = styled.div`
     }
     @media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
         margin-left: ${(props) => props.theme.spaces.md};
-        width: ${(props) => props.theme.spaces.xxxl.replace("rem","") * 0.7}rem;
+        width: 6.72rem;
     }
 `;
 

@@ -14,28 +14,13 @@ const ImageContainer = styled.div`
 	}
 `;
 
-const ImageContainerLight = styled(ImageContainer)`
-	@media (prefers-color-scheme: dark) {
-		display: none;
-	}
-`;
-
-const ImageContainerDark = styled(ImageContainer)`
-	display: none;
-	@media (prefers-color-scheme: dark) {
-		display: block;
-	}
-`;
-
-export default function ComingSoonImage() {
+export default function ComingSoonImage({ theme }) {
+	const deer_image = theme == 'light' ? deer_light : deer_dark;
 	return (
 		<>
-			<ImageContainerLight>
-				<Image src={deer_light} alt='Psychopomp Comics' />
-			</ImageContainerLight>
-			<ImageContainerDark>
-				<Image src={deer_dark} alt='Psychopomp Comics' />
-			</ImageContainerDark>
+			<ImageContainer>
+				<Image src={deer_image} alt='Psychopomp Comics' />
+			</ImageContainer>
 		</>
 	);
 }

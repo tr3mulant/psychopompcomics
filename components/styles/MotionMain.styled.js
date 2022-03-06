@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { theme } from '../themes/DefaultTheme';
+import { themeCommon } from '../themes/DefaultTheme';
 
 const StyledMain = styled(motion.main)`
 	height: 100%;
@@ -10,7 +10,7 @@ const StyledMain = styled(motion.main)`
 export default function MotionMain(props) {
 	return (
 		<StyledMain
-			variants={theme.motion.pageTransitionVariants}
+			variants={themeCommon.motion.pageTransitionVariants}
 			initial='hidden'
 			animate='visible'
 			exit='exit'

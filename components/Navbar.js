@@ -53,10 +53,7 @@ const IconContainer = styled.div`
 `;
 
 const MobileSocialContainer = () => {
-	const handleClick = (e) => {
-		e.preventDefault();
-		console.log('social icon clicked');
-	};
+	const handleClick = (e) => {};
 	return (
 		<SocialContainer>
 			<p>Sign Up for our Newsletter</p>
@@ -117,29 +114,30 @@ const NavLinks = ({ openMenu, components, onClick }) => {
 };
 
 export function Navbar() {
-	const [openMenu, toggleMenu] = useState(false);
-	const components = {
-		link: PrimaryLink,
-		container: NavLinkList_2,
-	};
-	return (
-		<StyledNavbar_1>
-			<NavBrand onClick={() => toggleMenu(false)} />
-			<HamburgerMenu.Wrapper onClick={() => toggleMenu(!openMenu)}>
-				{openMenu ? (
-					<HamburgerMenu.CloseMenuIcon_1 />
-				) : (
-					<HamburgerMenu.OpenMenuIcon_1 />
-				)}
-			</HamburgerMenu.Wrapper>
-			<NavLinks
-				openMenu={openMenu}
-				components={components}
-				onClick={() => toggleMenu(false)}
-			/>
-			<NavNewsletterSubscribe />
-		</StyledNavbar_1>
-	);
+    const [openMenu, toggleMenu] = useState(false);
+    const handleClick = (state) => {
+        //feels hacky, like maybe the state should be managed higher up?
+        if (state) {
+            document.getElementsByTagName("body")[0].classList.add("no-scroll");
+        } else {
+            document.getElementsByTagName("body")[0].classList.remove("no-scroll");
+        }
+        toggleMenu(state);
+    }
+    const components = {
+        link: PrimaryLink,
+        container: NavLinkList_2
+    }
+    return (
+        <StyledNavbar_1>
+            <NavBrand onClick={() => handleClick(false)}/>
+            <HamburgerMenu.Wrapper onClick={() => handleClick(!openMenu)}>
+                {openMenu ? <HamburgerMenu.CloseMenuIcon_1/> : <HamburgerMenu.OpenMenuIcon_1 />}
+            </HamburgerMenu.Wrapper>
+            <NavLinks openMenu={openMenu} components={components} onClick={() => handleClick(false)}/>
+            <NavNewsletterSubscribe />
+        </StyledNavbar_1>
+    );
 }
 
 export const Navbar_Style_1 = () => {

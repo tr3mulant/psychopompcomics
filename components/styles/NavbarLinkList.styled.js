@@ -19,6 +19,7 @@ const NavLinkList = styled.ul`
     }
     @media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
         width: unset;
+        margin-top: 0;
         margin-right: auto;
     }
     @media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
@@ -59,6 +60,9 @@ const NavLinkList = styled.ul`
             opacity:${({ openMenu }) => openMenu ? `1` : `0`};
             transition-delay:150ms;
         }
+    }
+    @media only screen and (max-width: ${(props) => props.theme.breakpoints.xxs}) {
+        top: 18%;
     }
 `;
 

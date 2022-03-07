@@ -1,294 +1,43 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from '../themes/DefaultTheme';
 
 /* Drawn from https://web.dev/building-a-color-scheme/ */
 export const GlobalStyle = createGlobalStyle`
 	* {
 		/* brand foundation */
-		--brand-hue: 85;
-		--brand-saturation: 54%;
-		--brand-lightness: 51%;
-		--brand-rgb: 142, 198, 63;
-
-		/* light */
-		--brand-hue-light: var(--brand-hue);
-		--brand-saturation-light: var(--brand-saturation);
-		--brand-lightness-light: var(--brand-lightness);
-
-		--surface1-hue-light: var(--brand-hue-light);
-		--surface1-saturation-light: 20%;
-		--surface1-lightness-light: 99%;
-
-		--surface2-hue-light: var(--brand-hue-light);
-		--surface2-saturation-light: 20%;
-		--surface2-lightness-light: 92%;
-
-		--surface3-hue-light: var(--brand-hue-light);
-		--surface3-saturation-light: 25%;
-		--surface3-lightness-light: 90%;
-
-		--surface4-hue-light: var(--brand-hue-light);
-		--surface4-saturation-light: 20%;
-		--surface4-lightness-light: 85%;
-
-		--text1-hue-light: var(--brand-hue-light);
-		--text1-saturation-light: var(--brand-saturation-light);
-		--text1-lightness-light: 10%;
-
-		--text2-hue-light: var(--brand-hue-light);
-		--text2-saturation-light: 30%;
-		--text2-lightness-light: 30%;
-
-		--text-on-brand-hue-light: 0;
-		--text-on-brand-saturation-light: 0%;
-		--text-on-brand-lightness-light: 0%;
-
-		--brand-light: hsl(var(--brand-hue-light) var(--brand-saturation-light) var(--brand-lightness-light));
-		--text1-light: hsl(var(--brand-hue-light) var(--text1-saturation-light) var(--text1-lightness-light));
-		--text2-light: hsl(var(--brand-hue-light) var(--text2-saturation-light) var(--text2-lightness-light));
-		--text-on-brand: hsl(var(--text-on-brand-hue-light) var(--text-on-brand-saturation-light) var(--text-on-brand-lightness-light));
-		--surface0-light: rgb(255,255,255);
-		--surface1-light: hsl(var(--surface1-hue-light) var(--surface1-saturation-light) var(--surface1-lightness-light));
-		--surface2-light: hsl(var(--surface2-hue-light) var(--surface2-saturation-light) var(--surface2-lightness-light));
-		--surface3-light: hsl(var(--surface3-hue-light) var(--surface3-saturation-light) var(--surface3-lightness-light));
-		--surface4-light: hsl(var(--surface4-hue-light) var(--surface4-saturation-light) var(--surface4-lightness-light));
-		/* Shadows generated with https://shadows.brumm.af */
-		--box-shadow-xxs-light:
-			.01rem .01rem .01rem rgba(0, 0, 0, 0.02),
-			.01rem .01rem .01rem rgba(0, 0, 0, 0.028),
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.035),
-			.04rem .04rem .04rem rgba(0, 0, 0, 0.042),
-			.08rem .08rem .08rem rgba(0, 0, 0, 0.05)
-			.2rem .2rem .2rem rgba(0, 0, 0, 0.07);
-		--box-shadow-xs-light:
-			.01rem .01rem .01rem rgba(0, 0, 0, 0.02),
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.028),
-			.05rem .05rem .05rem rgba(0, 0, 0, 0.035),
-			.09rem .09rem .09rem rgba(0, 0, 0, 0.042),
-			.17rem .17rem .17rem rgba(0, 0, 0, 0.05),
-			.4rem .4rem .4rem rgba(0, 0, 0, 0.07);
-		--box-shadow-sm-light:
-			.02rem .02rem .02rem rgba(0, 0, 0, 0.02),
-			.04rem .04rem .04rem rgba(0, 0, 0, 0.028),
-			.08rem .08rem .08rem rgba(0, 0, 0, 0.035),
-			.13rem .13rem .13rem rgba(0, 0, 0, 0.404277),
-			.25rem .25rem .25rem rgba(0, 0, 0, 0.05)
-			.6rem .6rem .6rem rgba(0, 0, 0, 0.07);
-		--box-shadow-ms-light:
-			.02rem .02rem .02rem rgba(0, 0, 0, 0.02),
-			.05rem .05rem .05rem rgba(0, 0, 0, 0.028),
-			.1rem .1rem .09rem rgba(0, 0, 0, 0.035),
-			.18rem .18rem .16rem rgba(0, 0, 0, 0.042),
-			.33rem .33rem .29rem rgba(0, 0, 0, 0.05),
-			.8rem .8rem .7rem rgba(0, 0, 0, 0.07);
-		--box-shadow-md-light:
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.02),
-			.08rem .08rem .07rem rgba(0, 0, 0, 0.028),
-			.15rem .15rem .14rem rgba(0, 0, 0, 0.035),
-			.27rem .27rem .25rem rgba(0, 0, 0, 0.042),
-			.5rem .5rem .46rem rgba(0, 0, 0, 0.05),
-			1.2rem 1.2rem 1.1rem rgba(0, 0, 0, 0.07);
-		--box-shadow-ml-light:
-			.07rem .07rem .06rem rgba(0, 0, 0, 0.02),
-			.17rem .17rem .15rem rgba(0, 0, 0, 0.028),
-			.31rem .31rem .29rem rgba(0, 0, 0, 0.035),
-			.56rem .56rem .51rem rgba(0, 0, 0, 0.042),
-			10.04rem 10.04rem .96rem rgba(0, 0, 0, 0.05),
-			2.5rem 2.5rem 2.3rem rgba(0, 0, 0, 0.07);
-		--box-shadow-lg-light:
-			.14rem .14rem .12rem rgba(0, 0, 0, 0.02),
-			.33rem .33rem .3rem rgba(0, 0, 0, 0.028),
-			.63rem .63rem .56rem rgba(0, 0, 0, 0.035),
-			1.12rem 1.12rem 10.01rem rgba(0, 0, 0, 0.042),
-			20.09rem 20.09rem 1.88rem rgba(0, 0, 0, 0.05),
-			5rem 5rem 4.5rem rgba(0, 0, 0, 0.07);
-		--box-shadow-xl-light:
-			.28rem .28rem .22rem rgba(0, 0, 0, 0.02),
-			.67rem .67rem .53rem rgba(0, 0, 0, 0.028),
-			1.25rem 1.25rem 1rem rgba(0, 0, 0, 0.035),
-			2.23rem 2.23rem 1.79rem rgba(0, 0, 0, 0.042),
-			4.18rem 4.18rem 3.34rem rgba(0, 0, 0, 0.05),
-			10rem 10rem 8rem rgba(0, 0, 0, 0.07);
-
-		/* dark */
-		--brand-dark: hsl(
-			var(--brand-hue)
-			calc(var(--brand-saturation))
-			calc(var(--brand-lightness))
-		);
-
-		--brand-hue-dark: var(--brand-hue);
-		--brand-saturation-dark: var(--brand-saturation);
-		--brand-lightness-dark: var(--brand-lightness);
-
-		--surface1-hue-dark: 0;
-		--surface1-saturation-dark: 0%;
-		--surface1-lightness-dark: 5.9%;
-
-		--surface2-hue-dark: 345;
-		--surface2-saturation-dark: 6.1%;
-		--surface2-lightness-dark: 12.9%;
-
-		--surface3-hue-dark: 345;
-		--surface3-saturation-dark: 3%;
-		--surface3-lightness-dark: 25.9%;
-
-		--surface4-hue-dark: 345;
-		--surface4-saturation-dark: 2.1%;
-		--surface4-lightness-dark: 38%;
-
-		--text1-hue-dark: 0;
-		--text1-saturation-dark: 0%;
-		--text1-lightness-dark: 100%;
-
-		--text2-hue-dark: 82.5;
-		--text2-saturation-dark: 53.3%;
-		--text2-lightness-dark: 94.1%;
-
-		--text-on-brand-hue-dark: 0;
-		--text-on-brand-saturation-dark: 0%;
-		--text-on-brand-lightness-dark: 0%;
-
-		--text1-dark: hsl(var(--text1-hue-dark) var(--text1-saturation-dark) var(--text1-lightness-dark));
-		--text2-dark: hsl(var(--text2-hue-dark) var(--text2-saturation-dark) var(--text2-lightness-dark));
-		--surface0-dark: rgb(0,0,0);
-		--surface1-dark: hsl(var(--surface1-hue-dark) var(--surface1-saturation-dark) var(--surface1-lightness-dark));
-		--surface2-dark: hsl(var(--surface2-hue-dark) var(--surface2-saturation-dark) var(--surface2-lightness-dark));
-		--surface3-dark: hsl(var(--surface3-hue-dark) var(--surface3-saturation-dark) var(--surface3-lightness-dark));
-		--surface4-dark: hsl(var(--surface4-hue-dark) var(--surface4-saturation-dark) var(--surface4-lightness-dark));
-		--box-shadow-xxs-dark:
-			.01rem .01rem .01rem rgba(0, 0, 0, 0.225),
-			.01rem .01rem .01rem rgba(0, 0, 0, 0.323),
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.4),
-			.04rem .04rem .04rem rgba(0, 0, 0, 0.477),
-			.08rem .08rem .08rem rgba(0, 0, 0, 0.575)
-			.2rem .2rem .2rem rgba(0, 0, 0, 0.8);
-		--box-shadow-xs-dark:
-			.01rem .01rem .01rem rgba(0, 0, 0,  0.225),
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.323),
-			.05rem .05rem .05rem rgba(0, 0, 0, 0.4),
-			.09rem .09rem .09rem rgba(0, 0, 0, 0.477),
-			.17rem .17rem .17rem rgba(0, 0, 0, 0.575),
-			.4rem .4rem .4rem rgba(0, 0, 0, 0.8);
-		--box-shadow-sm-dark:
-			.02rem .02rem .02rem rgba(0, 0, 0, 0.225),
-			.04rem .04rem .04rem rgba(0, 0, 0, 0.323),
-			.08rem .08rem .08rem rgba(0, 0, 0, 0.4),
-			.13rem .13rem .13rem rgba(0, 0, 0, 0.477),
-			.25rem .25rem .25rem rgba(0, 0, 0, 0.575)
-			.6rem .6rem .6rem rgba(0, 0, 0, 0.8);
-		--box-shadow-ms-dark:
-			.02rem .02rem .02rem rgba(0, 0, 0, 0.225),
-			.05rem .05rem .05rem rgba(0, 0, 0, 0.323),
-			.1rem .1rem .09rem rgba(0, 0, 0, 0.4),
-			.18rem .18rem .16rem rgba(0, 0, 0, 0.477),
-			.33rem .33rem .29rem rgba(0, 0, 0, 0.575),
-			.8rem .8rem .7rem rgba(0, 0, 0, 0.8);
-		--box-shadow-md-dark:
-			.03rem .03rem .03rem rgba(0, 0, 0, 0.225),
-			.08rem .08rem .07rem rgba(0, 0, 0, 0.323),
-			.15rem .15rem .14rem rgba(0, 0, 0, 0.4),
-			.27rem .27rem .25rem rgba(0, 0, 0, 0.477),
-			.5rem .5rem .46rem rgba(0, 0, 0, 0.575),
-			1.2rem 1.2rem 1.1rem rgba(0, 0, 0, 0.8);
-		--box-shadow-ml-dark:
-			.07rem .07rem .06rem rgba(0, 0, 0, 0.225),
-			.17rem .17rem .15rem rgba(0, 0, 0, 0.323),
-			.31rem .31rem .29rem rgba(0, 0, 0, 0.4),
-			.56rem .56rem .51rem rgba(0, 0, 0, 0.477),
-			10.04rem 10.04rem .96rem rgba(0, 0, 0, 0.575),
-			2.5rem 2.5rem 2.3rem rgba(0, 0, 0, 0.8);
-		--box-shadow-lg-dark:
-			.14rem .14rem .12rem rgba(0, 0, 0, 0.225),
-			.33rem .33rem .3rem rgba(0, 0, 0, 0.323),
-			.63rem .63rem .56rem rgba(0, 0, 0, 0.4),
-			1.12rem 1.12rem 10.01rem rgba(0, 0, 0, 0.477),
-			20.09rem 20.09rem 1.88rem rgba(0, 0, 0, 0.575),
-			5rem 5rem 4.5rem rgba(0, 0, 0, 0.8);
-		--box-shadow-xl-dark:
-			.28rem .28rem .22rem rgba(0, 0, 0, 0.225),
-			.67rem .67rem .53rem rgba(0, 0, 0, 0.323),
-			1.25rem 1.25rem 1rem rgba(0, 0, 0, 0.4),
-			2.23rem 2.23rem 1.79rem rgba(0, 0, 0, 0.477),
-			4.18rem 4.18rem 3.34rem rgba(0, 0, 0, 0.575),
-			10rem 10rem 8rem rgba(0, 0, 0, 0.8);
+		--brand-hue: ${({ theme }) => theme.brand.hsl.h};
+		--brand-saturation: ${({ theme }) => theme.brand.hsl.s};
+		--brand-lightness: ${({ theme }) => theme.brand.hsl.l};
+		--brand-rgb: ${({ theme }) => theme.brand.rgb.r}, ${({ theme }) =>
+	theme.brand.rgb.g}, ${({ theme }) => theme.brand.rgb.b};
 	}
 
 	:root {
-		color-scheme: light;
-
 		/* set defaults */
-		--brand: var(--brand-light);
-		--text1: var(--text1-light);
-		--text2: var(--text2-light);
-		--text-on-brand: var(--text-on-brand-light));
-		--surface0: var(--surface0-light);
-		--surface1: var(--surface1-light);
-		--surface2: var(--surface2-light);
-		--surface3: var(--surface3-light);
-		--surface4: var(--surface4-light);
-		--box-shadow-xxs: var(--box-shadow-xxs-light);
-		--box-shadow-xs: var(--box-shadow-xs-light);
-		--box-shadow-sm: var(--box-shadow-sm-light);
-		--box-shadow-ms: var(--box-shadow-ms-light);
-		--box-shadow-md: var(--box-shadow-md-light);
-		--box-shadow-ml: var(--box-shadow-ml-light);
-		--box-shadow-lg: var(--box-shadow-lg-light);
-		--box-shadow-xl: var(--box-shadow-xl-light);
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			color-scheme: dark;
-
-			--brand: var(--brand-dark);
-			--text1: var(--text1-dark);
-			--text2: var(--text2-dark);
-			--text-on-brand: var(--text-on-brand-dark);
-			--surface0: var(--surface0-dark);
-			--surface1: var(--surface1-dark);
-			--surface2: var(--surface2-dark);
-			--surface3: var(--surface3-dark);
-			--surface4: var(--surface4-dark);
-			--box-shadow-xxs: var(--box-shadow-xxs-dark);
-			--box-shadow-xs: var(--box-shadow-xs-dark);
-			--box-shadow-sm: var(--box-shadow-sm-dark);
-			--box-shadow-ms: var(--box-shadow-ms-dark);
-			--box-shadow-md: var(--box-shadow-md-dark);
-			--box-shadow-ml: var(--box-shadow-ml-dark);
-			--box-shadow-lg: var(--box-shadow-lg-dark);
-			--box-shadow-xl: var(--box-shadow-xl-dark);
-		}
-	}
-
-	[color-scheme="light"] {
-		color-scheme: light;
-
-		--brand: var(--brand-light);
-		--text1: var(--text1-light);
-		--text2: var(--text2-light);
-		--text-on-brand: var(--text-on-brand-light));
-		--surface1: var(--surface1-light);
-		--surface2: var(--surface2-light);
-		--surface3: var(--surface3-light);
-		--surface4: var(--surface4-light);
-		--surface-shadow: var(--surface-shadow-light);
-		--shadow-strength: var(--shadow-strength-light);
-	}
-
-	[color-scheme="dark"] {
-		color-scheme: dark;
-
-		--brand: var(--brand-dark);
-		--text1: var(--text1-dark);
-		--text2: var(--text2-dark);
-		--text-on-brand: var(--text-on-brand-dark);
-		--surface1: var(--surface1-dark);
-		--surface2: var(--surface2-dark);
-		--surface3: var(--surface3-dark);
-		--surface4: var(--surface4-dark);
-		--surface-shadow: var(--surface-shadow-dark);
-		--shadow-strength: var(--shadow-strength-dark);
+		--brand: hsl(var(--brand-hue), var(--brand-saturation), var(--brand-lightness));
+		--text1: hsl(${({ theme }) => theme.text1.hsl.h}, ${({ theme }) =>
+	theme.text1.hsl.s}, ${({ theme }) => theme.text1.hsl.l});
+		--text2: hsl(${({ theme }) => theme.text2.hsl.h}, ${({ theme }) =>
+	theme.text2.hsl.s}, ${({ theme }) => theme.text2.hsl.l});
+		--text-on-brand: hsl(${({ theme }) => theme.textOnBrand.hsl.h}, ${({ theme }) =>
+	theme.textOnBrand.hsl.s}, ${({ theme }) => theme.textOnBrand.hsl.l});
+		--surface0: hsl(${({ theme }) => theme.surface0.hsl.h}, ${({ theme }) =>
+	theme.surface0.hsl.s}, ${({ theme }) => theme.surface0.hsl.l});
+		--surface1: hsl(${({ theme }) => theme.surface1.hsl.h}, ${({ theme }) =>
+	theme.surface1.hsl.s}, ${({ theme }) => theme.surface1.hsl.l});
+		--surface2: hsl(${({ theme }) => theme.surface2.hsl.h}, ${({ theme }) =>
+	theme.surface2.hsl.s}, ${({ theme }) => theme.surface2.hsl.l});
+		--surface3: hsl(${({ theme }) => theme.surface3.hsl.h}, ${({ theme }) =>
+	theme.surface3.hsl.s}, ${({ theme }) => theme.surface3.hsl.l});
+		--surface4: hsl(${({ theme }) => theme.surface4.hsl.h}, ${({ theme }) =>
+	theme.surface4.hsl.s}, ${({ theme }) => theme.surface4.hsl.l});
+		--box-shadow-xxs: ${({ theme }) => theme.boxShadow.xxs};
+		--box-shadow-xs: ${({ theme }) => theme.boxShadow.xs};
+		--box-shadow-sm: ${({ theme }) => theme.boxShadow.sm};
+		--box-shadow-ms: ${({ theme }) => theme.boxShadow.ms};
+		--box-shadow-md: ${({ theme }) => theme.boxShadow.md};
+		--box-shadow-ml: ${({ theme }) => theme.boxShadow.ml};
+		--box-shadow-lg: ${({ theme }) => theme.boxShadow.lg};
+		--box-shadow-xl: ${({ theme }) => theme.boxShadow.xl};
 	}
 
 	/* Box sizing rules */
@@ -330,39 +79,39 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	h1 {
-		margin-top: ${theme.spaces.xl};
+		margin-top: ${({ theme }) => theme.spaces.xl};
 		&:first-child {
 			margin-top: 0;
 		}
 	}
 
 	h2 {
-		margin-top: ${theme.spaces.lg};
+		margin-top: ${({ theme }) => theme.spaces.lg};
 		&:first-child {
 			margin-top: 0;
 		}
 	}
 
 	h3 {
-		margin-top: ${theme.spaces.ml};
+		margin-top: ${({ theme }) => theme.spaces.ml};
 		&:first-child {
 			margin-top: 0;
 		}
 	}
 
 	h4,p {
-		margin-top: ${theme.spaces.ms};
+		margin-top: ${({ theme }) => theme.spaces.ms};
 		&:first-child {
 			margin-top: 0;
 		}
 	}
 
 	h1 + p {
-		margin-top: ${theme.spaces.ml};
+		margin-top: ${({ theme }) => theme.spaces.ml};
 	}
 
 	h2 + p {
-		margin-top: ${theme.spaces.md};
+		margin-top: ${({ theme }) => theme.spaces.md};
 	}
 
 	h3 + p,
@@ -380,7 +129,7 @@ export const GlobalStyle = createGlobalStyle`
 	h6 + ol,
 	p + ul,
 	p + ol {
-		margin-top: ${theme.spaces.ms};
+		margin-top: ${({ theme }) => theme.spaces.ms};
 	}
 
 	input {
@@ -394,23 +143,21 @@ export const GlobalStyle = createGlobalStyle`
 		background-color: var(--surface1);
 		text-rendering: optimizeSpeed;
 		line-height: 1.5;
-		font-family: ${theme.fonts.secondary};
+		font-family: ${({ theme }) => theme.fonts.secondary};
 		color: var(--text1);
 		font-feature-settings: "kern";
 
-		background:
-		radial-gradient(circle farthest-side at 0% 50%,var(--surface0) 23.5%,rgba(0,0,0,0) 0)2.1rem 3.0rem,
-		radial-gradient(circle farthest-side at 0% 50%,var(--surface2) 24%,rgba(0,0,0,0) 0)1.9rem 3.0rem,
-		linear-gradient(var(--surface0) 14%,rgba(0,0,0,0) 0, rgba(0,0,0,0) 85%,var(--surface0) 0)0 0,
-		linear-gradient(150deg,var(--surface0) 24%,var(--surface2) 0,var(--surface2) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface2) 0,var(--surface2) 76%,var(--surface0) 0)0 0,
-		linear-gradient(30deg,var(--surface0) 24%,var(--surface2) 0,var(--surface2) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface2) 0,var(--surface2) 76%,var(--surface0) 0)0 0,
-		linear-gradient(90deg,var(--surface2) 2%,var(--surface0) 0,var(--surface0) 98%,var(--surface2) 0%)0 0 var(--surface0);
-		background-size: 4rem 6rem;
+		background: ${({ theme }) => theme.texturedBackground};
 
 		&::after {
 			position: absolute;
 			content: '';
-			background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.75));
+			background: linear-gradient(rgba(${({ theme }) => theme.surface1.rgb.r}, ${({
+	theme,
+}) => theme.surface1.rgb.g}, ${({ theme }) =>
+	theme.surface1.rgb.b},1), rgba(${({ theme }) => theme.surface1.rgb.r}, ${({
+	theme,
+}) => theme.surface1.rgb.g}, ${({ theme }) => theme.surface1.rgb.b},0.75));
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -418,20 +165,6 @@ export const GlobalStyle = createGlobalStyle`
 			z-index: -1;
 		}
 
-		@media (prefers-color-scheme: dark) {
-			background:
-			radial-gradient(circle farthest-side at 0% 50%,var(--surface1) 23.5%,rgba(0,0,0,0) 0)2.1rem 3.0rem,
-			radial-gradient(circle farthest-side at 0% 50%,var(--surface0) 24%,rgba(0,0,0,0) 0)1.9rem 3.0rem,
-			linear-gradient(var(--surface1) 14%,rgba(0,0,0,0) 0, rgba(0,0,0,0) 85%,var(--surface1) 0)0 0,
-			linear-gradient(150deg,var(--surface1) 24%,var(--surface0) 0,var(--surface0) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface0) 0,var(--surface0) 76%,var(--surface1) 0)0 0,
-			linear-gradient(30deg,var(--surface1) 24%,var(--surface0) 0,var(--surface0) 26%,rgba(0,0,0,0) 0,rgba(0,0,0,0) 74%,var(--surface0) 0,var(--surface0) 76%,var(--surface1) 0)0 0,
-			linear-gradient(90deg,var(--surface0) 2%,var(--surface1) 0,var(--surface1) 98%,var(--surface0) 0%)0 0 var(--surface1);
-			background-size: 4rem 6rem;
-			
-			&::after {
-				background: linear-gradient(rgba(15,15,15,1), rgba(15,15,15,0.75));
-			}
-		}
 	}
 
 	body.no-scroll {
@@ -440,7 +173,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	#__next {
 		display: grid;
-		grid-gap: ${theme.spaces.md};
+		grid-gap: ${({ theme }) => theme.spaces.md};
 		grid-template-rows: auto auto 1fr auto;
 		grid-template-areas:
 			'nav'
@@ -474,61 +207,61 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	h1,h2,h3 {
-		font-family: ${theme.fonts.primary};
+		font-family: ${({ theme }) => theme.fonts.primary};
 	}
 
 	h4,h5,h6,p,input,button,a {
-		font-family: ${theme.fonts.secondary};
+		font-family: ${({ theme }) => theme.fonts.secondary};
 	}
 
 	p,input,button,a,ol,ul {
-		font-size: ${theme.fonts.sizes.xs};
+		font-size: ${({ theme }) => theme.fonts.sizes.xs};
 
-		@media (min-width: ${theme.breakpoints.md}) {
-			font-size: ${theme.fonts.sizes.sm};
+		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: ${({ theme }) => theme.fonts.sizes.sm};
 		}
 	}
 
 	p,input,a,ul,ol {
 		line-height: 1.333;
 
-		@media (min-width: ${theme.breakpoints.md}) {
+		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			line-height: 1.375;
 		}
 	}
 
 	h1 {
-	font-size: ${theme.fonts.sizes.lg};
+	font-size: ${({ theme }) => theme.fonts.sizes.lg};
 	line-height: 1.18;
 
-		@media (min-width: ${theme.breakpoints.md}) {
+		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			line-height: 1.06;
-			font-size: ${theme.fonts.sizes.xxl};
+			font-size: ${({ theme }) => theme.fonts.sizes.xxl};
 		}
 	}
 
 	h2 {
-	font-size: ${theme.fonts.sizes.md};
+	font-size: ${({ theme }) => theme.fonts.sizes.md};
 	line-height: 1.21;
 
-		@media (min-width: ${theme.breakpoints.md}) {
-			font-size: ${theme.fonts.sizes.ml};
+		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: ${({ theme }) => theme.fonts.sizes.ml};
 			line-height: 1.12;
 		}
 	}
 
 	h3 {
-		font-size: ${theme.fonts.sizes.ms};
+		font-size: ${({ theme }) => theme.fonts.sizes.ms};
 		line-height: 1.27;
 	}
 
 	h4 {
-		font-size: ${theme.fonts.sizes.sm};
+		font-size: ${({ theme }) => theme.fonts.sizes.sm};
 		line-height: 1.333;
 	}
 
 	h5 {
-		font-size: ${theme.fonts.sizes.xs};
+		font-size: ${({ theme }) => theme.fonts.sizes.xs};
 		line-height: 1.25;
 	}
 

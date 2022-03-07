@@ -112,7 +112,7 @@ const NavLinks = ({ openMenu, components, onClick }) => {
 	);
 };
 
-export function Navbar({ theme }) {
+export function Navbar() {
 	const [openMenu, toggleMenu] = useState(false);
 	const components = {
 		link: PrimaryLink,
@@ -120,7 +120,7 @@ export function Navbar({ theme }) {
 	};
 	return (
 		<StyledNavbar_1>
-			<NavBrand onClick={() => toggleMenu(false)} theme={theme} />
+			<NavBrand onClick={() => toggleMenu(false)} />
 			<HamburgerMenu.Wrapper onClick={() => toggleMenu(!openMenu)}>
 				{openMenu ? (
 					<HamburgerMenu.CloseMenuIcon_1 />

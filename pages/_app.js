@@ -23,11 +23,9 @@ export default function App({ Component, pageProps, router }) {
 			>
 				<GlobalStyle />
 				<MotionConfig reducedMotion='user'>
-					{process.env.NODE_ENV !== 'production' ? (
-						<Navbar theme={theme} />
-					) : null}
+					{process.env.NODE_ENV !== 'production' ? <Navbar /> : null}
 					<AnimatePresence exitBeforeEnter>
-						<Component {...pageProps} canonical={url} key={url} theme={theme} />
+						<Component {...pageProps} canonical={url} key={url} />
 					</AnimatePresence>
 				</MotionConfig>
 			</ThemeProvider>

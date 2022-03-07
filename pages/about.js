@@ -109,11 +109,11 @@ const childrenTCoreTeamVariants = {
 	},
 };
 
-export default function About({ theme }) {
+export default function About() {
 	return (
 		<>
 			<AboutHeader role='banner'>
-				<LogoTextImage theme={theme} />
+				<LogoTextImage />
 			</AboutHeader>
 			<AboutMain>
 				<StyledSection>

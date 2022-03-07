@@ -16,7 +16,7 @@ const SignUp = styled.h2`
 	margin: 2.4rem auto;
 `;
 
-export default function Home({ theme }) {
+export default function Home() {
 	return (
 		<>
 			<MotionHeader>
@@ -24,7 +24,7 @@ export default function Home({ theme }) {
 			</MotionHeader>
 			<MotionMain>
 				<ComingSoon>
-					<ComingSoonImage theme={theme} />
+					<ComingSoonImage />
 					<SignUp>Sign up to receive email updates</SignUp>
 					<NewsletterSubscribe />
 				</ComingSoon>

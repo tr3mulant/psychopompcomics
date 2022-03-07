@@ -103,6 +103,7 @@ export const themeCommon = {
 };
 
 export const themeDark = {
+	mode: 'dark',
 	...themeCommon,
 	surface0: {
 		hsl: {
@@ -238,6 +239,7 @@ export const themeDark = {
 };
 
 export const themeLight = {
+	mode: 'light',
 	...themeCommon,
 	surface0: {
 		hsl: {

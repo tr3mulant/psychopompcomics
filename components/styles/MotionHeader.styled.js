@@ -1,15 +1,15 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
-import { themeCommon } from '../themes/DefaultTheme';
 
 const StyledHeader = styled(motion.header)`
 	max-width: 100%;
 `;
 
 export default function MotionHeader(props) {
+	const theme = useTheme();
 	return (
 		<StyledHeader
-			variants={themeCommon.motion.pageTransitionVariant}
+			variants={theme.motion.pageTransitionVariants}
 			initial='hidden'
 			animate='visible'
 			exit='exit'

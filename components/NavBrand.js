@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import brand_light from '../images/final_inv_cropped.png';
 import brand_dark from '../images/final_cropped_transparent.png';
 
@@ -17,8 +17,9 @@ const NavBrandContainer = styled.div`
 	}
 `;
 
-export const NavBrand = ({ onClick, theme }) => {
-	const brand_image = theme == 'light' ? brand_light : brand_dark;
+export const NavBrand = ({ onClick }) => {
+	const theme = useTheme();
+	const brand_image = theme.mode == 'light' ? brand_light : brand_dark;
 	return (
 		<>
 			<NavBrandContainer>

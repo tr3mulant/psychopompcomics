@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import deer_light from '../images/final_wtype_inv_cropped@4x.png';
 import deer_dark from '../images/final_wtype_transparent_cropped@4x.png';
 
@@ -14,28 +14,14 @@ const ImageContainer = styled.div`
 	}
 `;
 
-const ImageContainerLight = styled(ImageContainer)`
-	@media (prefers-color-scheme: dark) {
-		display: none;
-	}
-`;
-
-const ImageContainerDark = styled(ImageContainer)`
-	display: none;
-	@media (prefers-color-scheme: dark) {
-		display: block;
-	}
-`;
-
 export default function ComingSoonImage() {
+	const theme = useTheme();
+	const deer_image = theme.mode == 'light' ? deer_light : deer_dark;
 	return (
 		<>
-			<ImageContainerLight>
-				<Image src={deer_light} alt='Psychopomp Comics' />
-			</ImageContainerLight>
-			<ImageContainerDark>
-				<Image src={deer_dark} alt='Psychopomp Comics' />
-			</ImageContainerDark>
+			<ImageContainer>
+				<Image src={deer_image} alt='Psychopomp Comics' />
+			</ImageContainer>
 		</>
 	);
 }

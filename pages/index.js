@@ -2,7 +2,6 @@ import ComingSoon from '../components/styles/ComingSoon.styled';
 import styled from 'styled-components';
 import ComingSoonImage from '../components/ComingSoonImage';
 import NewsletterSubscribe from '../components/NewsletterSubscribe';
-import { Navbar_Style_1 } from '../components/Navbar';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
 

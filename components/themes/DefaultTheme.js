@@ -38,6 +38,7 @@ export const themeCommon = {
 			g: 198,
 			b: 63,
 		},
+		hex: '#8dc63f',
 	},
 	textOnBrand: {
 		hsl: {
@@ -152,6 +153,19 @@ export const themeDark = {
 			l: '38%',
 		},
 		rgb: {},
+	},
+	colorOpposite: {
+		hsl: {
+			h: 0,
+			s: '0%',
+			l: '100%',
+		},
+		rgb: {
+			r: 255,
+			g: 255,
+			b: 255,
+		},
+		hex: '#fff',
 	},
 	text1: {
 		hsl: {
@@ -288,6 +302,19 @@ export const themeLight = {
 			l: '85%',
 		},
 		rgb: {},
+	},
+	colorOpposite: {
+		hsl: {
+			h: 0,
+			s: '0%',
+			l: '0%',
+		},
+		rgb: {
+			r: 0,
+			g: 0,
+			b: 0,
+		},
+		hex: '#000',
 	},
 	text1: {
 		hsl: {

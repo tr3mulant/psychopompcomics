@@ -1,6 +1,5 @@
-import Image from 'next/image';
 import styled, { useTheme } from 'styled-components';
-import MotionLogo from './MotionLogo';
+import MotionLogo from './styles/MotionLogo';
 
 const ImageContainer = styled.div`
 	margin-bottom: ${(props) => props.theme.spaces.xxl};

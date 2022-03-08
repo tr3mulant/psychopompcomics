@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import { themeDark, themeLight } from '../components/themes/DefaultTheme';
+import { themeDark } from '../components/themes/DefaultTheme';
 import { GlobalStyle } from '../components/styles/GlobalStyles.styled';
 import Home from '../pages/index';
 import { render, screen } from '@testing-library/react';

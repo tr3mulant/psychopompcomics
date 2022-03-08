@@ -1,4 +1,4 @@
-name: build-test-deploy
+name: deploy
 
 env:
   REGISTRY: 'registry.digitalocean.com/parabola/'
@@ -9,13 +9,11 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  build-and-test:
-    name: Checkout and Install and Test
+  build-and-deploy:
+    if: ${{ github.repository == 'psychopomp-dev/psychopompcomics' }}
+    name: Build Images and Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
@@ -23,18 +21,6 @@ jobs:
 
       - name: yarn install
         run: yarn
-
-      - name: Jest Test
-        run: yarn test-ci
-
-  build-and-deploy:
-    if: ${{ github.repository == 'psychopomp-dev/psychopompcomics' }}
-    name: Build Images and Deploy
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v2
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
@@ -77,7 +63,7 @@ jobs:
           source: 'docker-compose.prod.yml'
           target: '~/psychopompcomics'
 
-      - name: Deploy to Digital Ocean droplet via SSH action
+      - name: Deploy via SSH action
         uses: appleboy/ssh-action@master
         with:
           HOST: ${{ secrets.HOST }}
@@ -94,7 +80,7 @@ jobs:
             # Stops containers and removes containers, networks, volumes, and images created by up
             docker-compose -f docker-compose.prod.yml down -v --remove-orphans
 
-            # Lets login to Digtal Ocean Container Registry in order for Docker to run from the registry url
+            # Lets login to our container registry in order for Docker to pull from the registry url
             doctl registry login --expiry-seconds 600
 
             #Lets pull our images down

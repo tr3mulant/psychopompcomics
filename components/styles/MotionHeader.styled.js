@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 const StyledHeader = styled(motion.header)`
 	max-width: 100%;
+	text-align: center;
 `;
 
 export default function MotionHeader(props) {

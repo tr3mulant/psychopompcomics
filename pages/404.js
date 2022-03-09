@@ -13,8 +13,10 @@ const FourZeroFourHeader = styled.header`
 const Title = styled.h1`
 	text-align: center;
 	color: var(--text1);
-	position: relative;
+	position: absolute;
 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 10;
 `;
 
@@ -23,13 +25,24 @@ const FourZeroFourMain = styled.main`
 	max-width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	text-align: center;
 	p {
 		padding: ${(props) => props.theme.spaces.md};
 	}
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+	position: relative;
+	max-width: 60rem;
+	width: 100%;
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+		max-width: 34rem;
+	}
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		max-width: 26rem;
+	}
+`;
 
 export default function FourZeroFour() {
 	return (
@@ -37,11 +50,14 @@ export default function FourZeroFour() {
 			<FourZeroFourMain>
 				<ImageContainer>
 					<Title>404</Title>
-					<Image src={portal} alt='500' />
+					<Image src={portal} alt='404' />
 				</ImageContainer>
-				<p>{`Wondering astray, looking for what can't be found`}</p>
+
+				{/* <p>{`Wondering astray, looking for what can't be found`}</p> */}
+				<p>{`Cupidatat non qui deserunt nostrud reprehenderit non aliquip cillum id ipsum magna adipisicing.`}</p>
 				<LinkPrimaryOutline href='/'>
-					<a>Let us guide you back</a>
+					<a>Voluptate labore in irure</a>
+					{/* <a>Let us guide you back</a> */}
 				</LinkPrimaryOutline>
 			</FourZeroFourMain>
 		</>

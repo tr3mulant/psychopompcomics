@@ -13,7 +13,11 @@ const StyledNavbar = styled.nav`
         background-color: var(--surface1);
     }
     margin: 0 0 ${(props) => props.theme.spaces.lg} 0;
-    @media only screen and (max-width: ${(props) =>
+	@media only screen and (max-width: ${(props) =>
+		props.theme.breakpoints.lg}) {
+		margin-bottom: 0;
+	}
+	@media only screen and (max-width: ${(props) =>
 			props.theme.breakpoints.sm}) {
         margin: 0;
         padding-bottom: ${(props) => props.theme.spaces.lg};

@@ -5,12 +5,13 @@ import brand_light from '../images/final_inv_cropped.png';
 import brand_dark from '../images/final_cropped_transparent.png';
 
 const NavBrandContainer = styled.div`
-	width: ${(props) => props.theme.spaces.xxxl};
+	width: 9.6rem;
 	max-width: 100%;
 	padding: ${(props) => props.theme.spaces.ms};
 	margin: ${(props) => props.theme.spaces.lg} auto;
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		margin-left: auto;
+		width: 6.6rem;
+		margin: ${(props) => props.theme.spaces.sm } auto 0;
 	}
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		margin: ${(props) => props.theme.spaces.sm} auto

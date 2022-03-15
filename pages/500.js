@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import portal from '../images/portal.svg';
+import styled, { useTheme } from 'styled-components';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import portal from '../images/portal.svg';
 import { LinkPrimaryOutline } from '../components/styles/StyledButton.styled';
 
 const FiveZeroZeroHeader = styled.header`
@@ -10,12 +11,20 @@ const FiveZeroZeroHeader = styled.header`
 		${(props) => props.theme.spaces.lg} ${(props) => props.theme.spaces.xl};
 `;
 
+const MotionContainer = styled(motion.div)``;
+
+const FiveZeroZeroContainer = styled.div`
+	position: relative;
+	display: flex;
+	justify-content: center;
+`;
+
 const Title = styled.h1`
 	text-align: center;
 	color: var(--text1);
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 49.5%;
 	transform: translate(-50%, -50%);
 	z-index: 10;
 `;
@@ -44,21 +53,57 @@ const ImageContainer = styled.div`
 	}
 `;
 
+const MotionImageContainer = styled(motion.div)`
+	position: relative;
+	max-width: 60rem;
+	width: 100%;
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+		max-width: 34rem;
+	}
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		max-width: 26rem;
+	}
+`;
+
 export default function FiveZeroZero() {
+	const theme = useTheme();
+
+	const svgVariants = {
+		hidden: {
+			opacity: 0,
+		},
+		visible: {
+			opacity: 1,
+			transition: {
+				duration: 2,
+			},
+		},
+	};
+
 	return (
 		<>
-			<FiveZeroZeroMain>
-				<ImageContainer>
-					<Title>404</Title>
-					<Image src={portal} alt='404' />
-				</ImageContainer>
-
-				{/* <p>{`Wondering astray, looking for what can't be found`}</p> */}
-				<p>{`Cupidatat non qui deserunt nostrud reprehenderit non aliquip cillum id ipsum magna adipisicing.`}</p>
-				<LinkPrimaryOutline href='/'>
-					<a>Voluptate labore in irure</a>
-					{/* <a>Let us guide you back</a> */}
-				</LinkPrimaryOutline>
+			<FiveZeroZeroMain
+				variants={theme.motion.pageTransitionVariants}
+				initial='hidden'
+				animate='visible'
+				exit='exit'>
+				<MotionContainer
+					variants={svgVariants}
+					animate="visible"
+					initial="hidden">
+					<FiveZeroZeroContainer>
+						<Title>505</Title>
+						<MotionImageContainer
+							animate={{ rotate: 360 }}
+							transition={{duration: 20}}>
+							<Image src={portal} alt='500' />
+						</MotionImageContainer>
+					</FiveZeroZeroContainer>
+					<p>{`Wondering astray, looking for what can't be found`}</p>
+					<LinkPrimaryOutline href='/'>
+						<a>Let us guide you back</a>
+					</LinkPrimaryOutline>
+				</MotionContainer>
 			</FiveZeroZeroMain>
 		</>
 	);

@@ -21,6 +21,10 @@ const NavLinkList = styled.ul`
 		width: unset;
 		margin-top: 0;
 		margin-right: auto;
+
+		li * {
+			font-size: ${(props) => props.theme.fonts.sizes.xxs};
+		}
 	}
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		position: fixed;

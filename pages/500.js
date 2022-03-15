@@ -49,8 +49,8 @@ export default function FiveZeroZero() {
 		<>
 			<FiveZeroZeroMain>
 				<ImageContainer>
-					<Title>404</Title>
-					<Image src={portal} alt='404' />
+					<Title>500</Title>
+					<Image src={portal} alt='500' />
 				</ImageContainer>
 
 				{/* <p>{`Wondering astray, looking for what can't be found`}</p> */}

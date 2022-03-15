@@ -18,7 +18,7 @@ const svgVariants = {
 	},
 };
 
-const pathVariants = {
+const hexVariant = {
 	hidden: {
 		opacity: 0,
 		pathLength: 0,
@@ -33,6 +33,22 @@ const pathVariants = {
 	},
 };
 
+const pathVariants = {
+	hidden: {
+		opacity: 0,
+		pathLength: 0,
+	},
+	visible: {
+		opacity: 1,
+		pathLength: 1,
+		transition: {
+			delay: 2,
+			duration: 1,
+			ease: 'easeInOut',
+		},
+	},
+};
+
 const circleVariants = {
 	hidden: {
 		opacity: 0,
@@ -41,11 +57,6 @@ const circleVariants = {
 	visible: {
 		opacity: 1,
 		scale: 1,
-		transition: {
-			delay: 1.8,
-			duration: 0.2,
-			ease: 'easeOut',
-		},
 	},
 };
 
@@ -68,7 +79,7 @@ export default function MotionLogo() {
 					fill='none'
 					strokeMiterlimit='10'
 					d='M323.65 422.55l101.41-57.67V124.75L214.78 5.18 4.5 124.75v239.13l101.74 58.34'
-					variants={pathVariants}
+					variants={hexVariant}
 				/>
 				<path
 					fill={theme.colorOpposite.hex}
@@ -97,7 +108,7 @@ export default function MotionLogo() {
 					stroke={theme.colorOpposite.hex}
 					fill='none'
 					strokeMiterlimit='10'
-					d='M143.33 96.59l-.01 44.99-7.63 7.13-.05 37.19m33.37-39.88l-.05 25.54-33.49 42.81m-49.23 12.95l-9.05-23.02v-27.36'
+					d='m 135.64,185.9 0.05,-37.19 7.63,-7.13 0.01,-44.99 m -7.86,117.78 33.49,-42.81 0.05,-25.54 m -91.82,30.92 v 27.36 l 9.05,23.02'
 					variants={pathVariants}
 				/>
 				<motion.path
@@ -105,7 +116,7 @@ export default function MotionLogo() {
 					stroke={theme.colorOpposite.hex}
 					fill='none'
 					strokeMiterlimit='10'
-					d='M92.27 123.21l.03 87.01-8.91 8.31M30.6 197.27l-.29 15.28 24.17 18.61M286.59 96.98l-.17 44.84 7.67 7.09-.36 81.1 13.26 12.6-.1 32.83'
+					d='m 83.39,218.53 8.91,-8.31 -0.03,-87.01 M 54.48,231.16 30.31,212.55 30.6,197.27 m 276.29,78.17 0.1,-32.83 -13.26,-12.6 0.36,-81.1 -7.67,-7.09 0.17,-44.84'
 					variants={pathVariants}
 				/>
 				<motion.path
@@ -121,7 +132,7 @@ export default function MotionLogo() {
 					stroke={theme.colorOpposite.hex}
 					fill='none'
 					strokeMiterlimit='10'
-					d='M337.53 124.42l-.25 86.24 9.35 8.88m47.65-91.59l-10.16 8.28v42.7l-8.94 8.09-.56 36.08m.18 8.58l24.37-18.7-.24-13.59'
+					d='m 346.63,219.54 -9.35,-8.88 0.25,-86.24 m 37.09,98.68 0.56,-36.08 8.94,-8.09 v -42.7 l 10.16,-8.28 m 4.65,71.44 0.24,13.59 -24.37,18.7'
 					variants={pathVariants}
 				/>
 				<motion.path
@@ -148,6 +159,11 @@ export default function MotionLogo() {
 					cy='197.79'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.5,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -155,6 +171,11 @@ export default function MotionLogo() {
 					cy='127.39'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.7,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -162,6 +183,11 @@ export default function MotionLogo() {
 					cy='116.86'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.5,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -169,6 +195,11 @@ export default function MotionLogo() {
 					cy='123.72'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.9,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -176,6 +207,11 @@ export default function MotionLogo() {
 					cy='82.05'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.1,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -183,6 +219,11 @@ export default function MotionLogo() {
 					cy='96.78'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.3,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -190,6 +231,11 @@ export default function MotionLogo() {
 					cy='176.68'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.55,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -197,6 +243,11 @@ export default function MotionLogo() {
 					cy='188.91'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.75,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -204,6 +255,11 @@ export default function MotionLogo() {
 					cy='145.92'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.95,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -211,6 +267,11 @@ export default function MotionLogo() {
 					cy='145.79'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.15,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -218,6 +279,11 @@ export default function MotionLogo() {
 					cy='97.14'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.05,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -225,6 +291,11 @@ export default function MotionLogo() {
 					cy='82.42'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.85,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -232,6 +303,11 @@ export default function MotionLogo() {
 					cy='124.32'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.65,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -239,6 +315,11 @@ export default function MotionLogo() {
 					cy='117.48'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.4,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -246,6 +327,11 @@ export default function MotionLogo() {
 					cy='127.94'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1.2,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -253,6 +339,11 @@ export default function MotionLogo() {
 					cy='198.67'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 1,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -260,6 +351,11 @@ export default function MotionLogo() {
 					cy='177.17'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.8,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 				<motion.circle
 					fill={theme.colorOpposite.hex}
@@ -267,6 +363,11 @@ export default function MotionLogo() {
 					cy='188.93'
 					r='4.67'
 					variants={circleVariants}
+					transition={{
+						delay: 0.6,
+						duration: 0.5,
+						ease: 'easeOut',
+					}}
 				/>
 			</g>
 		</Logo>

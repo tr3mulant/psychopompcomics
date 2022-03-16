@@ -7,24 +7,11 @@ const StyledPrimaryLink = styled.div`
 	align-items: center;
 	padding: ${(props) => props.theme.spaces.md};
 
-	a {
-		color: var(--brand);
-		text-decoration: none;
-		text-transform: uppercase;
-		transition: color 300ms ease;
-		:hover {
-			color: hsl(
-				var(--brand-hue) var(--brand-saturation)
-					calc(var(--brand-lightness) * 1.2)
-			);
-		}
-
-		:focus {
-			color: hsl(
-				var(--brand-hue) var(--brand-saturation)
-					calc(var(--brand-lightness) * 1.5)
-			);
-		}
+	:focus {
+		color: hsl(
+			var(--brand-hue) var(--brand-saturation)
+				calc(var(--brand-lightness) * 1.5)
+		);
 	}
 `;
 

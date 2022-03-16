@@ -269,6 +269,19 @@ export const GlobalStyle = createGlobalStyle`
 		line-height: 1.25;
 	}
 
+	a {
+		color: var(--brand);
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: color 300ms ease;
+		:hover {
+			color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.2)
+			);
+		}
+	}
+
 	.text-center {
 		text-align: center;
 	}

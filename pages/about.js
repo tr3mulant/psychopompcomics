@@ -1,5 +1,6 @@
 import StyledSection from '../components/styles/StyledSection.styled';
 import SectionContainer from '../components/styles/SectionContainer.styled';
+import { TwoUpContainer, TwoUp } from '../components/styles/TwoUp.styled';
 import LogoTextImage from '../components/LogoTextImage';
 import MotionMain from '../components/styles/MotionMain.styled';
 import MotionHeader from '../components/styles/MotionHeader.styled';
@@ -17,27 +18,6 @@ const AboutHeader = styled(MotionHeader)`
 const AboutMain = styled(MotionMain)`
 	display: flex;
 	flex-direction: column;
-`;
-
-const TwoUpContainer = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-`;
-
-const TwoUp = styled.article`
-	width: 100%;
-	padding-left: ${(props) => props.theme.spaces.xl};
-	padding-right: ${(props) => props.theme.spaces.xl};
-	margin-bottom: ${(props) => props.theme.spaces.xxl};
-
-	@media (min-width: ${(props) => props.theme.breakpoints.md}) {
-		width: 50%;
-
-		&:first-child {
-			margin-bottom: initial;
-			border-right: 0.1rem solid var(--surface4);
-		}
-	}
 `;
 
 const CoreTeamContainer = styled(motion.div)`
@@ -112,13 +92,13 @@ const childrenTCoreTeamVariants = {
 export default function About() {
 	return (
 		<>
-			<AboutHeader role='banner'>
+			<AboutHeader>
 				<LogoTextImage />
 			</AboutHeader>
 			<AboutMain>
 				<StyledSection>
 					<SectionContainer>
-						<TwoUpContainer>
+						<TwoUpContainer divided>
 							<TwoUp>
 								<h3>{'Spirit Guide to Another Realm. . .'}</h3>
 								<p>

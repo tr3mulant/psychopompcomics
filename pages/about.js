@@ -8,6 +8,10 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { DevRoutes } from '../utils/dev_routes';
 import { motion } from 'framer-motion';
+import roninPic from '../images/core-members/RoninRosewater.jpg';
+import alaricPic from '../images/core-members/4l4RIC.jpg';
+import nfterPic from '../images/core-members/The_NFTer.jpg';
+import tr3mulantPic from '../images/core-members/tr3mulant.jpg';
 
 const AboutHeader = styled(MotionHeader)`
 	text-align: center;
@@ -141,12 +145,7 @@ export default function About() {
 								>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
-											<Image
-												width='75'
-												height='75'
-												src='https://via.placeholder.com/150?text=temp'
-												alt='Ian'
-											/>
+											<Image width='75' height='75' src={roninPic} alt='Ian' />
 										</CoreTeamMemberImage>
 										<h4>Ian</h4>
 										<h4>Chief Wagmi Officer</h4>
@@ -165,7 +164,7 @@ export default function About() {
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={alaricPic}
 												alt='Caleb'
 											/>
 										</CoreTeamMemberImage>
@@ -186,7 +185,7 @@ export default function About() {
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={nfterPic}
 												alt='Spencer'
 											/>
 										</CoreTeamMemberImage>
@@ -207,7 +206,7 @@ export default function About() {
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={tr3mulantPic}
 												alt='Scott'
 											/>
 										</CoreTeamMemberImage>

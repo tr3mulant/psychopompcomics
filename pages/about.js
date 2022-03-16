@@ -150,7 +150,15 @@ export default function About() {
 										</CoreTeamMemberImage>
 										<h4>Ian</h4>
 										<h4>Chief Wagmi Officer</h4>
-										<h4>@RoninRosewater</h4>
+										<h4>
+											<a
+												href='https://twitter.com/RoninRosewater'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@RoninRosewater
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
@@ -163,7 +171,15 @@ export default function About() {
 										</CoreTeamMemberImage>
 										<h4>Caleb</h4>
 										<h4>Developer</h4>
-										<h4>@4l4RIC_1</h4>
+										<h4>
+											<a
+												href='https://twitter.com/4l4RIC_1'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@4l4RIC_1
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
@@ -176,7 +192,15 @@ export default function About() {
 										</CoreTeamMemberImage>
 										<h4>Spencer</h4>
 										<h4>Director of Lore</h4>
-										<h4>@The_NFTer</h4>
+										<h4>
+											<a
+												href='https://twitter.com/The_NFTer'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@The_NFTer
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
@@ -189,7 +213,15 @@ export default function About() {
 										</CoreTeamMemberImage>
 										<h4>Scott</h4>
 										<h4>Developer</h4>
-										<h4>@__tr3mulant__</h4>
+										<h4>
+											<a
+												href='https://twitter.com/__tr3mulant__'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@__tr3mulant__
+											</a>
+										</h4>
 									</CoreTeamMember>
 								</CoreTeamContainer>
 							</TwoUp>

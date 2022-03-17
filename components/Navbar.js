@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useCycle } from 'framer-motion';
+import { useMedia } from '../hooks/useMedia';
+import { useScrollLock } from '../hooks/useScrollLock';
+import { useMenuContext } from '../state/useMenuContext';
 import { NavBrand } from './NavBrand';
 import { HamburgerMenu } from './HamburgerMenu';
 import { DiscordIcon, TwitterIcon } from './SocialIcons';
@@ -340,7 +343,9 @@ export const Navbar_Style_7 = () => {
 	);
 };
 
-const MotionNavLinks = ({ openMenu, onClick }) => {
+const MotionNavLinks = ({ openMenu, mobile, onClick }) => {
+	const links = ['about','comics','collectibles','characters','artists','news','merch'];
+	
 	const variants = {
 		close: {
 			opacity: 0,
@@ -360,47 +365,18 @@ const MotionNavLinks = ({ openMenu, onClick }) => {
 	};
 	return (
 		<StyledMotionNavLinkList_1
-			animate={openMenu ? 'open' : 'close'}
-			initial={variants.close}
+			animate={mobile ? (openMenu ? 'open' : 'close') : 'open'}
+			initial={mobile ? 'close' : 'open'}
 			variants={variants}
 			exit='exit'
-			openMenu={openMenu}
-		>
-			<li>
-				<PrimaryLink onClick={onClick} href='/about'>
-					about
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/comics'>
-					comics
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/collectibles'>
-					collectibles
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/characters'>
-					characters
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/artists'>
-					artists
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/news'>
-					news
-				</PrimaryLink>
-			</li>
-			<li>
-				<PrimaryLink onClick={onClick} href='/merch'>
-					merch
-				</PrimaryLink>
-			</li>
+			openMenu={openMenu}>
+			{links.map((link) => (
+				<li key={link}>
+					<PrimaryLink onClick={onClick} href={`/${link}`}>	
+						{link}
+					</PrimaryLink>
+				</li>
+			))}
 			<li>
 				<MobileSocialContainer />
 			</li>
@@ -409,20 +385,25 @@ const MotionNavLinks = ({ openMenu, onClick }) => {
 };
 
 export const MotionNavbar = () => {
-	// const [openMenu, toggleMenu] = useState(false);
-	const [openMenu, toggleMenu] = useCycle(false, true);
-
+	const { isMenuOpen, toggleMenu, closeMenu } = useMenuContext();
+	const { isMobile } = useMedia();
+	useScrollLock(isMenuOpen);
+	useEffect(() => {
+		if (!isMobile) {
+			closeMenu();
+		}
+	  }, [isMobile, closeMenu]);
 	return (
 		<StyledMotionNavbar_1>
-			<NavBrand onClick={toggleMenu} />
+			<NavBrand onClick={closeMenu} />
 			<HamburgerMenu.Wrapper onClick={toggleMenu}>
-				{openMenu ? (
+				{isMenuOpen ? (
 					<HamburgerMenu.CloseMenuIcon_1 />
 				) : (
 					<HamburgerMenu.OpenMenuIcon_1 />
 				)}
 			</HamburgerMenu.Wrapper>
-			<MotionNavLinks openMenu={openMenu} onClick={toggleMenu} />
+			<MotionNavLinks openMenu={isMenuOpen} mobile={isMobile} onClick={closeMenu} />
 			<NavNewsletterSubscribe />
 		</StyledMotionNavbar_1>
 	);

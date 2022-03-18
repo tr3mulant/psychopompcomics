@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import 'swiper/css/bundle';
+Sty;
 
 /* Drawn from https://web.dev/building-a-color-scheme/ */
 export const GlobalStyle = createGlobalStyle`

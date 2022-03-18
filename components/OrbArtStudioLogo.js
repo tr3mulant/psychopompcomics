@@ -1,7 +1,7 @@
 import { useTheme } from 'styled-components';
 import Image from 'next/image';
 import OrbLogoLight from '../images/logos/Orb-Art-Studio-inv.png';
-import OrbLogoDark from '../images/logos/Orb-Art-Studio.png';
+import OrbLogoDark from '../images/logos/orb-art-studio-logo.png';
 import OrbLogoNoText from '../images/logos/orb-art-studio-logo.png';
 
 export function OrbArtStudioLogoWithText() {

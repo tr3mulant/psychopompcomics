@@ -8,6 +8,10 @@ const StyledPrimaryLink = styled.div`
 	align-items: center;
 	padding: ${(props) => props.theme.spaces.md};
 
+	a {
+		text-transform: uppercase;
+	}
+
 	:focus {
 		color: hsl(
 			var(--brand-hue) var(--brand-saturation)

@@ -1,32 +1,34 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { useTheme } from 'styled-components';
 
 export const useMedia = () => {
-  
-  const theme = useTheme();
+	const theme = useTheme();
 
-  const hasWindow = typeof window !== 'undefined';
+	const [isMobile, setMobile] = useState(false);
 
-  function isMobileSized() {
-    const width = hasWindow ? window.innerWidth : null;
-    return width < parseInt(theme.breakpoints.sm.replace('px',''));
-  }
+	useEffect(() => {
+		function isMobileSized() {
+			setMobile(
+				window.innerWidth < parseInt(theme.breakpoints.sm.replace('px', ''))
+			);
+		}
+		// Add event listener
+		window.addEventListener('resize', isMobileSized);
+		isMobileSized();
+		return () => window.removeEventListener('resize', isMobileSized);
+	}, [isMobile, theme.breakpoints.sm]);
 
-  const [isMobile, setMobile] = useState(isMobileSized());  
+	useLayoutEffect(() => {
+		const onResize = () => {
+			const isMobile =
+				window.innerWidth < parseInt(theme.breakpoints.sm.replace('px', ''));
+			setMobile(isMobile);
+		};
+		window.addEventListener('resize', onResize);
+		return () => {
+			window.removeEventListener('resize', onResize);
+		};
+	}, [theme.breakpoints.sm]);
 
-  
-  useLayoutEffect(() => {
-    const onResize = () => {
-      const isMobile = window.innerWidth < parseInt(theme.breakpoints.sm.replace('px',''));
-      console.log("theme.breakpoints.sm: ", theme.breakpoints.sm);
-      console.log("windows.innerWidth: ", window.innerWidth);
-      setMobile(isMobile);
-    };
-    window.addEventListener("resize", onResize);
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  }, [theme.breakpoints.sm]);
-
-  return { isMobile };
+	return { isMobile };
 };

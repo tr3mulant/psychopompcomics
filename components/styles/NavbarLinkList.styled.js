@@ -1,4 +1,4 @@
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledMotionNavLinkList = styled(motion.ul)`
@@ -35,7 +35,6 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	}
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
 		width: unset;
-		margin-top: 0;
 		margin-right: auto;
 		li * {
 			font-size: ${(props) => props.theme.fonts.sizes.xxs};

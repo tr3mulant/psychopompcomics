@@ -1,4 +1,4 @@
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import MotionLogo from './styles/MotionLogo';
 
 const ImageContainer = styled.div`

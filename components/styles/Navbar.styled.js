@@ -1,4 +1,4 @@
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledMotionNavbar = styled(motion.nav)`

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'swiper/css/bundle';
 
 /* Drawn from https://web.dev/building-a-color-scheme/ */
 export const GlobalStyle = createGlobalStyle`
@@ -167,6 +168,14 @@ export const GlobalStyle = createGlobalStyle`
 
 	}
 
+	body.no-scroll {
+		overflow: hidden;
+	}
+
+	body.no-scroll {
+		overflow: hidden;
+	}
+
 	#__next {
 		display: grid;
 		grid-gap: ${({ theme }) => theme.spaces.md};
@@ -264,12 +273,17 @@ export const GlobalStyle = createGlobalStyle`
 	a {
 		color: var(--brand);
 		text-decoration: none;
-		text-transform: uppercase;
 		transition: color 300ms ease;
 		:hover {
 			color: hsl(
 				var(--brand-hue) var(--brand-saturation)
 					calc(var(--brand-lightness) * 1.2)
+			);
+		}
+		:active {
+			color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.5)
 			);
 		}
 	}

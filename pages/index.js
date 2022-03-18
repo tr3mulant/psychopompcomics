@@ -6,9 +6,7 @@ import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
 
 const Title = styled.h1`
-	text-align: center;
 	color: var(--text1);
-	margin: 0 0 3.2rem;
 `;
 
 const SignUp = styled.h2`

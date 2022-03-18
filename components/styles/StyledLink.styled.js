@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import NoScrollLink from '../NoScrollLink';
 
 const StyledPrimaryLink = styled.div`
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	padding: ${(props) => props.theme.spaces.md};
+
+	a {
+		text-transform: uppercase;
+	}
 
 	:focus {
 		color: hsl(
@@ -110,24 +115,72 @@ export function PrimaryLinkMd(props) {
 	);
 }
 
-// export const SecondaryLink = styled(Link)`
+export function PrimaryLinkNoScroll(props) {
+	return (
+		<StyledPrimaryLink>
+			<NoScrollLink
+				href={props.href}
+				passHref={props.passHref}
+				scroll={props.scroll}
+			>
+				<a onClick={props.onClick}>{props.children}</a>
+			</NoScrollLink>
+		</StyledPrimaryLink>
+	);
+}
 
-// `;
+export function PrimaryLinkXsNoScroll(props) {
+	return (
+		<StyledPrimaryLinkXs>
+			<NoScrollLink
+				href={props.href}
+				passHref={props.passHref}
+				scroll={props.scroll}
+			>
+				<a onClick={props.onClick}>{props.children}</a>
+			</NoScrollLink>
+		</StyledPrimaryLinkXs>
+	);
+}
 
-// export const SecondaryLinkLg = styled(SecondaryLink)`
-//     & a {
-//         font-size: ${(props) => props.theme.fonts.sizes.md};
-//         height: ${(props) => props.theme.spaces.lg.replace('rem', '') * 2}rem;
-//         min-width: ${(props) => props.theme.spaces.xxl.replace('rem', '') * 2}rem;
-//         line-height: ${(props) => props.theme.spaces.lg.replace('rem', '') * 2}rem;
-//     }
-// `;
+export function PrimaryLinkSmNoScroll(props) {
+	return (
+		<StyledPrimaryLinkSm>
+			<NoScrollLink
+				href={props.href}
+				passHref={props.passHref}
+				scroll={props.scroll}
+			>
+				<a onClick={props.onClick}>{props.children}</a>
+			</NoScrollLink>
+		</StyledPrimaryLinkSm>
+	);
+}
 
-// export const SecondaryLinkSm = styled(SecondaryLink)`
-//     & a {
-//         font-size: ${(props) => props.theme.fonts.sizes.xs};
-//         height: ${(props) => props.theme.spaces.lg};
-//         min-width: ${(props) => props.theme.spaces.xxl.replace('rem', '')}rem;
-//         line-height: ${(props) => props.theme.spaces.lg};
-//     }
-// `;
+export function PrimaryLinkMdNoScroll(props) {
+	return (
+		<StyledPrimaryLinkMd>
+			<NoScrollLink
+				href={props.href}
+				passHref={props.passHref}
+				scroll={props.scroll}
+			>
+				<a onClick={props.onClick}>{props.children}</a>
+			</NoScrollLink>
+		</StyledPrimaryLinkMd>
+	);
+}
+
+export function PrimaryLinkLgNoScroll(props) {
+	return (
+		<StyledPrimaryLinkLg>
+			<NoScrollLink
+				href={props.href}
+				passHref={props.passHref}
+				scroll={props.scroll}
+			>
+				<a onClick={props.onClick}>{props.children}</a>
+			</NoScrollLink>
+		</StyledPrimaryLinkLg>
+	);
+}

@@ -83,6 +83,7 @@ const ButtonContainerPrimary = styled.div`
 				var(--brand-hue) var(--brand-saturation)
 					calc(var(--brand-lightness) * 1.2)
 			);
+			color: var(--text-on-brand);
 		}
 
 		& > div:last-child {
@@ -107,6 +108,7 @@ const ButtonContainerPrimary = styled.div`
 				var(--brand-hue) var(--brand-saturation)
 					calc(var(--brand-lightness) * 1.5)
 			);
+			color: var(--text-on-brand);
 		}
 
 		& > div:last-child {

@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 const StyledMain = styled(motion.main)`
 	height: 100%;
 	max-width: 100%;
+	width: 100%;
+	overflow: hidden;
 `;
 
 export default function MotionMain(props) {

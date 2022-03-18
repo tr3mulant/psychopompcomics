@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import 'swiper/css/bundle';
 
 /* Drawn from https://web.dev/building-a-color-scheme/ */
 export const GlobalStyle = createGlobalStyle`
@@ -267,6 +268,24 @@ export const GlobalStyle = createGlobalStyle`
 	h5 {
 		font-size: ${({ theme }) => theme.fonts.sizes.xs};
 		line-height: 1.25;
+	}
+
+	a {
+		color: var(--brand);
+		text-decoration: none;
+		transition: color 300ms ease;
+		:hover {
+			color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.2)
+			);
+		}
+		:active {
+			color: hsl(
+				var(--brand-hue) var(--brand-saturation)
+					calc(var(--brand-lightness) * 1.5)
+			);
+		}
 	}
 
 	.text-center {

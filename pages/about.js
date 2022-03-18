@@ -1,5 +1,6 @@
 import StyledSection from '../components/styles/StyledSection.styled';
 import SectionContainer from '../components/styles/SectionContainer.styled';
+import { TwoUpContainer, TwoUp } from '../components/styles/TwoUp.styled';
 import LogoTextImage from '../components/LogoTextImage';
 import MotionMain from '../components/styles/MotionMain.styled';
 import MotionHeader from '../components/styles/MotionHeader.styled';
@@ -7,6 +8,10 @@ import styled from 'styled-components';
 import Image from 'next/image';
 import { DevRoutes } from '../utils/dev_routes';
 import { motion } from 'framer-motion';
+import roninPic from '../images/core-members/RoninRosewater.jpg';
+import alaricPic from '../images/core-members/4L4RIC.jpg';
+import nfterPic from '../images/core-members/The_NFTer.jpg';
+import tr3mulantPic from '../images/core-members/tr3mulant.jpg';
 
 const AboutHeader = styled(MotionHeader)`
 	text-align: center;
@@ -17,27 +22,6 @@ const AboutHeader = styled(MotionHeader)`
 const AboutMain = styled(MotionMain)`
 	display: flex;
 	flex-direction: column;
-`;
-
-const TwoUpContainer = styled.div`
-	display: flex;
-	flex-wrap: wrap;
-`;
-
-const TwoUp = styled.article`
-	width: 100%;
-	padding-left: ${(props) => props.theme.spaces.xl};
-	padding-right: ${(props) => props.theme.spaces.xl};
-	margin-bottom: ${(props) => props.theme.spaces.xxl};
-
-	@media (min-width: ${(props) => props.theme.breakpoints.md}) {
-		width: 50%;
-
-		&:first-child {
-			margin-bottom: initial;
-			border-right: 0.1rem solid var(--surface4);
-		}
-	}
 `;
 
 const CoreTeamContainer = styled(motion.div)`
@@ -112,13 +96,13 @@ const childrenTCoreTeamVariants = {
 export default function About() {
 	return (
 		<>
-			<AboutHeader role='banner'>
+			<AboutHeader>
 				<LogoTextImage />
 			</AboutHeader>
 			<AboutMain>
 				<StyledSection>
 					<SectionContainer>
-						<TwoUpContainer>
+						<TwoUpContainer divided>
 							<TwoUp>
 								<h3>{'Spirit Guide to Another Realm. . .'}</h3>
 								<p>
@@ -161,55 +145,82 @@ export default function About() {
 								>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
-											<Image
-												width='75'
-												height='75'
-												src='https://via.placeholder.com/150?text=temp'
-												alt='Ian'
-											/>
+											<Image width='75' height='75' src={roninPic} alt='Ian' />
 										</CoreTeamMemberImage>
 										<h4>Ian</h4>
 										<h4>Chief Wagmi Officer</h4>
-										<h4>@RoninRosewater</h4>
+										<h4>
+											<a
+												href='https://twitter.com/RoninRosewater'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@RoninRosewater
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={alaricPic}
 												alt='Caleb'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Caleb</h4>
 										<h4>Developer</h4>
-										<h4>@4l4RIC_1</h4>
+										<h4>
+											<a
+												href='https://twitter.com/4l4RIC_1'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@4l4RIC_1
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={nfterPic}
 												alt='Spencer'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Spencer</h4>
 										<h4>Director of Lore</h4>
-										<h4>@The_NFTer</h4>
+										<h4>
+											<a
+												href='https://twitter.com/The_NFTer'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@The_NFTer
+											</a>
+										</h4>
 									</CoreTeamMember>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
 											<Image
 												width='75'
 												height='75'
-												src='https://via.placeholder.com/150?text=temp'
+												src={tr3mulantPic}
 												alt='Scott'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Scott</h4>
 										<h4>Developer</h4>
-										<h4>@__tr3mulant__</h4>
+										<h4>
+											<a
+												href='https://twitter.com/__tr3mulant__'
+												target='_blank'
+												rel='noreferrer'
+											>
+												@__tr3mulant__
+											</a>
+										</h4>
 									</CoreTeamMember>
 								</CoreTeamContainer>
 							</TwoUp>

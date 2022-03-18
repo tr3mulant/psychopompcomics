@@ -31,13 +31,13 @@ import {
 } from './styles/StyledLink.styled';
 
 const MobileNavNewsletterSubscribe = styled(NavNewsletterSubscribe)`
-    display: flex;
-    padding: 0 ${(props) => props.theme.spaces.xl}
-        ${(props) => props.theme.spaces.xl} ${(props) => props.theme.spaces.xl};
-    @media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-        flex-direction: column;
-        padding: 0 0 ${(props) => props.theme.spaces.xl};
-    }
+	display: flex;
+	padding: 0 ${(props) => props.theme.spaces.xl}
+		${(props) => props.theme.spaces.xl} ${(props) => props.theme.spaces.xl};
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		flex-direction: column;
+		padding: 0 0 ${(props) => props.theme.spaces.xl};
+	}
 `;
 
 const SocialContainer = styled.div`
@@ -114,30 +114,38 @@ const NavLinks = ({ openMenu, components, onClick }) => {
 };
 
 export function Navbar() {
-    const [openMenu, toggleMenu] = useState(false);
-    const handleClick = (state) => {
-        //feels hacky, like maybe the state should be managed higher up?
-        if (state) {
-            document.getElementsByTagName("body")[0].classList.add("no-scroll");
-        } else {
-            document.getElementsByTagName("body")[0].classList.remove("no-scroll");
-        }
-        toggleMenu(state);
-    }
-    const components = {
-        link: PrimaryLink,
-        container: NavLinkList_2
-    }
-    return (
-        <StyledNavbar_1>
-            <NavBrand onClick={() => handleClick(false)}/>
-            <HamburgerMenu.Wrapper onClick={() => handleClick(!openMenu)}>
-                {openMenu ? <HamburgerMenu.CloseMenuIcon_1/> : <HamburgerMenu.OpenMenuIcon_1 />}
-            </HamburgerMenu.Wrapper>
-            <NavLinks openMenu={openMenu} components={components} onClick={() => handleClick(false)}/>
-            <NavNewsletterSubscribe />
-        </StyledNavbar_1>
-    );
+	const [openMenu, toggleMenu] = useState(false);
+	const handleClick = (state) => {
+		//feels hacky, like maybe the state should be managed higher up?
+		if (state) {
+			document.getElementsByTagName('body')[0].classList.add('no-scroll');
+		} else {
+			document.getElementsByTagName('body')[0].classList.remove('no-scroll');
+		}
+		toggleMenu(state);
+	};
+	const components = {
+		link: PrimaryLink,
+		container: NavLinkList_2,
+	};
+	return (
+		<StyledNavbar_1>
+			<NavBrand onClick={() => handleClick(false)} />
+			<HamburgerMenu.Wrapper onClick={() => handleClick(!openMenu)}>
+				{openMenu ? (
+					<HamburgerMenu.CloseMenuIcon_1 />
+				) : (
+					<HamburgerMenu.OpenMenuIcon_1 />
+				)}
+			</HamburgerMenu.Wrapper>
+			<NavLinks
+				openMenu={openMenu}
+				components={components}
+				onClick={() => handleClick(false)}
+			/>
+			<NavNewsletterSubscribe />
+		</StyledNavbar_1>
+	);
 }
 
 export const Navbar_Style_1 = () => {

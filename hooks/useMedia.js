@@ -14,20 +14,19 @@ export const useMedia = () => {
 
   const [isMobile, setMobile] = useState(isMobileSized());  
 
-
-  const onResize = () => {
-    const isMobile = window.innerWidth < parseInt(theme.breakpoints.sm.replace('px',''));
-    console.log("theme.breakpoints.sm: ", theme.breakpoints.sm);
-    console.log("windows.innerWidth: ", window.innerWidth);
-    setMobile(isMobile);
-  };
-
+  
   useLayoutEffect(() => {
+    const onResize = () => {
+      const isMobile = window.innerWidth < parseInt(theme.breakpoints.sm.replace('px',''));
+      console.log("theme.breakpoints.sm: ", theme.breakpoints.sm);
+      console.log("windows.innerWidth: ", window.innerWidth);
+      setMobile(isMobile);
+    };
     window.addEventListener("resize", onResize);
     return () => {
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [theme.breakpoints.sm]);
 
   return { isMobile };
 };

@@ -26,8 +26,19 @@ const NewsletterSubscribe = ({ className }) => {
 export const NavNewsletterSubscribe = styled(NewsletterSubscribe)`
 	margin: auto auto;
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		display: none;
+		// margin-top: 0px;
+		// margin-bottom: 12px;
+		max-width: 30.4rem;
+		* {
+			font-size: ${(props) => props.theme.fonts.sizes.xxs}
+		}
+		a {
+			min-width: 9rem;
+		}
+
 	}
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		display: none;
 `;
 
 export default NewsletterSubscribe;

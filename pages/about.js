@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { DevRoutes } from '../utils/dev_routes';
 import { motion } from 'framer-motion';
 import roninPic from '../images/core-members/RoninRosewater.jpg';
-import alaricPic from '../images/core-members/4l4RIC.jpg';
+import alaricPic from '../images/core-members/4L4RIC.jpg';
 import nfterPic from '../images/core-members/The_NFTer.jpg';
 import tr3mulantPic from '../images/core-members/tr3mulant.jpg';
 

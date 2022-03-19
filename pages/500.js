@@ -4,13 +4,6 @@ import Image from 'next/image';
 import portal from '../images/portal.svg';
 import { LinkPrimaryOutline } from '../components/styles/StyledButton.styled';
 
-const FiveZeroZeroHeader = styled.header`
-	text-align: center;
-	max-width: 100%;
-	padding: ${(props) => props.theme.spaces.xxl}
-		${(props) => props.theme.spaces.lg} ${(props) => props.theme.spaces.xl};
-`;
-
 const MotionContainer = styled(motion.div)``;
 
 const FiveZeroZeroContainer = styled.div`
@@ -41,18 +34,6 @@ const FiveZeroZeroMain = styled.main`
 	}
 `;
 
-const ImageContainer = styled.div`
-	position: relative;
-	max-width: 60rem;
-	width: 100%;
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		max-width: 34rem;
-	}
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-		max-width: 26rem;
-	}
-`;
-
 const MotionImageContainer = styled(motion.div)`
 	position: relative;
 	max-width: 60rem;
@@ -75,7 +56,7 @@ export default function FiveZeroZero() {
 		visible: {
 			opacity: 1,
 			transition: {
-				duration: 2,
+				duration: 0.5,
 			},
 		},
 	};
@@ -86,16 +67,19 @@ export default function FiveZeroZero() {
 				variants={theme.motion.pageTransitionVariants}
 				initial='hidden'
 				animate='visible'
-				exit='exit'>
+				exit='exit'
+			>
 				<MotionContainer
 					variants={svgVariants}
-					animate="visible"
-					initial="hidden">
+					animate='visible'
+					initial='hidden'
+				>
 					<FiveZeroZeroContainer>
-						<Title>505</Title>
+						<Title>500</Title>
 						<MotionImageContainer
-							animate={{ rotate: 360 }}
-							transition={{duration: 20}}>
+							animate={{ rotate: -360 }}
+							transition={{ ease: 'linear', repeat: Inifinity, duration: 60 }}
+						>
 							<Image src={portal} alt='500' />
 						</MotionImageContainer>
 					</FiveZeroZeroContainer>

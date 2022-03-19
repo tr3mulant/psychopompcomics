@@ -1,18 +1,20 @@
 import styled from 'styled-components';
-import { DevRoutes } from "../utils/dev_routes";
+import MotionFooter from '../components/Footer';
+import { DevRoutes } from '../utils/dev_routes';
 
 const Title = styled.h1`
-    text-align: center;
-    color: var(--text1);
-    margin: 0 0 3.2rem;
+	text-align: center;
+	color: var(--text1);
+	margin: 0 0 3.2rem;
 `;
 
 export default function Collectibles() {
 	return (
 		<>
-            <Title>Collectibles</Title>
-        </>
-    )
-};
+			<Title>Collectibles</Title>
+			<MotionFooter />
+		</>
+	);
+}
 
 export const getServerSideProps = DevRoutes;

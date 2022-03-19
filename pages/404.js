@@ -4,13 +4,6 @@ import portal from '../images/portal.svg';
 import Image from 'next/image';
 import { LinkPrimaryOutline } from '../components/styles/StyledButton.styled';
 
-const FourZeroFourHeader = styled.header`
-	text-align: center;
-	max-width: 100%;
-	padding: ${(props) => props.theme.spaces.xxl}
-		${(props) => props.theme.spaces.lg} ${(props) => props.theme.spaces.xl};
-`;
-
 const MotionContainer = styled(motion.div)``;
 
 const FourZeroFourContainer = styled.div`
@@ -54,18 +47,6 @@ const MotionImageContainer = styled(motion.div)`
 	}
 `;
 
-const ImageContainer = styled.div`
-	position: relative;
-	max-width: 60rem;
-	width: 100%;
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		max-width: 34rem;
-	}
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-		max-width: 26rem;
-	}
-`;
-
 export default function FourZeroFour() {
 	const theme = useTheme();
 
@@ -76,37 +57,37 @@ export default function FourZeroFour() {
 		visible: {
 			opacity: 1,
 			transition: {
-				duration: 2,
+				duration: 0.5,
 			},
 		},
 	};
 
 	return (
-		<>
-			<FourZeroFourMain
-				variants={theme.motion.pageTransitionVariants}
-				initial='hidden'
+		<FourZeroFourMain
+			variants={theme.motion.pageTransitionVariants}
+			initial='hidden'
+			animate='visible'
+			exit='exit'
+		>
+			<MotionContainer
+				variants={svgVariants}
 				animate='visible'
-				exit='exit'>
-				<MotionContainer
-					variants={svgVariants}
-					animate="visible"
-					initial="hidden">
-					<FourZeroFourContainer>
-						<Title>404</Title>
-						<MotionImageContainer
-							animate={{ rotate: -360 }}
-							transition={{ease: "linear", repeat: Infinity, duration: 60}}>
-							<Image src={portal} alt='404' />
-						</MotionImageContainer>
-					</FourZeroFourContainer>
-					<p>{`Wondering astray, looking for what can't be found`}</p>
-					<LinkPrimaryOutline href='/'>
-						<a>Let us guide you back</a>
-					</LinkPrimaryOutline>
-				</MotionContainer>
-
-			</FourZeroFourMain>
-		</>
+				initial='hidden'
+			>
+				<FourZeroFourContainer>
+					<Title>404</Title>
+					<MotionImageContainer
+						animate={{ rotate: -360 }}
+						transition={{ ease: 'linear', repeat: Infinity, duration: 60 }}
+					>
+						<Image src={portal} alt='404' />
+					</MotionImageContainer>
+				</FourZeroFourContainer>
+				<p>{`Wondering astray, looking for what can't be found`}</p>
+				<LinkPrimaryOutline href='/'>
+					<a>Let us guide you back</a>
+				</LinkPrimaryOutline>
+			</MotionContainer>
+		</FourZeroFourMain>
 	);
 }

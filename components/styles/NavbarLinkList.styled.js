@@ -8,6 +8,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	list-style: none;
 	padding: 0;
 	margin-left: auto;
+	margin-right: ${(props) => props.theme.spaces.xxl};
 	li {
 		display: flex;
 		align-items: center;
@@ -47,7 +48,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 		height: 90%;
 		flex-direction: column;
 		justify-content: flex-start;
-
+		margin-top: 0;
 		li * {
 			flex-grow: 1;
 			text-align: center;

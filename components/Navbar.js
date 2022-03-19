@@ -8,18 +8,8 @@ import { HamburgerMenu } from './HamburgerMenu';
 import { DiscordIcon, TwitterIcon } from './SocialIcons';
 import { StyledMotionNavbar } from '../components/styles/Navbar.styled';
 import { StyledMotionNavLinkList } from '../components/styles/NavbarLinkList.styled';
-import { NavNewsletterSubscribe } from './NewsletterSubscribe';
+import { MobileNavNewsletterSubscribe } from './NewsletterSubscribe';
 import { PrimaryLink } from './styles/StyledLink.styled';
-
-const MobileNavNewsletterSubscribe = styled(NavNewsletterSubscribe)`
-	display: flex;
-	padding: 0 ${(props) => props.theme.spaces.xl}
-		${(props) => props.theme.spaces.xl} ${(props) => props.theme.spaces.xl};
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-		flex-direction: column;
-		padding: 0 0 ${(props) => props.theme.spaces.xl};
-	}
-`;
 
 const SocialContainer = styled.div`
 	margin: ${(props) => props.theme.spaces.md} auto;
@@ -139,7 +129,6 @@ export const MotionNavbar = () => {
 				mobile={isMobile}
 				onClick={closeMenu}
 			/>
-			<NavNewsletterSubscribe />
 		</StyledMotionNavbar>
 	);
 };

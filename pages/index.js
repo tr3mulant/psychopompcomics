@@ -7,6 +7,7 @@ import MotionFooter from '../components/Footer';
 
 const Title = styled.h1`
 	color: var(--text1);
+	text-align: center;
 `;
 
 const SignUp = styled.h2`

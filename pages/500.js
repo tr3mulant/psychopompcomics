@@ -78,7 +78,7 @@ export default function FiveZeroZero() {
 						<Title>500</Title>
 						<MotionImageContainer
 							animate={{ rotate: -360 }}
-							transition={{ ease: 'linear', repeat: Inifinity, duration: 60 }}
+							transition={{ ease: 'linear', repeat: Infinity, duration: 60 }}
 						>
 							<Image src={portal} alt='500' />
 						</MotionImageContainer>

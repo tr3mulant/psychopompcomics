@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import MotionLogo from './styles/MotionLogo';
+import styled, { useTheme } from 'styled-components';
+import MotionLogo from './styles/MotionLogo.styled';
 
 const ImageContainer = styled.div`
 	margin-bottom: ${(props) => props.theme.spaces.xxl};

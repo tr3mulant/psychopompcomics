@@ -31,7 +31,8 @@ const EmailCaptureContainer = styled.article`
 
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		& a {
-			min-width: ${(props) => props.theme.spaces.xxl.replace('rem', '') * 1.25}rem;
+			min-width: ${(props) =>
+				props.theme.spaces.xxl.replace('rem', '') * 1.25}rem;
 		}
 	}
 `;

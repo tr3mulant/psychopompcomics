@@ -2,11 +2,8 @@ import Image from 'next/image';
 import styled, { useTheme } from 'styled-components';
 import discord_light from '../images/logos/discord_icon_light.svg';
 import discord_dark from '../images/logos/discord_icon_dark.svg';
-import discord_color from '../images/logos/discord_icon_blurple.svg';
-import discord_brand_color from '../images/logos/discord_icon_ppc_branded.svg';
 import twitter_light from '../images/logos/twitter_icon_light.svg';
 import twitter_dark from '../images/logos/twitter_icon_dark.svg';
-import twitter_brand_color from '../images/logos/twitter_icon_ppc_branded.svg';
 
 const DiscordServerLink = process.env.NEXT_PUBLIC_PPC_DISCORD_INVITE_URL;
 const TwitterLink = process.env.NEXT_PUBLIC_PPC_TWITTER_URL;

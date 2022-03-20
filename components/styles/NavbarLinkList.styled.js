@@ -16,10 +16,9 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	li + li:before {
 		content: '';
 		background-color: var(--surface4);
-		// height: 50%;
 		width: 2px;
 		margin: 0 1rem;
-		height: 75%;
+		height: 30%;
 	}
 	@media only screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
 		li:last-child {
@@ -31,7 +30,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	}
 	@media only screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
 		li * {
-			font-size: ${(props) => props.theme.fonts.sizes.md};
+			font-size: ${(props) => props.theme.fonts.sizes.sm};
 		}
 	}
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {

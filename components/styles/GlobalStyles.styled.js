@@ -172,10 +172,6 @@ export const GlobalStyle = createGlobalStyle`
 		overflow: hidden;
 	}
 
-	body.no-scroll {
-		overflow: hidden;
-	}
-
 	#__next {
 		display: grid;
 		grid-gap: ${({ theme }) => theme.spaces.md};

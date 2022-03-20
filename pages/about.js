@@ -4,6 +4,7 @@ import { TwoUpContainer, TwoUp } from '../components/styles/TwoUp.styled';
 import LogoTextImage from '../components/LogoTextImage';
 import MotionMain from '../components/styles/MotionMain.styled';
 import MotionHeader from '../components/styles/MotionHeader.styled';
+import MotionFooter from '../components/Footer';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { DevRoutes } from '../utils/dev_routes';
@@ -228,6 +229,7 @@ export default function About() {
 					</SectionContainer>
 				</StyledSection>
 			</AboutMain>
+			<MotionFooter />
 		</>
 	);
 }

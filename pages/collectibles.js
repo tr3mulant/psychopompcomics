@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { DevRoutes } from '../utils/dev_routes';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
+import MotionFooter from '../components/Footer';
 import StyledSection from '../components/styles/StyledSection.styled';
 import SectionContainer from '../components/styles/SectionContainer.styled';
 import VanthSwiper, { StartSwiperAutoPlay } from '../components/VanthSwiper';
@@ -170,6 +171,7 @@ export default function Collectibles() {
 					</SectionContainer>
 				</StyledSection>
 			</MotionMain>
+			<MotionFooter />
 		</>
 	);
 }

@@ -11,7 +11,7 @@ const NavBrandContainer = styled.div`
 	margin: ${(props) => props.theme.spaces.lg} auto;
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
 		width: 6.6rem;
-		margin: ${(props) => props.theme.spaces.sm } auto 0;
+		margin: ${(props) => props.theme.spaces.sm} auto 0;
 	}
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		margin: ${(props) => props.theme.spaces.sm} auto
@@ -24,14 +24,12 @@ export const NavBrand = ({ onClick }) => {
 	const theme = useTheme();
 	const brand_image = theme.mode == 'light' ? brand_light : brand_dark;
 	return (
-		<>
-			<NavBrandContainer>
-				<Link href='/'>
-					<a onClick={onClick}>
-						<Image src={brand_image} alt='Psychopomp Comics Brand Image' />
-					</a>
-				</Link>
-			</NavBrandContainer>
-		</>
+		<NavBrandContainer>
+			<Link href='/'>
+				<a onClick={onClick}>
+					<Image src={brand_image} alt='Psychopomp Comics Brand Image' />
+				</a>
+			</Link>
+		</NavBrandContainer>
 	);
 };

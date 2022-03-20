@@ -47,8 +47,6 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 		'news',
 		'merch',
 	];
-	console.log('MotionNavLinks openmenu:', openmenu);
-	console.log('MotionNavLinks mobile:', mobile);
 	const variants = mobile
 		? {
 				hidden: {
@@ -80,8 +78,6 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 					transition: { ease: 'easeInOut' },
 				},
 		  };
-	console.log('variants: ', variants);
-	console.log('animate: ', mobile ? 'hidden' : 'visbile');
 	return (
 		<StyledMotionNavLinkList
 			animate={openmenu || !mobile ? 'visible' : 'hidden'}
@@ -103,6 +99,19 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 	);
 };
 
+const NavInnerContainer = styled.div`
+	position: relative;
+	width: 128rem;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+		width: 100%;
+		padding-bottom: ${(props) => props.theme.spaces.lg};
+	}
+`;
+
 export const MotionNavbar = () => {
 	const { isMenuOpen, toggleMenu, closeMenu } = useMenuContext();
 	const { isMobile } = useMedia();
@@ -112,23 +121,23 @@ export const MotionNavbar = () => {
 			closeMenu();
 		}
 	}, [isMobile, closeMenu]);
-	console.log('motionnavbar isMobile: ', isMobile);
-	console.log('motionnavbar isMenuOpen: ', isMenuOpen);
 	return (
 		<StyledMotionNavbar>
-			<NavBrand onClick={closeMenu} />
-			<HamburgerMenu.Wrapper onClick={toggleMenu}>
-				{isMenuOpen ? (
-					<HamburgerMenu.CloseMenuIcon_1 />
-				) : (
-					<HamburgerMenu.OpenMenuIcon_1 />
-				)}
-			</HamburgerMenu.Wrapper>
-			<MotionNavLinks
-				openmenu={isMenuOpen}
-				mobile={isMobile}
-				onClick={closeMenu}
-			/>
+			<NavInnerContainer>
+				<NavBrand onClick={closeMenu} />
+				<HamburgerMenu.Wrapper onClick={toggleMenu}>
+					{isMenuOpen ? (
+						<HamburgerMenu.CloseMenuIcon_1 />
+					) : (
+						<HamburgerMenu.OpenMenuIcon_1 />
+					)}
+				</HamburgerMenu.Wrapper>
+				<MotionNavLinks
+					openmenu={isMenuOpen}
+					mobile={isMobile}
+					onClick={closeMenu}
+				/>
+			</NavInnerContainer>
 		</StyledMotionNavbar>
 	);
 };

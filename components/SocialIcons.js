@@ -1,72 +1,41 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styled from 'styled-components';
-import discord_light from '../images/discord_icon_light.svg';
-import discord_dark from '../images/discord_icon_dark.svg';
-import discord_color from '../images/discord_icon_blurple.svg';
-import discord_brand_color from '../images/discord_icon_ppc_branded.svg';
-import twitter_light from '../images/twitter_icon_light.svg';
-import twitter_dark from '../images/twitter_icon_dark.svg';
-import twitter_brand_color from '../images/twitter_icon_ppc_branded.svg';
+import styled, { useTheme } from 'styled-components';
+import discord_light from '../images/logos/discord_icon_light.svg';
+import discord_dark from '../images/logos/discord_icon_dark.svg';
+import discord_color from '../images/logos/discord_icon_blurple.svg';
+import discord_brand_color from '../images/logos/discord_icon_ppc_branded.svg';
+import twitter_light from '../images/logos/twitter_icon_light.svg';
+import twitter_dark from '../images/logos/twitter_icon_dark.svg';
+import twitter_brand_color from '../images/logos/twitter_icon_ppc_branded.svg';
 
-const DiscordServerLink = "https://discord.com";
-const TwitterLink = "https://twitter.com";
+const DiscordServerLink = process.env.NEXT_PUBLIC_PPC_DISCORD_INVITE_URL;
+const TwitterLink = process.env.NEXT_PUBLIC_PPC_TWITTER_URL;
 
 const SocialIconContainer = styled.div`
-    width: ${(props) => props.theme.spaces.xl};
+	width: ${(props) => props.theme.spaces.xl};
 `;
 
-const SocialIconContainerLight = styled(SocialIconContainer)`
-    @media (prefers-color-scheme: dark) {
-        display: none;
-    }
-`;
+export const DiscordIcon = ({ onClick }) => {
+	const theme = useTheme();
+	const discordImg = theme.mode == 'light' ? discord_dark : discord_light;
+	return (
+		<SocialIconContainer>
+			<a href={DiscordServerLink} target='_blank' rel='noreferrer'>
+				<Image src={discordImg} alt='Discord Icon' width='71' height='55' />
+			</a>
+		</SocialIconContainer>
+	);
+};
 
-const SocialIconContainerDark = styled(SocialIconContainer)`
-    display: none;
-    @media (prefers-color-scheme: dark) {
-        display: block;
-    }
-`;
-
-export const DiscordIcon = ({onClick}) => {
-    return (
-        <>
-            <SocialIconContainerLight>
-                <Link href={DiscordServerLink}>
-                    <a onClick={onClick}>
-                        <Image src={discord_dark} alt="Discord Icon" />
-                    </a>
-                </Link>
-            </SocialIconContainerLight>
-            <SocialIconContainerDark>
-                <Link href={DiscordServerLink}>
-                    <a onClick={onClick}>
-                        <Image src={discord_light} alt="Discord Icon" />
-                    </a>
-                </Link>
-            </SocialIconContainerDark>
-        </>
-    );
-}
-
-export const TwitterIcon = ({onClick}) => {
-    return (
-        <>
-            <SocialIconContainerLight>
-                <Link href={TwitterLink}>
-                    <a onClick={onClick}>
-                        <Image src={twitter_dark} alt="Twitter Icon" />
-                    </a>
-                </Link>
-            </SocialIconContainerLight>
-            <SocialIconContainerDark>
-                <Link href={TwitterLink}>
-                    <a onClick={onClick}>
-                        <Image src={twitter_light} alt="Twitter Icon" />
-                    </a>
-                </Link>
-            </SocialIconContainerDark>
-        </>
-    );
-}
+export const TwitterIcon = ({ onClick }) => {
+	const theme = useTheme();
+	const twitterImg = theme.mode == 'light' ? twitter_dark : twitter_light;
+	return (
+		<SocialIconContainer>
+			<a href={TwitterLink} target='_blank' rel='noreferrer'>
+				<Image src={twitterImg} alt='Twitter Icon' width='24' height='24' />
+			</a>
+		</SocialIconContainer>
+	);
+};

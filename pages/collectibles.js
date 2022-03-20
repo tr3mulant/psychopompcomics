@@ -20,7 +20,7 @@ const CollectiblesHeader = styled(MotionHeader)`
 `;
 
 const Title = styled.h1`
-	color: var(--text1);
+	color: #fff;
 	z-index: 2;
 	position: relative;
 	display: block;
@@ -32,7 +32,7 @@ const Title = styled.h1`
 
 const Subtitle = styled(motion.h2)`
 	margin-top: ${({ theme }) => theme.spaces.md};
-	color: var(--text1);
+	color: #fff;
 	position: relative;
 	z-index: 2;
 `;

@@ -12,6 +12,7 @@ import vanthImg from '../images/vanth.svg';
 import twitterVanth from '../images/vanth/IMG_5841.jpeg';
 import { TwoUp, TwoUpContainer } from '../components/styles/TwoUp.styled';
 import LinkPrimary from '../components/styles/StyledButton.styled';
+import StyledFooter from '../components/styles/StyledFooter.styled';
 
 const CollectiblesHeader = styled(MotionHeader)`
 	padding: ${({ theme }) => theme.spaces.xxxl} ${({ theme }) => theme.spaces.lg};
@@ -170,6 +171,7 @@ export default function Collectibles() {
 					</SectionContainer>
 				</StyledSection>
 			</MotionMain>
+			<StyledFooter />
 		</>
 	);
 }

@@ -69,11 +69,7 @@ export default function FiveZeroZero() {
 				animate='visible'
 				exit='exit'
 			>
-				<MotionContainer
-					variants={svgVariants}
-					animate='visible'
-					initial='hidden'
-				>
+				<MotionContainer variants={svgVariants}>
 					<FiveZeroZeroContainer>
 						<Title>500</Title>
 						<MotionImageContainer

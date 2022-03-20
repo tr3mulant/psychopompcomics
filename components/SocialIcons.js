@@ -18,11 +18,14 @@ export const DiscordIcon = ({ onClick }) => {
 	const discord_image = theme.mode == 'light' ? discord_light : discord_dark;
 	return (
 		<SocialIconContainer>
-			<Link href={DiscordServerLink}>
-				<a target='_blank' rel='noreferrer' onClick={onClick}>
-					<Image src={discord_image} alt='Discord Icon' />
-				</a>
-			</Link>
+			<a
+				href={DiscordServerLink}
+				target='_blank'
+				rel='noreferrer'
+				onClick={onClick}
+			>
+				<Image src={discord_image} alt='Discord Icon' />
+			</a>
 		</SocialIconContainer>
 	);
 };
@@ -32,11 +35,9 @@ export const TwitterIcon = ({ onClick }) => {
 	const twitter_image = theme.mode == 'light' ? twitter_light : twitter_dark;
 	return (
 		<SocialIconContainer>
-			<Link href={TwitterLink}>
-				<a target='_blank' rel='noreferrer' onClick={onClick}>
-					<Image src={twitter_image} alt='Twitter Icon' />
-				</a>
-			</Link>
+			<a href={TwitterLink} target='_blank' rel='noreferrer' onClick={onClick}>
+				<Image src={twitter_image} alt='Twitter Icon' />
+			</a>
 		</SocialIconContainer>
 	);
 };

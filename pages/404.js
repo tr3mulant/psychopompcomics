@@ -69,11 +69,7 @@ export default function FourZeroFour() {
 			animate='visible'
 			exit='exit'
 		>
-			<MotionContainer
-				variants={svgVariants}
-				animate='visible'
-				initial='hidden'
-			>
+			<MotionContainer variants={svgVariants}>
 				<FourZeroFourContainer>
 					<Title>404</Title>
 					<MotionImageContainer

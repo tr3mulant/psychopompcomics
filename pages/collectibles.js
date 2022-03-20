@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { DevRoutes } from '../utils/dev_routes';
 import MotionHeader from '../components/styles/MotionHeader.styled';
@@ -6,7 +7,10 @@ import MotionMain from '../components/styles/MotionMain.styled';
 import MotionFooter from '../components/Footer';
 import StyledSection from '../components/styles/StyledSection.styled';
 import SectionContainer from '../components/styles/SectionContainer.styled';
-import VanthSwiper, { StartSwiperAutoPlay } from '../components/VanthSwiper';
+import { StartSwiperAutoPlay } from '../components/VanthSwiper';
+const DynamicVanthSwiper = dynamic(() => import('../components/VanthSwiper'), {
+	ssr: false,
+});
 import Image from 'next/image';
 import ruinsImg from '../images/ruins.jpg';
 import vanthImg from '../images/vanth.svg';
@@ -20,7 +24,7 @@ const CollectiblesHeader = styled(MotionHeader)`
 `;
 
 const Title = styled.h1`
-	color: var(--text1);
+	color: #fff;
 	z-index: 2;
 	position: relative;
 	display: block;
@@ -32,7 +36,7 @@ const Title = styled.h1`
 
 const Subtitle = styled(motion.h2)`
 	margin-top: ${({ theme }) => theme.spaces.md};
-	color: var(--text1);
+	color: #fff;
 	position: relative;
 	z-index: 2;
 `;
@@ -92,7 +96,7 @@ export default function Collectibles() {
 			<MotionMain>
 				<StyledSection>
 					<SectionContainer>
-						<VanthSwiper autoplay={false} />
+						<DynamicVanthSwiper autoplay={false} />
 					</SectionContainer>
 				</StyledSection>
 				<StyledSection>

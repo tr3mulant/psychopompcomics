@@ -29,26 +29,26 @@ const CoreTeamContainer = styled(motion.div)`
 	margin-top: ${(props) => props.theme.spaces.ml};
 	display: grid;
 	grid-template-areas:
-		'card'
-		'card'
-		'card'
-		'card';
+		'card card'
+		'card card';
 	gap: ${(props) => props.theme.spaces.ml};
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	max-width: 42rem;
 	width: 100%;
-	max-width: 22rem;
 	margin-left: auto;
 	margin-right: auto;
 
-	@media (min-width: ${(props) => props.theme.breakpoints.xs}) {
+	@media (max-width: ${(props) => props.theme.breakpoints.xs}) {
 		grid-template-areas:
-			'card card'
-			'card card';
+			'card'
+			'card'
+			'card'
+			'card';
 		gap: ${(props) => props.theme.spaces.ml};
-		grid-template-rows: 1fr 1fr;
-		grid-template-columns: 1fr 1fr;
-		max-width: 42rem;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr;
+		max-width: 22rem;
 	}
 `;
 

@@ -216,38 +216,38 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	p,input,button,a,ol,ul {
-		font-size: ${({ theme }) => theme.fonts.sizes.xs};
-
-		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			font-size: ${({ theme }) => theme.fonts.sizes.sm};
+		font-size: ${({ theme }) => theme.fonts.sizes.sm};
+		
+		@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: ${({ theme }) => theme.fonts.sizes.xs};
 		}
 	}
 
 	p,input,a,ul,ol {
-		line-height: 1.333;
-
-		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			line-height: 1.375;
+		line-height: 1.375;
+		
+		@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+			line-height: 1.333;
 		}
 	}
 
 	h1 {
-	font-size: ${({ theme }) => theme.fonts.sizes.lg};
-	line-height: 1.18;
-
-		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			line-height: 1.06;
-			font-size: ${({ theme }) => theme.fonts.sizes.xxl};
+		line-height: 1.06;
+		font-size: ${({ theme }) => theme.fonts.sizes.xxl};
+		
+		@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: ${({ theme }) => theme.fonts.sizes.lg};
+			line-height: 1.18;
 		}
 	}
 
 	h2 {
-	font-size: ${({ theme }) => theme.fonts.sizes.md};
-	line-height: 1.21;
-
-		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-			font-size: ${({ theme }) => theme.fonts.sizes.ml};
-			line-height: 1.12;
+		font-size: ${({ theme }) => theme.fonts.sizes.ml};
+		line-height: 1.12;
+		
+		@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+			font-size: ${({ theme }) => theme.fonts.sizes.md};
+			line-height: 1.21;
 		}
 	}
 

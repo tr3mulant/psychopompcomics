@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledMotionNavbar = styled(motion.nav)`
+    width: 100%;
     position: sticky;
     top 0;
     z-index: 100;

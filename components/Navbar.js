@@ -101,8 +101,8 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 
 const NavInnerContainer = styled.div`
 	position: relative;
-	width: 128rem;
-	max-width: 100%;
+	width: 100%;
+	max-width: 128rem;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;

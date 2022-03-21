@@ -35,12 +35,12 @@ const VanthSwiperContainer = styled(motion.article)`
 
 	.swiper {
 		width: 100%;
-		min-height: 35rem;
-		@media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-			max-width: calc(100% - 32rem);
-			min-height: initial;
+		max-width: calc(100% - 32rem);
+		@media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+			width: 100%;
+			max-width: 100%;
+			min-height: 35rem;
 		}
-		width: 100%;
 
 		.swiper-slide {
 			display: flex;
@@ -50,10 +50,10 @@ const VanthSwiperContainer = styled(motion.article)`
 `;
 
 const VanthDescription = styled.div`
-	max-width: 100%;
+	max-width: 32rem;
 	width: 100%;
-	@media (min-width: ${({ theme }) => theme.breakpoints.xs}) {
-		max-width: 32rem;
+	@media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+		max-width: 100%;
 	}
 	padding: 0 ${({ theme }) => theme.spaces.md} ${({ theme }) => theme.spaces.md}
 		0;

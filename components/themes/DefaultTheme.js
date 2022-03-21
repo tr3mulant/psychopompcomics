@@ -65,12 +65,12 @@ export const themeCommon = {
 		},
 	},
 	breakpoints: {
-		xxs: '368px',
-		xs: '576px',
-		sm: '768px',
-		md: '992px',
-		lg: '1280px',
-		xl: '1600px',
+		xxs: '367px',
+		xs: '575px',
+		sm: '767px',
+		md: '991px',
+		lg: '1279px',
+		xl: '1599px',
 	},
 	spaces: {
 		zero: '0',

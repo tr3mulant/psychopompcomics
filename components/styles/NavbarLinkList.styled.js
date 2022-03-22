@@ -11,7 +11,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 		display: flex;
 		align-items: center;
 
-		& a {
+		& > div > a {
 			font-size: ${(props) => props.theme.fonts.sizes.ml};
 		}
 
@@ -35,6 +35,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		position: fixed;
 		top: 10%;
+		left: 0;
 		width: 100%;
 		height: 90%;
 		flex-direction: column;

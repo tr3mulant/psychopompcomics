@@ -62,9 +62,9 @@ const VanthImageWrapper = styled(motion.div)`
 	}
 `;
 
-const LegendTwoUP = styled(TwoUpContainer)`
-	flex-direction: row;
+const LegendTwoUP = styled(VanthTwoUp)`
 	flex-wrap: nowrap;
+	max-width: 100%;
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
 		flex-direction: column-reverse;

@@ -1,33 +1,27 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import styled, { useTheme } from 'styled-components';
-import brand_light from '../images/final_inv_cropped.png';
-import brand_dark from '../images/final_cropped_transparent.png';
+import styled from 'styled-components';
+import MotionLogo from './styles/MotionLogo.styled';
 
 const NavBrandContainer = styled.div`
-	width: 9.6rem;
-	max-width: 100%;
-	padding: ${(props) => props.theme.spaces.ms};
-	margin: ${(props) => props.theme.spaces.lg} auto;
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		width: 6.6rem;
-		margin: ${(props) => props.theme.spaces.sm} auto 0;
-	}
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
-		margin: ${(props) => props.theme.spaces.sm} auto
-			${(props) => props.theme.spaces.sm} ${(props) => props.theme.spaces.md};
-		width: 6.72rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 8rem;
+	display: inline-block;
+	z-index: 1;
+
+	svg {
+		height: 100%;
+		width: auto;
 	}
 `;
 
 export const NavBrand = ({ onClick }) => {
-	const theme = useTheme();
-	const brand_image = theme.mode == 'light' ? brand_light : brand_dark;
 	return (
 		<NavBrandContainer>
 			<Link href='/'>
 				<a onClick={onClick}>
-					<Image src={brand_image} alt='Psychopomp Comics Brand Image' />
+					<MotionLogo />
 				</a>
 			</Link>
 		</NavBrandContainer>

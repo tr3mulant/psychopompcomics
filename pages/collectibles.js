@@ -45,12 +45,13 @@ const VanthTwoUp = styled(TwoUpContainer)`
 	align-items: center;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 32rem;
+	max-width: 75rem;
+	flex-wrap: nowrap;
 	margin-top: ${({ theme }) => theme.spaces.xxl};
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		max-width: 75rem;
-		flex-wrap: nowrap;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+		max-width: 32rem;
+		flex-wrap: wrap;
 	}
 `;
 
@@ -62,12 +63,12 @@ const VanthImageWrapper = styled(motion.div)`
 `;
 
 const LegendTwoUP = styled(VanthTwoUp)`
-	max-width: initial;
-	flex-direction: column-reverse;
+	flex-wrap: nowrap;
+	max-width: 100%;
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		flex-direction: row;
-		flex-wrap: nowrap;
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
 	}
 `;
 

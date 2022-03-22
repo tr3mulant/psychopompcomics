@@ -40,12 +40,12 @@ const MobileSocialContainer = () => {
 const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 	const links = [
 		'about',
-		'comics',
+		// 'comics',
 		'collectibles',
-		'characters',
-		'artists',
-		'news',
-		'merch',
+		// 'characters',
+		// 'artists',
+		// 'news',
+		// 'merch',
 	];
 	const variants = mobile
 		? {
@@ -101,14 +101,18 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 
 const NavInnerContainer = styled.div`
 	position: relative;
-	width: 128rem;
-	max-width: 100%;
+	width: 100%;
+	max-width: 128rem;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+	justify-content: center;
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
 		width: 100%;
 		padding-bottom: ${(props) => props.theme.spaces.lg};
+	}
+	@media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+		justify-content: flex-end;
 	}
 `;
 

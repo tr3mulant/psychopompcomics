@@ -7,42 +7,35 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 	justify-content: center;
 	list-style: none;
 	padding: 0;
-	margin-left: auto;
-	margin-right: ${(props) => props.theme.spaces.xxl};
 	li {
 		display: flex;
 		align-items: center;
+
+		& > div > a {
+			font-size: ${(props) => props.theme.fonts.sizes.ml};
+		}
+
+		&:last-child {
+			display: none;
+		}
 	}
 	li + li:before {
 		content: '';
 		background-color: var(--surface4);
 		width: 2px;
 		margin: 0 1rem;
-		height: 30%;
+		height: 80%;
 	}
-	@media only screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		li:last-child {
-			display: none;
+			display: initial;
 		}
 	}
-	@media only screen and (min-width: ${(props) => props.theme.breakpoints.lg}) {
-		width: unset;
-	}
-	@media only screen and (min-width: ${(props) => props.theme.breakpoints.xl}) {
-		li * {
-			font-size: ${(props) => props.theme.fonts.sizes.sm};
-		}
-	}
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-		width: unset;
-		margin-right: auto;
-		li * {
-			font-size: ${(props) => props.theme.fonts.sizes.xxs};
-		}
-	}
+
 	@media only screen and (max-width: ${(props) => props.theme.breakpoints.sm}) {
 		position: fixed;
 		top: 10%;
+		left: 0;
 		width: 100%;
 		height: 90%;
 		flex-direction: column;
@@ -77,14 +70,5 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 		li a {
 			transition-delay: 150ms;
 		}
-	}
-	@media only screen and (max-width: ${(props) => props.theme.breakpoints.xs}) {
-		top: 12.5%;
-		height: 87.5%;
-	}
-	@media only screen and (max-width: ${(props) =>
-			props.theme.breakpoints.xxs}) {
-		top: 15%;
-		height: 85%;
 	}
 `;

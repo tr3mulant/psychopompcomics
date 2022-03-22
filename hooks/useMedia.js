@@ -9,7 +9,7 @@ export const useMedia = () => {
 	useEffect(() => {
 		function isMobileSized() {
 			setMobile(
-				window.innerWidth < parseInt(theme.breakpoints.sm.replace('px', ''))
+				window.innerWidth <= parseInt(theme.breakpoints.sm.replace('px', ''))
 			);
 		}
 		// Add event listener
@@ -21,7 +21,7 @@ export const useMedia = () => {
 	useLayoutEffect(() => {
 		const onResize = () => {
 			const isMobile =
-				window.innerWidth < parseInt(theme.breakpoints.sm.replace('px', ''));
+				window.innerWidth <= parseInt(theme.breakpoints.sm.replace('px', ''));
 			setMobile(isMobile);
 		};
 		window.addEventListener('resize', onResize);

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledMotionNavbar = styled(motion.nav)`
+    width: 100%;
     position: sticky;
     top 0;
     z-index: 100;
@@ -10,6 +11,9 @@ export const StyledMotionNavbar = styled(motion.nav)`
     justify-content: center;
     align-items: center;
     background-color: var(--surface1);
+    box-shadow: var(--box-shadow-ms);
+    padding: ${(props) => props.theme.spaces.md} ${(props) =>
+	props.theme.spaces.lg};
     * {
         background-color: var(--surface1);
     }

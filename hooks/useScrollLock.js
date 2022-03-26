@@ -1,7 +1,7 @@
-import { useLayoutEffect } from 'react';
+import { useEffect } from 'react';
 
 export const useScrollLock = (menuOpen) => {
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const original = window.getComputedStyle(document.body).overflow;
 
 		if (menuOpen) {

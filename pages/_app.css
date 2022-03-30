@@ -2,7 +2,9 @@
 
 @font-face {
 	font-family: 'Archive';
-	src: url('/fonts/Archive/Archive-Regular.ttf') format('truetype');
+	src: url('/fonts/Archive/Archive-Regular.woff2') format('woff2'),
+		url('/fonts/Archive/Archive-Regular.ttf') format('truetype');
+
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;

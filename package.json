@@ -19,7 +19,7 @@
 		"lint": "next lint",
 		"format": "prettier --write .",
 		"doc-up": "docker-compose up -d --remove-orphans",
-		"doc-dev": "docker-compose up -d --build --remove-orphans",
+		"doc-dev": "docker-compose down && docker-compose up -d --build --remove-orphans",
 		"doc-down": "docker-compose down",
 		"doc-build": "docker-compose build",
 		"doc-build-psy": "docker-compose build psychopompcomics",

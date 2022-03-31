@@ -10,7 +10,7 @@ export const HamburgerMenu = {
 		outline: none;
 		z-index: 1;
 		width: ${({ theme }) => theme.spaces.xxl.replace('rem', '') * 1.2}rem;
-		padding: ${({ theme }) => theme.spaces.sm};
+		padding: var(--space-sm);
 		& * {
 			stroke: var(--brand);
 			stroke-width: 1.5;

@@ -39,7 +39,7 @@ const VanthImages = [
 	},
 	{
 		src: wolfImg,
-		alt: 'Bunny Vanth',
+		alt: 'Wolf Vanth',
 	},
 	{
 		src: mothImg,
@@ -169,7 +169,7 @@ export default function VanthSwiper({ autoplay }) {
 				}}
 			>
 				{VanthImages.map((VanthImage) => (
-					<SwiperSlide key={VanthImage}>
+					<SwiperSlide key={VanthImage.alt}>
 						<Image
 							src={VanthImage.src}
 							alt={VanthImage.alt}

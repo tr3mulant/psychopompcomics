@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { motion } from 'framer-motion';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
@@ -36,10 +36,13 @@ const SoCLogoContainer = styled(motion.div)`
 	right: 5%;
 	width: 33.3%;
 	z-idex: 2;
-	min-width: 25rem;
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
 		bottom: 10%;
+	}
+
+	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+		width: 25rem;
 	}
 `;
 
@@ -108,12 +111,14 @@ const ThreeUpItem = styled.article`
 `;
 
 const ThreeUpImageContainer = styled.div`
-	max-width: 15rem;
+	width: 15rem;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 `;
 
 export default function Home() {
+	const theme = useTheme();
 	return (
 		<>
 			<MotionHeader>
@@ -121,16 +126,20 @@ export default function Home() {
 					<Image
 						src={SoCBanner}
 						alt='Seed of Cain Promo Banner showing Colonel Frost standing in rubble with a city behind him'
-						width='6075'
-						height='3417'
+						width={6075}
+						height={3417}
+						layout='responsive'
+						placeholder={'blur'}
 					/>
 				</SoCBannerContainer>
 				<SoCPillarContainer>
 					<Image
 						src={SoCPillar}
 						alt='Seed of Cain Promo Banner showing Colonel Frost standing in rubble with a Cog and the city behind him'
-						width='2700'
-						height='3600'
+						width={2700}
+						height={3600}
+						layout='responsive'
+						placeholder={'blur'}
 					/>
 				</SoCPillarContainer>
 				<SoCLogoContainer
@@ -144,8 +153,10 @@ export default function Home() {
 					<Image
 						src={SoCLogo}
 						alt='Seed of Cain Logo'
-						width='3076'
-						height='1649'
+						layout='responsive'
+						width={3076}
+						height={1649}
+						sizes={`(max-width: ${theme.breakpoints.sm}) 25rem, 33.3%`}
 					/>
 				</SoCLogoContainer>
 			</MotionHeader>
@@ -154,7 +165,9 @@ export default function Home() {
 					<SectionContainer>
 						<PsychoDescriptionContainer>
 							<PsychoDescriptionImage>
-								<LogoWithText />
+								<LogoWithText
+									sizes={`(max-width: ${theme.breakpoints.xs}) 27rem, 20rem`}
+								/>
 							</PsychoDescriptionImage>
 							<PsychoDescriptionText>
 								<h2>A New Kind of Comic Studio</h2>
@@ -169,7 +182,7 @@ export default function Home() {
 						<ThreeUpContainer>
 							<ThreeUpItem>
 								<ThreeUpImageContainer>
-									<MicrochipIconHexagon />
+									<MicrochipIconHexagon sizes='15rem' />
 								</ThreeUpImageContainer>
 								<h2>Digitally Native</h2>
 								<p>
@@ -179,7 +192,7 @@ export default function Home() {
 							</ThreeUpItem>
 							<ThreeUpItem>
 								<ThreeUpImageContainer>
-									<BlockchainIconHexagon />
+									<BlockchainIconHexagon sizes='15rem' />
 								</ThreeUpImageContainer>
 								<h2>NFT-Powered</h2>
 								<p>
@@ -189,7 +202,7 @@ export default function Home() {
 							</ThreeUpItem>
 							<ThreeUpItem>
 								<ThreeUpImageContainer>
-									<RobotIconHexagon />
+									<RobotIconHexagon sizes='15rem' />
 								</ThreeUpImageContainer>
 								<h2>Artist-Centric</h2>
 								<p>

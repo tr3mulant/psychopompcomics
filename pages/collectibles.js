@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { DevRoutes } from '../utils/dev_routes';
@@ -73,6 +73,7 @@ const LegendTwoUP = styled(VanthTwoUp)`
 `;
 
 export default function Collectibles() {
+	const theme = useTheme();
 	return (
 		<>
 			<CollectiblesHeader>
@@ -92,6 +93,8 @@ export default function Collectibles() {
 					layout='fill'
 					objectFit='cover'
 					objectPosition='bottom'
+					sizes='100vw'
+					placeholder='blur'
 				/>
 			</CollectiblesHeader>
 			<MotionMain>
@@ -116,6 +119,9 @@ export default function Collectibles() {
 										alt='Vanth Symbol'
 										width='1080'
 										height='1080'
+										layout='responsive'
+										sizes={`(max-width: ${theme.breakpoints.sm}) 100vw, 57.6rem`}
+										placeholder='blur'
 									/>
 								</VanthImageWrapper>
 							</TwoUp>
@@ -170,6 +176,8 @@ export default function Collectibles() {
 									alt='Vanth Symbol'
 									width='1080'
 									height='1080'
+									layout='responsive'
+									sizes={`(max-width: ${theme.breakpoints.sm}) 25.6rem, 30.4rem`}
 								/>
 							</TwoUp>
 						</VanthTwoUp>

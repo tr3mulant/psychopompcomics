@@ -20,6 +20,13 @@ const AboutHeader = styled(MotionHeader)`
 		${({ theme }) => theme.spaces.xl};
 `;
 
+const LogoContainer = styled.div`
+	width: 640px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+`;
+
 const AboutMain = styled(MotionMain)`
 	display: flex;
 	flex-direction: column;
@@ -98,7 +105,9 @@ export default function About() {
 	return (
 		<>
 			<AboutHeader>
-				<LogoTextImage />
+				<LogoContainer>
+					<LogoTextImage layout='responsive' sizes='64rem' />
+				</LogoContainer>
 			</AboutHeader>
 			<AboutMain>
 				<StyledSection>
@@ -146,7 +155,14 @@ export default function About() {
 								>
 									<CoreTeamMember variants={childrenTCoreTeamVariants}>
 										<CoreTeamMemberImage>
-											<Image width='75' height='75' src={roninPic} alt='Ian' />
+											<Image
+												width='75'
+												height='75'
+												src={roninPic}
+												alt='Ian'
+												layout='fixed'
+												placeholder='blur'
+											/>
 										</CoreTeamMemberImage>
 										<h4>Ian</h4>
 										<h4>Chief Wagmi Officer</h4>
@@ -167,6 +183,8 @@ export default function About() {
 												height='75'
 												src={alaricPic}
 												alt='Caleb'
+												layout='fixed'
+												placeholder='blur'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Caleb</h4>
@@ -188,6 +206,8 @@ export default function About() {
 												height='75'
 												src={nfterPic}
 												alt='Spencer'
+												layout='fixed'
+												placeholder='blur'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Spencer</h4>
@@ -209,6 +229,8 @@ export default function About() {
 												height='75'
 												src={tr3mulantPic}
 												alt='Scott'
+												layout='fixed'
+												placeholder='blur'
 											/>
 										</CoreTeamMemberImage>
 										<h4>Scott</h4>

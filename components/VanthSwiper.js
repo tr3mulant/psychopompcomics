@@ -28,6 +28,41 @@ const VanthSwiperVariants = {
 	},
 };
 
+const VanthImages = [
+	{
+		src: bunnyImg,
+		alt: 'Bunny Vanth',
+	},
+	{
+		src: catImg,
+		alt: 'Cat Vanth',
+	},
+	{
+		src: wolfImg,
+		alt: 'Bunny Vanth',
+	},
+	{
+		src: mothImg,
+		alt: 'Moth Vanth',
+	},
+	{
+		src: owlImg,
+		alt: 'Owl Vanth',
+	},
+	{
+		src: deerImg,
+		alt: 'Deer Vanth',
+	},
+	{
+		src: foxImg,
+		alt: 'Fox Vanth',
+	},
+	{
+		src: ravenImg,
+		alt: 'Raven Vanth',
+	},
+];
+
 const VanthSwiperContainer = styled(motion.article)`
 	display: flex;
 	flex-wrap: wrap;
@@ -86,7 +121,6 @@ const OrbLogoContainer = styled.div`
 
 export function StartSwiperAutoPlay() {
 	const swiper = document.querySelector('.vanth-swiper').swiper;
-	console.log('starting swiper');
 	swiper.autoplay.start();
 }
 
@@ -135,86 +169,25 @@ export default function VanthSwiper({ autoplay }) {
 					},
 				}}
 			>
-				<SwiperSlide>
-					<Image
-						src={bunnyImg}
-						alt='Bunny Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={catImg}
-						alt='Cat Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={wolfImg}
-						alt='Wolf Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={mothImg}
-						alt='Moth Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={owlImg}
-						alt='Owl Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={deerImg}
-						alt='Deer Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={foxImg}
-						alt='Fox Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<Image
-						src={ravenImg}
-						alt='Raven Vanth'
-						layout='fill'
-						objectFit='cover'
-						objectPosition='center'
-					/>
-				</SwiperSlide>
-				{/* <SwiperSlide>
-                    <Image
-                      src={vanthImg}
-                      alt='Vanth Symbol'
-                      width='1080'
-                      height='1080'
-                    />
-                  </SwiperSlide> */}
+				{VanthImages.map((VanthImage) => (
+					<SwiperSlide key={VanthImage}>
+						<Image
+							src={VanthImage.src}
+							alt={VanthImage.alt}
+							layout='fill'
+							objectFit='cover'
+							objectPosition='center'
+							width={2500}
+							height={2500}
+							sizes={`(max-width: ${theme.breakpoints.xxs}) 35rem,
+								(max-width: ${theme.breakpoints.xs}) 54.3rem,
+								(max-width: ${theme.breakpoints.sm}) 29.2rem,
+								(max-width: ${theme.breakpoints.md}) 33.3rem,
+								35.9rem`}
+							placeholder={'blur'}
+						/>
+					</SwiperSlide>
+				))}
 				<SwiperSlide>
 					<ArtistSlide>
 						<h4 className='text-center'>The Artist</h4>

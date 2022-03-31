@@ -49,13 +49,13 @@ const SoCLogoContainer = styled(motion.div)`
 const PsychoDescriptionContainer = styled.div`
 	display: flex;
 	align-items: center;
-	margin-top: ${({ theme }) => theme.spaces.xl};
+	margin-top: var(--space-xl);
 	max-width: 72rem;
 	margin-left: auto;
 	margin-right: auto;
 
 	& > div + div {
-		margin-left: ${({ theme }) => theme.spaces.lg};
+		margin-left: var(--space-lg);
 	}
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
@@ -80,17 +80,17 @@ const PsychoDescriptionText = styled.div`
 	@media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
 		width: 100%;
 		flex-shrink: initial;
-		margin-top: ${({ theme }) => theme.spaces.xl};
+		margin-top: var(--space-xl);
 	}
 `;
 
 const ThreeUpContainer = styled.div`
-	margin-top: ${({ theme }) => theme.spaces.xxl};
+	margin-top: var(--space-xxl);
 	max-width: 90rem;
 	margin-left: auto;
 	margin-right: auto;
 	display: grid;
-	grid-gap: ${({ theme }) => theme.spaces.xl};
+	grid-gap: var(--space-xl);
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas: 'item item item';
 

@@ -15,12 +15,12 @@ const TwoUpContainer = styled.div`
 
 const TwoUp = styled.article`
 	width: 50%;
-	padding-left: ${({ theme }) => theme.spaces.xl};
-	padding-right: ${({ theme }) => theme.spaces.xl};
+	padding-left: var(--space-xl);
+	padding-right: var(--space-xl);
 	margin-bottom: initial;
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-		margin-bottom: ${({ theme }) => theme.spaces.xxl};
+		margin-bottom: var(--space-xxl);
 		width: 100%;
 	}
 `;

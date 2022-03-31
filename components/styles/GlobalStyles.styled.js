@@ -39,6 +39,35 @@ export const GlobalStyle = createGlobalStyle`
 		--box-shadow-ml: ${({ theme }) => theme.boxShadow.ml};
 		--box-shadow-lg: ${({ theme }) => theme.boxShadow.lg};
 		--box-shadow-xl: ${({ theme }) => theme.boxShadow.xl};
+		/* Breakpoints (variables don't work in media queries)*/
+		--breakpoint-xxs: ${({ theme }) => theme.breakpoints.xxs};
+		--breakpoint-xs: ${({ theme }) => theme.breakpoints.xs};
+		--breakpoint-sm: ${({ theme }) => theme.breakpoints.sm};
+		--breakpoint-md: ${({ theme }) => theme.breakpoints.md};
+		--breakpoint-lg: ${({ theme }) => theme.breakpoints.lg};
+		--breakpoint-xl: ${({ theme }) => theme.breakpoints.xl};
+		/* Spacing Sizes */
+		--space-zero:  ${({ theme }) => theme.spaces.zero};
+		--space-xs:  ${({ theme }) => theme.spaces.xs};
+		--space-sm:  ${({ theme }) => theme.spaces.sm};
+		--space-ms:  ${({ theme }) => theme.spaces.ms};
+		--space-md:  ${({ theme }) => theme.spaces.md};
+		--space-ml:  ${({ theme }) => theme.spaces.ml};
+		--space-lg:  ${({ theme }) => theme.spaces.lg};
+		--space-xl:  ${({ theme }) => theme.spaces.xl};
+		--space-xxl:  ${({ theme }) => theme.spaces.xxl};
+		--space-xxxl:  ${({ theme }) => theme.spaces.xxxl};
+		/* Font Sizes */
+		--font-size-xxs:  ${({ theme }) => theme.fonts.sizes.xxs};
+		--font-size-xs:  ${({ theme }) => theme.fonts.sizes.xs};
+		--font-size-sm:  ${({ theme }) => theme.fonts.sizes.sm};
+		--font-size-ms:  ${({ theme }) => theme.fonts.sizes.ms};
+		--font-size-md:  ${({ theme }) => theme.fonts.sizes.md};
+		--font-size-ml:  ${({ theme }) => theme.fonts.sizes.ml};
+		--font-size-lg:  ${({ theme }) => theme.fonts.sizes.lg};
+		--font-size-xl:  ${({ theme }) => theme.fonts.sizes.xl};
+		--font-size-xxl:  ${({ theme }) => theme.fonts.sizes.xxl};
+		--font-size-xxxl:  ${({ theme }) => theme.fonts.sizes.xxxl};
 	}
 
 	/* Box sizing rules */

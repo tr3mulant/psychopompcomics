@@ -31,7 +31,7 @@ const FourZeroFourMain = styled(motion.main)`
 	text-align: center;
 	overflow: hidden;
 	p {
-		padding: ${({ theme }) => theme.spaces.md};
+		padding: var(--space-md);
 	}
 `;
 

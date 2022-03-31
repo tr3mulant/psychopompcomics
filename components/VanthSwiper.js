@@ -90,13 +90,12 @@ const VanthDescription = styled.div`
 	@media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
 		max-width: 100%;
 	}
-	padding: 0 ${({ theme }) => theme.spaces.md} ${({ theme }) => theme.spaces.md}
-		0;
+	padding: 0 var(--space-md) var(--space-md) 0;
 `;
 
 const ArtistSlide = styled.div`
 	background-color: var(--surface0);
-	padding: ${({ theme }) => theme.spaces.lg} ${({ theme }) => theme.spaces.md};
+	padding: var(--space-lg) var(--space-md);
 	display: flex;
 	flex-direction: column;
 	width: 100%;

@@ -6,7 +6,7 @@ export const StyledCopyright = styled.span`
 `;
 
 export const StyledCopyrightContainer = styled.div`
-	margin-bottom: ${({ theme }) => theme.spaces.md};
+	margin-bottom: var(--space-md);
 	width: 100%;
 	grid-column-start: 1;
 	grid-column-end: 4;
@@ -24,11 +24,10 @@ export const StyledMotionFooter = styled(motion.footer)`
 	text-align: center;
 	background-color: var(--surface1);
 	border-top: 0.1rem solid hsl(var(--brand-hue) 10% 50% / 15%);
-	margin-top: ${({ theme }) => theme.spaces.xxl};
-	padding: ${({ theme }) => theme.spaces.lg} ${({ theme }) => theme.spaces.xxl}
-		0;
+	margin-top: var(--space-xxl);
+	padding: var(--space-lg) var(--space-xxl) 0;
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-		margin-top: ${({ theme }) => theme.spaces.lg};
-		padding: ${({ theme }) => theme.spaces.lg};
+		margin-top: var(--space-lg);
+		padding: var(--space-lg);
 	}
 `;

@@ -9,7 +9,7 @@ const DiscordServerLink = process.env.NEXT_PUBLIC_PPC_DISCORD_INVITE_URL;
 const TwitterLink = process.env.NEXT_PUBLIC_PPC_TWITTER_URL;
 
 const SocialIconContainer = styled.div`
-	width: ${({ theme }) => theme.spaces.xl};
+	width: var(--space-xl);
 `;
 
 export const DiscordIcon = ({ onClick }) => {

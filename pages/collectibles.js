@@ -19,7 +19,7 @@ import { TwoUp, TwoUpContainer } from '../components/styles/TwoUp.styled';
 import LinkPrimary from '../components/styles/StyledButton.styled';
 
 const CollectiblesHeader = styled(MotionHeader)`
-	padding: ${({ theme }) => theme.spaces.xxxl} ${({ theme }) => theme.spaces.lg};
+	padding: var(--space-xxxl) var(--space-lg);
 	text-align: center;
 `;
 
@@ -35,7 +35,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled(motion.h2)`
-	margin-top: ${({ theme }) => theme.spaces.md};
+	margin-top: var(--space-md);
 	color: #fff;
 	position: relative;
 	z-index: 2;
@@ -47,7 +47,7 @@ const VanthTwoUp = styled(TwoUpContainer)`
 	margin-right: auto;
 	max-width: 75rem;
 	flex-wrap: nowrap;
-	margin-top: ${({ theme }) => theme.spaces.xxl};
+	margin-top: var(--space-xxl);
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 32rem;

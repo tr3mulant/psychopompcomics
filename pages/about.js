@@ -16,8 +16,7 @@ import tr3mulantPic from '../images/core-members/tr3mulant.jpg';
 
 const AboutHeader = styled(MotionHeader)`
 	text-align: center;
-	padding: ${({ theme }) => theme.spaces.xxl} ${({ theme }) => theme.spaces.lg}
-		${({ theme }) => theme.spaces.xl};
+	padding: var(--space-xxl) var(--space-lg) var(--space-xl);
 `;
 
 const LogoContainer = styled.div`
@@ -33,12 +32,12 @@ const AboutMain = styled(MotionMain)`
 `;
 
 const CoreTeamContainer = styled(motion.div)`
-	margin-top: ${({ theme }) => theme.spaces.ml};
+	margin-top: var(--space-ml);
 	display: grid;
 	grid-template-areas:
 		'card card'
 		'card card';
-	gap: ${({ theme }) => theme.spaces.ml};
+	gap: var(--space-ml);
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1fr;
 	max-width: 42rem;
@@ -52,7 +51,7 @@ const CoreTeamContainer = styled(motion.div)`
 			'card'
 			'card'
 			'card';
-		gap: ${({ theme }) => theme.spaces.ml};
+		gap: var(--space-ml);
 		grid-template-rows: 1fr;
 		grid-template-columns: 1fr;
 		max-width: 22rem;
@@ -63,10 +62,10 @@ const CoreTeamMember = styled(motion.section)`
 	background-color: var(--surface1);
 	border: 0.1rem solid hsl(var(--brand-hue) 10% 50% / 15%);
 	border-radius: 1rem;
-	padding: ${({ theme }) => theme.spaces.ml};
+	padding: var(--space-ml);
 	box-shadow: var(--box-shadow-md);
 	h4 + h4 {
-		margin-top: ${({ theme }) => theme.spaces.xs};
+		margin-top: var(--space-xs);
 	}
 `;
 

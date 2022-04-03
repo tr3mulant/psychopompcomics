@@ -25,6 +25,17 @@ const NewsletterSubscribe = ({ className }) => {
 
 export const NavNewsletterSubscribe = styled(NewsletterSubscribe)`
 	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& .newsletter-form-info {
+		position: absolute;
+		top: calc(var(--space-md) * 3);
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
 		max-width: 30.4rem;
 		* {

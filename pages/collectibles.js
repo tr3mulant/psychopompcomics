@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { DevRoutes } from '../utils/dev_routes';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
 import MotionFooter from '../components/Footer';

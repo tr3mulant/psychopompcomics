@@ -7,7 +7,6 @@ import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionFooter from '../components/Footer';
 import styled from 'styled-components';
 import Image from 'next/image';
-import { DevRoutes } from '../utils/dev_routes';
 import { motion } from 'framer-motion';
 import roninPic from '../images/core-members/RoninRosewater.jpg';
 import alaricPic from '../images/core-members/4L4RIC.jpg';

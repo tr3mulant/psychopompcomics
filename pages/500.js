@@ -30,7 +30,7 @@ const FiveZeroZeroMain = styled.main`
 	align-items: center;
 	text-align: center;
 	p {
-		padding: ${({ theme }) => theme.spaces.md};
+		padding: var(--space-md);
 	}
 `;
 

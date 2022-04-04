@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { DevRoutes } from '../utils/dev_routes';
@@ -19,7 +19,7 @@ import { TwoUp, TwoUpContainer } from '../components/styles/TwoUp.styled';
 import LinkPrimary from '../components/styles/StyledButton.styled';
 
 const CollectiblesHeader = styled(MotionHeader)`
-	padding: ${({ theme }) => theme.spaces.xxxl} ${({ theme }) => theme.spaces.lg};
+	padding: var(--space-xxxl) var(--space-lg);
 	text-align: center;
 `;
 
@@ -35,7 +35,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled(motion.h2)`
-	margin-top: ${({ theme }) => theme.spaces.md};
+	margin-top: var(--space-md);
 	color: #fff;
 	position: relative;
 	z-index: 2;
@@ -47,7 +47,7 @@ const VanthTwoUp = styled(TwoUpContainer)`
 	margin-right: auto;
 	max-width: 75rem;
 	flex-wrap: nowrap;
-	margin-top: ${({ theme }) => theme.spaces.xxl};
+	margin-top: var(--space-xxl);
 
 	@media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
 		max-width: 32rem;
@@ -73,6 +73,7 @@ const LegendTwoUP = styled(VanthTwoUp)`
 `;
 
 export default function Collectibles() {
+	const theme = useTheme();
 	return (
 		<>
 			<CollectiblesHeader>
@@ -92,6 +93,8 @@ export default function Collectibles() {
 					layout='fill'
 					objectFit='cover'
 					objectPosition='bottom'
+					sizes='100vw'
+					placeholder='blur'
 				/>
 			</CollectiblesHeader>
 			<MotionMain>
@@ -116,6 +119,9 @@ export default function Collectibles() {
 										alt='Vanth Symbol'
 										width='1080'
 										height='1080'
+										layout='responsive'
+										sizes={`(max-width: ${theme.breakpoints.sm}) 100vw, 57.6rem`}
+										placeholder='blur'
 									/>
 								</VanthImageWrapper>
 							</TwoUp>
@@ -170,6 +176,8 @@ export default function Collectibles() {
 									alt='Vanth Symbol'
 									width='1080'
 									height='1080'
+									layout='responsive'
+									sizes={`(max-width: ${theme.breakpoints.sm}) 25.6rem, 30.4rem`}
 								/>
 							</TwoUp>
 						</VanthTwoUp>

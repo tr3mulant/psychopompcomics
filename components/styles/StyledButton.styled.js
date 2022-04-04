@@ -57,17 +57,17 @@ const ButtonContainerPrimary = styled.div`
 		text-decoration: none;
 		color: var(--text-on-brand);
 		border: none;
-		height: ${({ theme }) => theme.spaces.xl};
+		height: var(--space-xl);
 		min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '') * 2}rem;
-		line-height: ${({ theme }) => theme.spaces.xl};
-		padding: 0 ${({ theme }) => theme.spaces.lg};
+		line-height: var(--space-xl);
+		padding: 0 var(--space-lg);
 		cursor: pointer;
 		transition: background-color 300ms ease;
 		font-weight: bold;
 	}
 
 	& > svg {
-		height: ${({ theme }) => theme.spaces.xl};
+		height: var(--space-xl);
 	}
 
 	&:hover {
@@ -149,10 +149,10 @@ const ButtonTest = styled.a`
 	text-decoration: none;
 	color: var(--text-on-brand);
 	border: none;
-	height: ${({ theme }) => theme.spaces.xl};
+	height: var(--space-xl);
 	min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '') * 2}rem;
-	line-height: ${({ theme }) => theme.spaces.xl};
-	padding: 0 ${({ theme }) => theme.spaces.lg};
+	line-height: var(--space-xl);
+	padding: 0 var(--space-lg);
 	cursor: pointer;
 	transition: background-color 300ms ease;
 	font-weight: bold;
@@ -172,10 +172,10 @@ function LinkPrimary(props) {
 
 const ButtonContainerPrimarySm = styled(ButtonContainerPrimary)`
 	& a {
-		font-size: ${({ theme }) => theme.fonts.sizes.xs};
-		height: ${({ theme }) => theme.spaces.lg};
+		font-size: var(--font-size-xs);
+		height: var(--space-lg);
 		min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '')}rem;
-		line-height: ${({ theme }) => theme.spaces.lg};
+		line-height: var(--space-lg);
 	}
 `;
 
@@ -203,7 +203,7 @@ export function LinkPrimarySm(props) {
 
 const ButtonContainerPrimaryLg = styled(ButtonContainerPrimary)`
 	& a {
-		font-size: ${({ theme }) => theme.fonts.sizes.md};
+		font-size: var(--font-size-md);
 		height: ${({ theme }) => theme.spaces.lg.replace('rem', '') * 2}rem;
 		min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '') * 2}rem;
 		line-height: ${({ theme }) => theme.spaces.lg.replace('rem', '') * 2}rem;
@@ -309,13 +309,13 @@ export function LinkPrimaryOutline(props) {
 
 const ButtonContainerPrimaryOutlineSm = styled(ButtonContainerPrimaryOutline)`
 	& > svg {
-		height: ${({ theme }) => theme.spaces.lg};
+		height: var(--space-lg);
 	}
 	& a {
-		font-size: ${({ theme }) => theme.fonts.sizes.xs};
-		height: ${({ theme }) => theme.spaces.lg};
+		font-size: var(--font-size-xs);
+		height: var(--space-lg);
 		min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '')}rem;
-		line-height: ${({ theme }) => theme.spaces.lg};
+		line-height: var(--space-lg);
 	}
 `;
 
@@ -358,7 +358,7 @@ const ButtonContainerPrimaryOutlineLg = styled(ButtonContainerPrimaryOutline)`
 		height: ${({ theme }) => theme.spaces.lg.replace('rem', '') * 2}rem;
 	}
 	& a {
-		font-size: ${({ theme }) => theme.fonts.sizes.md};
+		font-size: var(--font-size-md);
 		height: ${({ theme }) => theme.spaces.lg.replace('rem', '') * 2}rem;
 		min-width: ${({ theme }) => theme.spaces.xxl.replace('rem', '') * 2}rem;
 		line-height: ${({ theme }) => theme.spaces.lg.replace('rem', '') * 2}rem;

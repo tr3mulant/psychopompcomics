@@ -2,6 +2,8 @@ import { ThemeProvider } from 'styled-components';
 import { themeDark, themeLight } from '../components/themes/DefaultTheme';
 import { GlobalStyle } from '../components/styles/GlobalStyles.styled';
 import HeadTag from '../components/HeadTag';
+import TagManager from 'react-gtm-module/dist/TagManager';
+import { useEffect } from 'react';
 import { MenuProvider } from '../state/useMenuContext';
 import { MotionNavbar } from '../components/Navbar';
 import { MotionConfig, AnimatePresence } from 'framer-motion';
@@ -15,6 +17,9 @@ export default function App({ Component, pageProps, router }) {
 			? 'https://psychopompcomics.com'
 			: 'localhost'
 	}${router.route}`;
+	useEffect(() => {
+		TagManager.initialize({ gtmId: 'GTM-NPGDGRP' });
+	}, []);
 	return (
 		<>
 			<HeadTag />

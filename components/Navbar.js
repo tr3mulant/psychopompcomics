@@ -43,7 +43,7 @@ const MotionNavLinks = ({ openmenu, mobile, onClick }) => {
 		// 'comics',
 		'collectibles',
 		// 'characters',
-		// 'artists',
+		'artists',
 		// 'news',
 		// 'merch',
 	];

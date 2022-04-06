@@ -40,7 +40,7 @@ yarn-error.log*
 .vscode
 
 # ditch those pesky Zone Identifier files
-/images/*:Zone.Identifier
+/images/**/*:Zone.Identifier
 
 # generated every `next build`
 next-env.d.ts

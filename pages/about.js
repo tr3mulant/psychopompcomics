@@ -8,7 +8,7 @@ import MotionFooter from '../components/Footer';
 import styled from 'styled-components';
 import Image from 'next/image';
 import { DevRoutes } from '../utils/dev_routes';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import roninPic from '../images/core-members/RoninRosewater.jpg';
 import alaricPic from '../images/core-members/4L4RIC.jpg';
 import nfterPic from '../images/core-members/The_NFTer.jpg';
@@ -31,7 +31,7 @@ const AboutMain = styled(MotionMain)`
 	flex-direction: column;
 `;
 
-const CoreTeamContainer = styled(motion.div)`
+const CoreTeamContainer = styled(m.div)`
 	margin-top: var(--space-ml);
 	display: grid;
 	grid-template-areas:
@@ -58,7 +58,7 @@ const CoreTeamContainer = styled(motion.div)`
 	}
 `;
 
-const CoreTeamMember = styled(motion.section)`
+const CoreTeamMember = styled(m.section)`
 	background-color: var(--surface1);
 	border: 0.1rem solid hsl(var(--brand-hue) 10% 50% / 15%);
 	border-radius: 1rem;

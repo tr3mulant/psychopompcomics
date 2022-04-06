@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Navigation, A11y, FreeMode, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
@@ -63,7 +63,7 @@ const VanthImages = [
 	},
 ];
 
-const VanthSwiperContainer = styled(motion.article)`
+const VanthSwiperContainer = styled(m.article)`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;

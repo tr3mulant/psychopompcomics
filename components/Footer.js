@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import LogoTextImage from '../components/LogoTextImage';
 import { MobileNavNewsletterSubscribe } from './NewsletterSubscribe';
 import {
@@ -82,7 +82,7 @@ const CopyRight = () => {
 	);
 };
 
-const InnerContainer = styled(motion.div)`
+const InnerContainer = styled(m.div)`
 	display: grid;
 	grid-template-areas:
 		'area area'

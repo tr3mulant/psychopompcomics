@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
 import MotionFooter from '../components/Footer';
@@ -30,7 +30,7 @@ const SoCPillarContainer = styled.div`
 	}
 `;
 
-const SoCLogoContainer = styled(motion.div)`
+const SoCLogoContainer = styled(m.div)`
 	position: absolute;
 	bottom: 25%;
 	right: 5%;
@@ -64,7 +64,7 @@ const PsychoDescriptionContainer = styled.div`
 	}
 `;
 
-const PsychoDescriptionImage = styled(motion.div)`
+const PsychoDescriptionImage = styled(m.div)`
 	width: 20rem;
 	flex-shrink: 0;
 

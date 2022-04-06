@@ -6,7 +6,12 @@ import TagManager from 'react-gtm-module/dist/TagManager';
 import { useEffect } from 'react';
 import { MenuProvider } from '../state/useMenuContext';
 import { MotionNavbar } from '../components/Navbar';
-import { MotionConfig, AnimatePresence } from 'framer-motion';
+import {
+	MotionConfig,
+	AnimatePresence,
+	LazyMotion,
+	domAnimation,
+} from 'framer-motion';
 import './_app.css';
 import { useState } from 'react';
 
@@ -28,14 +33,16 @@ export default function App({ Component, pageProps, router }) {
 				setTheme={setTheme}
 			>
 				<GlobalStyle />
-				<MotionConfig reducedMotion='user'>
-					<MenuProvider>
-						<MotionNavbar />
-					</MenuProvider>
-					<AnimatePresence exitBeforeEnter>
-						<Component {...pageProps} canonical={url} key={url} />
-					</AnimatePresence>
-				</MotionConfig>
+				<LazyMotion strict features={domAnimation}>
+					<MotionConfig reducedMotion='user'>
+						<MenuProvider>
+							<MotionNavbar />
+						</MenuProvider>
+						<AnimatePresence exitBeforeEnter>
+							<Component {...pageProps} canonical={url} key={url} />
+						</AnimatePresence>
+					</MotionConfig>
+				</LazyMotion>
 			</ThemeProvider>
 		</>
 	);

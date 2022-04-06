@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { DevRoutes } from '../utils/dev_routes';
 import MotionHeader from '../components/styles/MotionHeader.styled';
 import MotionMain from '../components/styles/MotionMain.styled';
@@ -34,7 +34,7 @@ const Title = styled.h1`
 	margin-right: auto;
 `;
 
-const Subtitle = styled(motion.h2)`
+const Subtitle = styled(m.h2)`
 	margin-top: var(--space-md);
 	color: #fff;
 	position: relative;
@@ -55,7 +55,7 @@ const VanthTwoUp = styled(TwoUpContainer)`
 	}
 `;
 
-const VanthImageWrapper = styled(motion.div)`
+const VanthImageWrapper = styled(m.div)`
 	& > * {
 		box-shadow: var(--box-shadow-md);
 		border-radius: 4rem;

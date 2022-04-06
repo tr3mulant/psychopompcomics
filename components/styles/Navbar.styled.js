@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-export const StyledMotionNavbar = styled(motion.nav)`
+export const StyledMotionNavbar = styled(m.nav)`
     width: 100%;
     position: sticky;
     top 0;

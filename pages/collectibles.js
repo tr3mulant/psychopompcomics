@@ -11,7 +11,7 @@ const DynamicLegendTwoUpContainer = dynamic(() =>
 	import('../components/styles/TwoUpLegend.styled')
 );
 const DynamicVanthTwoUpContainer = dynamic(() =>
-	import('../components/VanthTwoUp')
+	import('../components/styles/TwoUpVanth')
 );
 
 export default function Collectibles() {

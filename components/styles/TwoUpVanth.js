@@ -1,8 +1,8 @@
 import styled, { useTheme } from 'styled-components';
-import { TwoUp, TwoUpContainer } from './styles/TwoUp.styled';
+import { TwoUp, TwoUpContainer } from './TwoUp.styled';
 import Image from 'next/image';
-import vanthImg from '../images/vanth.svg';
-import LinkPrimary from './styles/StyledButton.styled';
+import vanthImg from '../../images/vanth.svg';
+import LinkPrimary from './StyledButton.styled';
 
 const VanthTwoUp = styled(TwoUpContainer)`
 	align-items: center;

@@ -6,7 +6,7 @@ const StyledPrimaryLink = styled.div`
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	padding: ${({ theme }) => theme.spaces.md};
+	padding: var(--space-md);
 
 	a {
 		text-transform: uppercase;
@@ -22,46 +22,46 @@ const StyledPrimaryLink = styled.div`
 
 const StyledPrimaryLinkLg = styled(StyledPrimaryLink)`
 	a {
-		font-size: ${({ theme }) => theme.fonts.sizes.lg};
-		height: ${({ theme }) => theme.spaces.lg};
-		min-width: ${({ theme }) => theme.spaces.lg};
-		line-height: ${({ theme }) => theme.spaces.lg};
+		font-size: var(--font-size-lg);
+		height: var(--space-lg);
+		min-width: var(--space-lg);
+		line-height: var(--space-lg);
 	}
 `;
 
 const StyledPrimaryLinkMd = styled(StyledPrimaryLink)`
 	a {
-		font-size: ${({ theme }) => theme.fonts.sizes.md};
-		height: ${({ theme }) => theme.spaces.md};
-		min-width: ${({ theme }) => theme.spaces.md};
-		line-height: ${({ theme }) => theme.spaces.md};
+		font-size: var(--font-size-md);
+		height: var(--space-md);
+		min-width: var(--space-md);
+		line-height: var(--space-md);
 	}
 `;
 
 const StyledPrimaryLinkXs = styled(StyledPrimaryLink)`
 	a {
-		font-size: ${({ theme }) => theme.fonts.sizes.xs};
-		height: ${({ theme }) => theme.spaces.xs};
-		min-width: ${({ theme }) => theme.spaces.xs};
-		line-height: ${({ theme }) => theme.spaces.xs};
+		font-size: var(--font-size-xs);
+		height: var(--space-xs);
+		min-width: var(--space-xs);
+		line-height: var(--space-xs);
 	}
 `;
 
 const StyledPrimaryLinkSm = styled(StyledPrimaryLink)`
 	a {
-		font-size: ${({ theme }) => theme.fonts.sizes.sm};
-		height: ${({ theme }) => theme.spaces.sm};
-		min-width: ${({ theme }) => theme.spaces.sm};
-		line-height: ${({ theme }) => theme.spaces.sm};
+		font-size: var(--font-size-sm);
+		height: var(--space-sm);
+		min-width: var(--space-sm);
+		line-height: var(--space-sm);
 	}
 `;
 
 const StyledPrimaryLinkXl = styled(StyledPrimaryLink)`
 	a {
-		font-size: ${({ theme }) => theme.fonts.sizes.xl};
-		height: ${({ theme }) => theme.spaces.xl};
-		min-width: ${({ theme }) => theme.spaces.xl};
-		line-height: ${({ theme }) => theme.spaces.xl};
+		font-size: var(--font-size-xl);
+		height: var(--space-xl);
+		min-width: var(--space-xl);
+		line-height: var(--space-xl);
 	}
 `;
 

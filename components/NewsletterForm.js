@@ -12,7 +12,9 @@ const NewsletterForm = ({ status, message, onValidated, className }) => {
 	 *
 	 * @return {{value}|*|boolean|null}
 	 */
-	const handleFormSubmit = () => {
+	const handleFormSubmit = (event) => {
+		// Cancel the default action, if needed
+		event.preventDefault();
 		setError(null);
 
 		if (!email) {
@@ -35,10 +37,8 @@ const NewsletterForm = ({ status, message, onValidated, className }) => {
 		setError(null);
 		// Number 13 is the "Enter" key on the keyboard
 		if (event.keyCode === 13) {
-			// Cancel the default action, if needed
-			event.preventDefault();
 			// Trigger the button element with a click
-			handleFormSubmit();
+			handleFormSubmit(event);
 		}
 	};
 

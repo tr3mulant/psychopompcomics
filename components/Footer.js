@@ -1,5 +1,5 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import LogoTextImage from '../components/LogoTextImage';
 import { MobileNavNewsletterSubscribe } from './NewsletterSubscribe';
 import {
@@ -15,10 +15,9 @@ const LogoTextContainer = styled.div`
 	max-width: 40%;
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.md}) {
 		margin-right: 0;
-		padding: ${({ theme }) => theme.spaces.sm};
+		padding: var(--space-sm);
 		max-width: 22rem;
-		margin: ${({ theme }) => theme.spaces.md} auto
-			${({ theme }) => theme.spaces.lg};
+		margin: var(--space-md) auto var(--space-lg);
 	}
 `;
 
@@ -27,7 +26,7 @@ const SocialContainer = styled.div`
 	grid-row-start: 1;
 	justify-self: start;
 	p {
-		margin-bottom: ${({ theme }) => theme.spaces.md};
+		margin-bottom: var(--space-md);
 	}
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
 		grid-column-start: 1;
@@ -40,15 +39,15 @@ const IconContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	div + div {
-		margin-left: ${({ theme }) => theme.spaces.md};
+		margin-left: var(--space-md);
 	}
 `;
 
 const SocialList = styled.ul`
 	list-style: none;
-	padding: ${({ theme }) => theme.spaces.md};
+	padding: var(--space-md);
 	li {
-		padding: ${({ theme }) => theme.spaces.md};
+		padding: var(--space-md);
 	}
 `;
 
@@ -83,12 +82,12 @@ const CopyRight = () => {
 	);
 };
 
-const InnerContainer = styled(motion.div)`
+const InnerContainer = styled(m.div)`
 	display: grid;
 	grid-template-areas:
 		'area area'
 		'area area';
-	gap: ${({ theme }) => theme.spaces.ml};
+	gap: var(--space-ml);
 	grid-template-rows: 1fr 0.1fr;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;

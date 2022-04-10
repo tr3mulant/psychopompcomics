@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-export const StyledMotionNavLinkList = styled(motion.ul)`
+export const StyledMotionNavLinkList = styled(m.ul)`
 	width: 50%;
 	display: flex;
 	justify-content: center;
@@ -12,7 +12,7 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 		align-items: center;
 
 		& > div > a {
-			font-size: ${({ theme }) => theme.fonts.sizes.ml};
+			font-size: var(--font-size-ml);
 		}
 
 		&:last-child {
@@ -47,11 +47,11 @@ export const StyledMotionNavLinkList = styled(motion.ul)`
 		}
 
 		li {
-			padding: ${({ theme }) => theme.spaces.ml};
+			padding: var(--space-ml);
 		}
 
 		li:last-child {
-			margin-bottom: ${({ theme }) => theme.spaces.lg};
+			margin-bottom: var(--space-lg);
 		}
 
 		li:last-child * {

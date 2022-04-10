@@ -25,10 +25,21 @@ const NewsletterSubscribe = ({ className }) => {
 
 export const NavNewsletterSubscribe = styled(NewsletterSubscribe)`
 	margin: auto auto;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& .newsletter-form-info {
+		position: absolute;
+		top: calc(var(--space-md) * 3);
+		width: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.lg}) {
 		max-width: 30.4rem;
 		* {
-			font-size: ${({ theme }) => theme.fonts.sizes.xxs};
+			font-size: var(--font-size-xxs);
 		}
 		a {
 			min-width: 9rem;
@@ -41,11 +52,10 @@ export const NavNewsletterSubscribe = styled(NewsletterSubscribe)`
 
 export const MobileNavNewsletterSubscribe = styled(NavNewsletterSubscribe)`
 	display: flex;
-	padding: 0 ${({ theme }) => theme.spaces.xl} ${({ theme }) => theme.spaces.xl}
-		${({ theme }) => theme.spaces.xl};
+	padding: 0 var(--space-xl) var(--space-xl) var(--space-xl);
 	@media only screen and (max-width: ${({ theme }) => theme.breakpoints.sm}) {
 		flex-direction: column;
-		padding: 0 0 ${({ theme }) => theme.spaces.xl};
+		padding: 0 0 var(--space-xl);
 	}
 `;
 

@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-const StyledHeader = styled(motion.header)`
+const StyledHeader = styled(m.header)`
 	width: 100%;
 	max-width: 100%;
 	position: relative;

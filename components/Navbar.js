@@ -129,11 +129,14 @@ export const MotionNavbar = () => {
 		<StyledMotionNavbar>
 			<NavInnerContainer>
 				<NavBrand onClick={closeMenu} />
-				<HamburgerMenu.Wrapper onClick={toggleMenu}>
+				<HamburgerMenu.Wrapper
+					onClick={toggleMenu}
+					aria-label='Nav Menu Toggle'
+				>
 					{isMenuOpen ? (
-						<HamburgerMenu.CloseMenuIcon_1 />
+						<HamburgerMenu.CloseMenuIcon />
 					) : (
-						<HamburgerMenu.OpenMenuIcon_1 />
+						<HamburgerMenu.OpenMenuIcon />
 					)}
 				</HamburgerMenu.Wrapper>
 				<MotionNavLinks

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-export const StyledMotionNavLinkList = styled(motion.ul)`
+export const StyledMotionNavLinkList = styled(m.ul)`
 	width: 50%;
 	display: flex;
 	justify-content: center;

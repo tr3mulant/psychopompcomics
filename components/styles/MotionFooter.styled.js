@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export const StyledCopyright = styled.span`
 	text-transform: uppercase;
@@ -19,7 +19,7 @@ export const StyledCopyrightContainer = styled.div`
 	}
 `;
 
-export const StyledMotionFooter = styled(motion.footer)`
+export const StyledMotionFooter = styled(m.footer)`
 	max-width: 100%;
 	text-align: center;
 	background-color: var(--surface1);

@@ -1,10 +1,10 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import portal from '../images/portal.svg';
 import Image from 'next/image';
 import { LinkPrimaryOutline } from '../components/styles/StyledButton.styled';
 
-const MotionContainer = styled(motion.div)``;
+const MotionContainer = styled(m.div)``;
 
 const FourZeroFourContainer = styled.div`
 	position: relative;
@@ -22,7 +22,7 @@ const Title = styled.h1`
 	z-index: 10;
 `;
 
-const FourZeroFourMain = styled(motion.main)`
+const FourZeroFourMain = styled(m.main)`
 	height: 100%;
 	max-width: 100%;
 	display: flex;
@@ -35,7 +35,7 @@ const FourZeroFourMain = styled(motion.main)`
 	}
 `;
 
-const MotionImageContainer = styled(motion.div)`
+const MotionImageContainer = styled(m.div)`
 	position: relative;
 	max-width: 60rem;
 	width: 100%;

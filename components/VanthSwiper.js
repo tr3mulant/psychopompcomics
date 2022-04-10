@@ -1,6 +1,6 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
-import { Navigation, A11y, FreeMode, Autoplay } from 'swiper';
+import { m } from 'framer-motion';
+import { A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 import bunnyImg from '../images/vanth/Bunny 2.jpeg';
@@ -63,7 +63,7 @@ const VanthImages = [
 	},
 ];
 
-const VanthSwiperContainer = styled(motion.article)`
+const VanthSwiperContainer = styled(m.article)`
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
@@ -123,7 +123,7 @@ export function StartSwiperAutoPlay() {
 	swiper.autoplay.start();
 }
 
-export default function VanthSwiper({ autoplay }) {
+export default function VanthSwiper() {
 	const theme = useTheme();
 	const breakpointLg = theme.breakpoints.lg.replace('px', '');
 	const breakpointMd = theme.breakpoints.md.replace('px', '');
@@ -138,7 +138,7 @@ export default function VanthSwiper({ autoplay }) {
 			</VanthDescription>
 			<Swiper
 				className='vanth-swiper'
-				modules={[Navigation, A11y, Autoplay]}
+				modules={[A11y, Autoplay]}
 				spaceBetween={0}
 				loop={true}
 				slidesPerView={1}
@@ -176,8 +176,6 @@ export default function VanthSwiper({ autoplay }) {
 							layout='fill'
 							objectFit='cover'
 							objectPosition='center'
-							width={2500}
-							height={2500}
 							sizes={`(max-width: ${theme.breakpoints.xxs}) 35rem,
 								(max-width: ${theme.breakpoints.xs}) 54.3rem,
 								(max-width: ${theme.breakpoints.sm}) 29.2rem,

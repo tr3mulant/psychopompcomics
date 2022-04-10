@@ -1,4 +1,4 @@
-const shouldAnalyzeBundles = process.env.ANALYZE === true;
+const shouldAnalyzeBundles = process.env.ANALYZE === 'true';
 
 let nextConfig = {
 	webpackDevMiddleware: (config) => {
@@ -14,6 +14,10 @@ let nextConfig = {
 	reactStrictMode: true,
 	compiler: {
 		styledComponents: true,
+	},
+	i18n: {
+		locales: ['en'],
+		defaultLocale: 'en',
 	},
 };
 

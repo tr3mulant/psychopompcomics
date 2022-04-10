@@ -93,6 +93,66 @@ const artistsVariants = {
 	},
 };
 
+const ArtistDetails = [
+	{
+		artistGroupTitle:'Masters of Lore',
+		artistGroupIntro: `Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.`,
+		artistGroupDesc: `Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.`,
+		artists: [
+			{
+				imgSrc: nfterPic,
+				imgAlt: 'The_NFTer',
+				name: 'Spencer Kope',
+				handle: 'The_NFTer',
+				title: 'Lore Master, Writer, Editor',
+				bioIntro: `Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.`,
+				bio: `Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident.`
+			}
+		]
+	},
+	{
+		artistGroupTitle:'Conjurers of Shape and Pigment',
+		artistGroupIntro: `Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.`,
+		artistGroupDesc: `Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.`,
+		artists: [
+			{
+				imgSrc: loganPic,
+				imgAlt: 'Logan Carrol',
+				name: 'Logna Carrol',
+				handle: '@LoganCarrol',
+				title: 'Artist, Colorist',
+				bioIntro: `Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.`,
+				bio: `Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident.`
+			},
+			{
+				imgSrc: jamesPic,
+				imgAlt: `James O'Reily`,
+				name:  `James O'Reily`,
+				handle: `@JamesOReily`,
+				title: 'Artist, Colorist',
+				bioIntro: `Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.`,
+				bio: `Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident.`
+			}
+		]
+	},
+	{
+		artistGroupTitle:'Pens and Brushes for Hire',
+		artistGroupIntro: `Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.`,
+		artistGroupDesc: `Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.`,
+		artists: [
+			{
+				imgSrc: 'https://placeholder.com/128',
+				imgAlt: 'Issac',
+				name: 'Issac',
+				handle: '@Issac',
+				title: 'Graphic Design',
+				bioIntro: `Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.`,
+				bio: `Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident.`
+			}
+		]
+	}
+];
+
 export default function Artists() {
 	return (
 		<>
@@ -107,6 +167,53 @@ export default function Artists() {
 				/>
 			</ArtistsHeader>
 			<MotionMain>
+				{/* foreach artist section here */}
+				{ArtistDetails.map((details, idx) => {
+					<StyledSection key={idx}>
+						<SectionContainer>
+							<ArtistsTwoUpContainer divided>
+								<ArtistsDescTwoUp>
+									<h2>{details.artistGroupTitle}</h2>
+									<p>{details.artistGroupIntro}</p>
+									<p>{details.artistGroupDesc}</p>
+								</ArtistsDescTwoUp>
+								<ArtistsTwoUp>
+									{details.artists.map((artist, iidx) => {
+										<ArtistContainer
+											key={iidx}
+											initial='hidden'
+											whileInView='visible'
+											viewport={{ once: true }}
+											variants={artistsVariants}
+										>
+											<ArtistImageContainer>
+												<Image
+													width='128'
+													height='128'
+													src={artist.imgSrc}
+													alt={artist.imgAlt}
+												/>
+											</ArtistImageContainer>
+											<ArtistRoleContainer>
+												<h4>{artist.name}</h4>
+												<h4>{artist.handle}</h4>
+												<h4>{artist.title}</h4>
+											</ArtistRoleContainer>
+											<ArtistBioContainer>
+												<p>
+													{artist.bioIntro}
+												</p>
+												<p>
+													{artist.bio}
+												</p>
+											</ArtistBioContainer>
+										</ArtistContainer>
+									})}
+								</ArtistsTwoUp>
+							</ArtistsTwoUpContainer>
+						</SectionContainer>
+					</StyledSection>	
+				})}
 				<StyledSection>
 					<SectionContainer>
 						<ArtistsTwoUpContainer divided>

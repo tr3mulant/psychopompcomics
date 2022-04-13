@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-const StyledMain = styled(motion.main)`
+const StyledMain = styled(m.main)`
 	height: 100%;
 	max-width: 100%;
 	width: 100%;

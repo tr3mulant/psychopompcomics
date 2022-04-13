@@ -26,7 +26,7 @@
 	offblack: '#0f0f0f'
 */
 
-export const themeCommon = {
+const themeCommon = {
 	brand: {
 		hsl: {
 			h: 85,

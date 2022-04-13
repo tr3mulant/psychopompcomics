@@ -1,13 +1,31 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import indexImg from '../images/pages/index.jpg';
+import aboutImg from '../images/pages/about.png';
+import collectiblesImg from '../images/pages/collectibles.jpg';
 
 const HeadTag = () => {
+	const { route } = useRouter();
+	let ogImg = indexImg;
+	if (route.includes('about')) {
+		ogImg = aboutImg;
+	}
+	if (route.includes('collectibles')) {
+		ogImg = collectiblesImg;
+	}
 	return (
 		<Head>
 			<title>Psychopomp Comics</title>
-			<meta
-				name='description'
-				content='Psychpompcomics.com is a web3 comic book company and home of The Vanth NFT collection, and the Seed of Cain comic series with accompanying NFT collection.'
-			/>
+			{/** Social Meta**/}
+			<meta property="og:title" content="Psychopomp Comics" />
+			<meta property="og:type" content="website" />
+			<meta property="og:description" name='description' content="Psychpompcomics.com is a web3 comic book company and home of The Vanth NFT collection, and the Seed of Cain comic series with accompanying NFT collection." />
+			<meta property="og:image" content={ ogImg.src } />
+			<meta property="og:url" content={ `https://psychopompcomics.com${route}` } />
+			<meta property="og:site_name" content="Psychopomp Comics" />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@PsychopompComix" />
+			{/** End Social Meta**/}
 			<link
 				rel='apple-touch-icon'
 				sizes='180x180'

@@ -1,7 +1,7 @@
 import styled, { useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
-const Logo = styled(motion.svg)`
+const Logo = styled(m.svg)`
 	width: 100%;
 	display: block;
 `;
@@ -74,7 +74,7 @@ export default function MotionLogo() {
 		>
 			<title>{`Psychopomp Comics`}</title>
 			<g>
-				<motion.path
+				<m.path
 					stroke={theme.brand.hex}
 					strokeWidth='9'
 					fill='none'
@@ -104,7 +104,7 @@ export default function MotionLogo() {
 				/>
 			</g>
 			<g>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -112,7 +112,7 @@ export default function MotionLogo() {
 					d='m 135.64,185.9 0.05,-37.19 7.63,-7.13 0.01,-44.99 m -7.86,117.78 33.49,-42.81 0.05,-25.54 m -91.82,30.92 v 27.36 l 9.05,23.02'
 					variants={pathVariants}
 				/>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -120,7 +120,7 @@ export default function MotionLogo() {
 					d='m 83.39,218.53 8.91,-8.31 -0.03,-87.01 M 54.48,231.16 30.31,212.55 30.6,197.27 m 276.29,78.17 0.1,-32.83 -13.26,-12.6 0.36,-81.1 -7.67,-7.09 0.17,-44.84'
 					variants={pathVariants}
 				/>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -128,7 +128,7 @@ export default function MotionLogo() {
 					d='M294.12 214.7l-33.41-42.97.08-26.24m44.22-63.25l9.47 16.73-.25 68.49-20.59 19.09m58.78-8.39v26.51l-7.96 19.91'
 					variants={pathVariants}
 				/>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -136,7 +136,7 @@ export default function MotionLogo() {
 					d='m 346.63,219.54 -9.35,-8.88 0.25,-86.24 m 37.09,98.68 0.56,-36.08 8.94,-8.09 v -42.7 l 10.16,-8.28 m 4.65,71.44 0.24,13.59 -24.37,18.7'
 					variants={pathVariants}
 				/>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -144,7 +144,7 @@ export default function MotionLogo() {
 					d='M54.31 216.09l.18-29.7-9.18-8.29.08-42.44-9.44-8.62'
 					variants={pathVariants}
 				/>
-				<motion.path
+				<m.path
 					strokeWidth='3.8'
 					stroke={theme.colorOpposite.hex}
 					fill='none'
@@ -154,7 +154,7 @@ export default function MotionLogo() {
 				/>
 			</g>
 			<g>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='30.47'
 					cy='197.79'
@@ -166,7 +166,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='35.88'
 					cy='127.39'
@@ -178,7 +178,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='64.7'
 					cy='116.86'
@@ -190,7 +190,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='92.27'
 					cy='123.72'
@@ -202,7 +202,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='124.69'
 					cy='82.05'
@@ -214,7 +214,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='143.25'
 					cy='96.78'
@@ -226,7 +226,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='77.26'
 					cy='176.68'
@@ -238,7 +238,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='105.25'
 					cy='188.91'
@@ -250,7 +250,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='168.91'
 					cy='145.92'
@@ -262,7 +262,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='260.84'
 					cy='145.79'
@@ -274,7 +274,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='286.57'
 					cy='97.14'
@@ -286,7 +286,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='305.16'
 					cy='82.42'
@@ -298,7 +298,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='337.56'
 					cy='124.32'
@@ -310,7 +310,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='365.15'
 					cy='117.48'
@@ -322,7 +322,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='393.94'
 					cy='127.94'
@@ -334,7 +334,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='399.05'
 					cy='198.67'
@@ -346,7 +346,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='352.38'
 					cy='177.17'
@@ -358,7 +358,7 @@ export default function MotionLogo() {
 						ease: 'easeOut',
 					}}
 				/>
-				<motion.circle
+				<m.circle
 					fill={theme.colorOpposite.hex}
 					cx='324.35'
 					cy='188.93'

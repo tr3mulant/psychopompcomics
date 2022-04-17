@@ -1,0 +1,59 @@
+[
+    {
+        "artistGroupTitle": "Masters of Lore",
+        "artistGroupIntro": "Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.",
+        "artistGroupDesc": "Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.",
+        "artists": [
+            {
+                "imgSrc": "/images/artists/The_NFTer.jpg",
+                "imgAlt": "The_NFTer",
+                "name": "Spencer Kope",
+                "handle": "@The_NFTer",
+                "title": "Lore Master, Writer, Editor",
+                "bioIntro": "Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.",
+                "bio": "Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident."
+            }
+        ]
+    },
+    {
+        "artistGroupTitle":"Conjurers of Shape and Pigment",
+        "artistGroupIntro": "Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.",
+        "artistGroupDesc": "Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.",
+        "artists": [
+            {
+                "imgSrc": "/images/artists/logan_twitter_pfp.png",
+                "imgAlt": "Logan Carroll",
+                "name": "Logan Carroll",
+                "handle": "@logancarrollart",
+                "title": "Artist, Colorist",
+                "bioIntro": "Logan Carroll – An experienced Illustrator focusing on all manner of Pop Culture fandom, Logan has worked with some of biggest brands around to bring their properties to life.",
+                "bio": "Since 2011, he’s been working in his signature style, striving to create art that catches the eye and tells a story. Visit Logan's <a href='https://logancarroll.com'>site</a> to check out his other specatcular works or drop a line."
+            },
+            {
+                "imgSrc": "/images/artists/james_twitter_pfp.jpg",
+                "imgAlt": "James O'Reilly",
+                "name":  "James O'Reilly",
+                "handle": "@JamesOReillyArt",
+                "title": "Artist, Colorist",
+                "bioIntro": "James O’Reilly - a professional artist for over a decade, James has worked in games, comics, exhibited in fine art galleries internationally and founded his own art studio, <a href='https://www.orbartstudio.com/'>Orb Art Studio</a>.",
+                "bio": "He has focussed almost exclusively on NFTs and crypto game art for the last 12 months. You can check out James' gallery or get in contact at <a href='https://www.james-oreilly.com/'>james-oreilly.com</a>."
+            }
+        ]
+    },
+    {
+        "artistGroupTitle": "Mercenaries",
+        "artistGroupIntro": "Sit ea est est sit velit do id ut esse incididunt ex ea. Sint et minim laboris nisi. Aliquip aliquip ad tempor eiusmod nisi cillum occaecat ad voluptate commodo. Quis officia anim ea id.",
+        "artistGroupDesc": "Occaecat commodo ad pariatur cillum excepteur officia nulla nostrud sint cillum reprehenderit eu consectetur tempor. Cillum occaecat eu excepteur laborum dolor laborum cillum in aliqua proident ut. Dolor quis sint enim magna Lorem minim cupidatat. Mollit Lorem anim ipsum esse laborum qui sit ex officia tempor labore mollit eu. Dolore in officia aute incididunt in aliquip aliqua reprehenderit aliqua fugiat pariatur duis minim.",
+        "artists": [
+            {
+                "imgSrc": "https://via.placeholder.com/128",
+                "imgAlt": "Issac",
+                "name": "Issac",
+                "handle": "@Issac",
+                "title": "Graphic Design",
+                "bioIntro": "Est tempor labore veniam pariatur voluptate ad ad laborum quis cillum elit est consequat esse. Officia aute dolore voluptate nisi irure duis irure nisi id non. Incididunt adipisicing laboris sint aliquip eiusmod. Nisi nostrud ut enim incididunt voluptate excepteur culpa nostrud nostrud dolore exercitation deserunt enim tempor. Ipsum ex tempor deserunt aliqua qui tempor. Pariatur anim officia ad pariatur cillum eu minim aute.",
+                "bio": "Est consectetur dolore minim nostrud est cillum. Eu consequat magna voluptate nostrud nisi duis sit ad aute aliqua dolore labore veniam fugiat. Eiusmod elit irure commodo adipisicing enim non est sint. Cupidatat cupidatat occaecat consectetur irure laboris in velit labore. Nisi eu voluptate exercitation enim occaecat tempor excepteur eiusmod qui aliquip pariatur. Exercitation non esse magna veniam proident."
+            }
+        ]
+    }
+]
